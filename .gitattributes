@@ -7,3 +7,4 @@ TV/tv_belweder_baseColor.jpg filter=lfs diff=lfs merge=lfs -text
 TV/bbb_360p_48k.jpg filter=lfs diff=lfs merge=lfs -text
 TV/bbb_360p_48k.mp4 filter=lfs diff=lfs merge=lfs -text
 TV/scene.bin filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
