@@ -122,15 +122,15 @@
             "camera" : 0,
             "name" : "Camera_Orientation",
             "translation" : [
-                17,
-                20,
-                37
+                0,
+                2,
+                17.47
             ],
-            "rotation" : [
-                -0.202,
-                0.202,
-                0.00,
-                0.958
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
             ]
         },
         {
