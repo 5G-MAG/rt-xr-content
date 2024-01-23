@@ -19,7 +19,7 @@
                     "triggers": [
                         {                    
                            "type": 3,
-                           "cameraNode":0,
+                           "cameraNode":4,
                            "nodes":[0]
                         },
                         {                    
