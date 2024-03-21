@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "Lelievre Sylvain",
+            "owner": "Interdigital",
+            "year": "2023",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "Everything"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/UseCase_02-variant3-Interactivity.jpg",
+    "name": "UseCase_02-variant3-Interactivity",
+    "path": "UseCase_02-variant3-Interactivity.gltf",
+    "summary": "demonstrates interactivity behavior using TRIGGER_VISIBILTIY to activate ACTION_MEDIA"
+}
