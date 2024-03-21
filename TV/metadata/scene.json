@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "owner": "RDW MIC, Ma\u00c5\u201aopolska's Virtual Museums project",
+            "year": "2016",
+            "license": "CC0 Public Domain",
+            "licenseUrl": "https://creativecommons.org/public-domain/cc0/",
+            "what": "TV set 3D model (https://skfb.ly/NnEr)"
+        },
+        {
+            "owner": "Blender Foundation",
+            "year": "2008",
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+            "what": "Big Buck Bunny movie"
+        },
+        {
+            "owner": "MotionSpell",
+            "year": "2023",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "what": "added video texture & audio source"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/scene.jpg",
+    "name": "scene",
+    "path": "scene.gltf",
+    "summary": "a CRT TV set playing a movie"
+}

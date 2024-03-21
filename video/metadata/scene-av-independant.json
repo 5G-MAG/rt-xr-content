@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "owner": "Carlos Miguel Vieira Maciel",
+            "year": "2019",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "what": "Living Room 3D model (https://skfb.ly/6TAqI)"
+        },
+        {
+            "owner": "Blender Foundation",
+            "year": "2008",
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+            "what": "Big Buck Bunny movie"
+        },
+        {
+            "owner": "MotionSpell",
+            "year": "2023",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "what": "added video texture & audio source to the living room scene"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/scene.jpg",
+    "name": "scene-av-independant",
+    "path": "scene-av-independant.gltf",
+    "summary": "audio and video packaged in separate mp4 files"
+}
