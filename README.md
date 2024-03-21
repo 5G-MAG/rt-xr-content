@@ -3,9 +3,13 @@
 
 This repository provides test content for the XR Player.
 
-See the wiki section of the XR Player for more information: https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/
+Make sure to visit the [wiki section of the XR Player](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/) for more information on the project.
 
-Please open an issue if you have any question or remark. 
+
+## Questions or Comments
+
+If you have any questions, please submit an issue.
+
 
 ## Listing
 
@@ -75,3 +79,40 @@ a living room scene demonstrating video texture<br/>
 </table>
 
 
+## Contributing 
+
+In order to contribute, open a pull request on the `development` branch.
+
+For all contributions, the following items are expected:
+
+
+All submitted models must pass the glTF-Validator.
+
+Each model must provide its own metadata and be illustrated with a screenshot. 
+
+The metadata must include the correct and complete legal information (ownership, copyright, and license).
+
+A README for the subdirectory containing the model. A script is proposed to generate these README draft from the metadata files. The README files submitted can be extended with additionnal information (eg. usage, extended description, ...).
+
+The metadata file json format is as follow:
+```
+{
+    "legal": [
+        {
+            "owner": "",
+            "year": "",
+            "license": "",
+            "licenseUrl": "",
+            "what": ""
+        }
+    ],
+    "tags": [],
+    "screenshot": "metadata/screenshot.jpg",
+    "name": "",
+    "path": "",
+    "summary": ""
+}
+```
+
+- **path** : is relative to the gltf file.
+- **tags** : tags will be currated. Currently, "testing" is the only tag used. 
