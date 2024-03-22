@@ -118,7 +118,7 @@
 							"accessors":[
 								44
 							],
-							"attenuation":"linear_distance",
+							"attenuation":"linearDistance",
 							"attenuationParameters":[
 								340282346638528859811704183484516925440,
 								1
