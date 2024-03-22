@@ -174,7 +174,7 @@
             "extensions": {
                 "MPEG_audio_spatial": {
                     "sources": [{
-                        "attenuation": "linear_distance",
+                        "attenuation": "linearDistance",
                         "attenuationParameters": [
                             90.0,
                             1.0
@@ -198,7 +198,7 @@
             "extensions": {
                 "MPEG_audio_spatial": {
                     "sources": [{
-                        "attenuation": "linear_distance",
+                        "attenuation": "linearDistance",
                         "attenuationParameters": [
                             90.0,
                             1.0
@@ -222,7 +222,7 @@
             "extensions": {
                 "MPEG_audio_spatial": {
                     "sources": [{
-                        "attenuation": "linear_distance",
+                        "attenuation": "linearDistance",
                         "attenuationParameters": [
                             90.0,
                             1.0
