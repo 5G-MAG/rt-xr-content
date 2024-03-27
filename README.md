@@ -22,60 +22,60 @@ See individual directory for detailed informations.
 </tr>
 <tr>
 <td>
-<a href="interactivity">UseCase_01-variant3-Interactivity</a><br/>
+<a href="interactivity">UseCase_01-variant3-Interactivity</a><br>
 <img src="interactivity/metadata/UseCase_01-variant3-Interactivity.jpg" alt="UseCase_01-variant3-Interactivity"/>
 </td>
 <td>
-demonstrates interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERIAL and ACTION_MEDIA<br/>
+demonstrates interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERIAL and ACTION_MEDIA<br>
 <tr>
 <td>
-<a href="interactivity">UseCase_02-variant3-Interactivity</a><br/>
+<a href="interactivity">UseCase_02-variant3-Interactivity</a><br>
 <img src="interactivity/metadata/UseCase_02-variant3-Interactivity.jpg" alt="UseCase_02-variant3-Interactivity"/>
 </td>
 <td>
-demonstrates interactivity behavior using TRIGGER_VISIBILTIY to activate ACTION_MEDIA<br/>
+demonstrates interactivity behavior using TRIGGER_VISIBILTIY to activate ACTION_MEDIA<br>
 <tr>
 <td>
-<a href="interactivity">UseCase_03-variant1-Interactivity</a><br/>
+<a href="interactivity">UseCase_03-variant1-Interactivity</a><br>
 <img src="interactivity/metadata/UseCase_03-variant1-Interactivity.jpg" alt="UseCase_03-variant1-Interactivity"/>
 </td>
 <td>
-demonstrates interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION and ACTION_MEDIA<br/>
+demonstrates interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION and ACTION_MEDIA<br>
 <tr>
 <td>
-<a href="interactivity">UseCase_03-variant3-Interactivity</a><br/>
+<a href="interactivity">UseCase_03-variant3-Interactivity</a><br>
 <img src="interactivity/metadata/UseCase_03-variant3-Interactivity.jpg" alt="UseCase_03-variant3-Interactivity"/>
 </td>
 <td>
-demonstrates interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION<br/>
+demonstrates interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION<br>
 <tr>
 <td>
-<a href="TV">scene</a><br/>
+<a href="TV">scene</a><br>
 <img src="TV/metadata/scene.jpg" alt="scene"/>
 </td>
 <td>
-a CRT TV set playing a movie<br/>
+a CRT TV set playing a movie<br>
 <tr>
 <td>
-<a href="video">scene-av-combined</a><br/>
+<a href="video">scene-av-combined</a><br>
 <img src="video/metadata/scene.jpg" alt="scene-av-combined"/>
 </td>
 <td>
-audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br/>
+audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br>
 <tr>
 <td>
-<a href="video">scene-av-independant</a><br/>
+<a href="video">scene-av-independant</a><br>
 <img src="video/metadata/scene.jpg" alt="scene-av-independant"/>
 </td>
 <td>
-audio and video packaged in separate mp4 files<br/>
+audio and video packaged in separate mp4 files<br>
 <tr>
 <td>
-<a href="video">scene</a><br/>
+<a href="video">scene</a><br>
 <img src="video/metadata/scene.jpg" alt="scene"/>
 </td>
 <td>
-a living room scene demonstrating video texture<br/>
+a living room scene demonstrating video texture<br>
 </table>
 
 

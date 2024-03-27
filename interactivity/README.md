@@ -1,3 +1,4 @@
+
 ## UseCase_01-variant3-Interactivity
 
 ### Summary
@@ -18,8 +19,11 @@ demonstrates interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERI
 
 ### Legal
 
-&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a><br/>
-  - Lelievre Sylvain for Everything<br/>
+&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a>
+
+  - Lelievre Sylvain for Everything
+
+
 ## UseCase_02-variant3-Interactivity
 
 ### Summary
@@ -41,8 +45,11 @@ demonstrates interactivity behavior using TRIGGER_VISIBILTIY to activate ACTION_
 
 ### Legal
 
-&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a><br/>
-  - Lelievre Sylvain for Everything<br/>
+&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a>
+
+  - Lelievre Sylvain for Everything
+
+
 ## UseCase_03-variant1-Interactivity
 
 ### Summary
@@ -63,8 +70,11 @@ demonstrates interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION 
 
 ### Legal
 
-&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a><br/>
-  - Lelievre Sylvain for Everything<br/>
+&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a>
+
+  - Lelievre Sylvain for Everything
+
+
 ## UseCase_03-variant3-Interactivity
 
 ### Summary
@@ -85,5 +95,6 @@ demonstrates interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION
 
 ### Legal
 
-&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a><br/>
-  - Lelievre Sylvain for Everything<br/>
+&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a>
+
+  - Lelievre Sylvain for Everything
