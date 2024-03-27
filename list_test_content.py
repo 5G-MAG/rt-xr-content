@@ -48,12 +48,12 @@ def copyright(c):
     artist = c.get('artist', None) 
     lic = f"<a alt=\"license\" href=\"{c['licenseUrl']}\">{c['license']}</a>"
     res = [
-        f"&#169; {c['year']}, {c['owner']}, {lic}<br/>"
+        f"&#169; {c['year']}, {c['owner']}, {lic}\n"
     ]
     if artist is None:
-        res.append( f"  - {c['what']}<br/>" )
+        res.append( f"  - {c['what']}\n" )
     else:
-        res.append( f"  - {artist} for {c['what']}<br/>" )
+        res.append( f"  - {artist} for {c['what']}\n" )
     return res
 
 
@@ -61,11 +61,11 @@ def as_table_row(scene, dfp):
     name = scene['name']
     res = [
         "<tr>","<td>",
-        f"<a href=\"{dfp.stem}\">{name}</a><br/>",
+        f"<a href=\"{dfp.stem}\">{name}</a><br>",
         f"<img src=\"{dfp.stem}/{scene['screenshot']}\" alt=\"{name}\"/>",
         "</td>",
         "<td>",
-        f"{scene['summary']}<br/>"
+        f"{scene['summary']}<br>"
     ]
     # res.append("Credit:")
     # for c in scene["legal"]:
@@ -90,7 +90,7 @@ def process_directory_readme(dp):
     readme = []
     for sfp in dp.glob('*.gltf'):
         scene = read_scene_data(sfp)
-        readme.append(f"## {scene['name']}")
+        readme.append(f"\n## {scene['name']}")
         readme.append(f"\n### Summary")
         readme.append(scene["summary"]+"\n")
         readme.append(f"\n### Extensions used\n")
