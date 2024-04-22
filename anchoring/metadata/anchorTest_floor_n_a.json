@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "Faivre d'Arcier Etienne",
+            "owner": "Interdigital",
+            "year": "2023",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "Everything"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/anchorTest_floor_n_a.jpg",
+    "name": "anchorTest_floor_n_a",
+    "path": "anchorTest_floor_n_a.gltf",
+    "summary": "demonstrates anchoring using MPEG_anchor at the node level using TRACKABLE_FLOOR with 2 nodes."
+}

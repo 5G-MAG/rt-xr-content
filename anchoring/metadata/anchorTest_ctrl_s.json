@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "Faivre d'Arcier Etienne",
+            "owner": "Interdigital",
+            "year": "2023",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "Everything"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/anchorTest_app_s.jpg",
+    "name": "anchorTest_app_s",
+    "path": "anchorTest_app_s.gltf",
+    "summary": "demonstrates anchoring using MPEG_anchor at the scene level using TRACKABLE_CONTROLLER."
+}
