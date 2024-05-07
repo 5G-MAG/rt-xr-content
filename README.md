@@ -1,19 +1,17 @@
+<h1 align="center">Content for the XR Unity Player</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Under_Development-yellow" alt="Under Development">
+  <img src="https://img.shields.io/github/v/tag/5G-MAG/rt-xr-content?label=version" alt="Version">
+</p>
 
-## rt-xr-content
-
+## Introduction
 This repository provides test content for the XR Player.
 
-Make sure to visit the [wiki section of the XR Player](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/) for more information on the project.
-
-
-## Questions or Comments
-
-If you have any questions, please submit an issue.
-
+Additional information can be found at: https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/
 
 ## Listing
 
-See individual directory for detailed informations.
+See individual directory for detailed information.
 
 <table>
 <tr>
@@ -83,16 +81,15 @@ a living room scene demonstrating video texture<br>
 
 In order to contribute, open a pull request on the `development` branch.
 
-For all contributions, the following items are expected:
+For all contributions, the following rules apply:
 
+- All submitted models must pass the glTF-Validator.
 
-All submitted models must pass the glTF-Validator.
+- Each model must provide its own metadata and be illustrated with a screenshot. 
 
-Each model must provide its own metadata and be illustrated with a screenshot. 
+- The metadata must include the correct and complete legal information (ownership, copyright, and license).
 
-The metadata must include the correct and complete legal information (ownership, copyright, and license).
-
-A README for the subdirectory containing the model. A script is proposed to generate these README draft from the metadata files. The README files submitted can be extended with additionnal information (eg. usage, extended description, ...).
+- A README for the subdirectory containing the model must be created. A script is proposed to generate these README draft from the metadata files. The README files submitted can be extended with additionnal information (eg. usage, extended description, ...).
 
 The metadata file json format is as follow:
 ```
@@ -116,3 +113,7 @@ The metadata file json format is as follow:
 
 - **path** : is relative to the gltf file.
 - **tags** : tags will be currated. Currently, "testing" is the only tag used. 
+
+## Questions or Comments
+
+If you have any questions, please submit an issue.
