@@ -146,7 +146,7 @@ The metadata file json format is as follow:
 ```
 
 - **path** : is relative to the gltf file.
-- **tags** : tags will be currated. Currently, "testing" is the only tag used. 
+- **tags** : tags will be curated. Currently, "testing" is the only tag used. 
 
 ## Questions or Comments
 
