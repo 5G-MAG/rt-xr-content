@@ -12,7 +12,7 @@ Post modern furniture assets
 - MPEG_audio_spatial
 - MPEG_texture_video
 
-### Screeshot
+### Screenshot
 ![screenshot](metadata/post_modern_furniture.png)
 
 ### Legal
