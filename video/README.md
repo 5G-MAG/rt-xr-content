@@ -13,7 +13,7 @@ audio and video packaged as seperate tracks of a single mp4, explicit track to b
 - MPEG_audio_spatial
 - MPEG_texture_video
 
-### Screeshot
+### Screenshot
 ![screenshot](metadata/scene.jpg)
 
 ### Legal
