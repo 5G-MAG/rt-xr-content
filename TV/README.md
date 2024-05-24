@@ -13,7 +13,7 @@ a CRT TV set playing a movie
 - MPEG_audio_spatial
 - MPEG_texture_video
 
-### Screeshot
+### Screenshot
 ![screenshot](metadata/scene.jpg)
 
 ### Legal
