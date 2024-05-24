@@ -1,0 +1,19 @@
+{
+    "version": 1,
+    "legal": [
+        {
+            "owner": "Taha Kaya",
+            "year": "2022",
+            "license": "Creative Commons Attribution",
+            "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+            "what": "Low Poly Furnitures Full Bundle (https://skfb.ly/oLwUo)"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/low_poly_furnitures_full_bundle.png",
+    "name": "low_poly_furnitures_full_bundle",
+    "path": "low_poly_furnitures_full_bundle.gltf",
+    "summary": "33 pieces low poly furnitures for mobile games Blender + Substance Painter"
+}

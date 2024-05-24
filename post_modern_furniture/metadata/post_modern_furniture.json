@@ -1,0 +1,19 @@
+{
+    "version": 1,
+    "legal": [
+        {
+            "owner": "eyglohildur",
+            "year": "2019",
+            "license": "Creative Commons Attribution",
+            "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+            "what": "Post Modern Furniture (https://skfb.ly/6WOrs)"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/post_modern_furniture.png",
+    "name": "post_modern_furniture",
+    "path": "post_modern_furniture.gltf",
+    "summary": "Post modern furniture assets"
+}
