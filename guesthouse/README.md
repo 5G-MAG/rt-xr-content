@@ -12,7 +12,7 @@ Tiny House - Two Story Little House. A guesthouse is a small building, close to,
 - MPEG_audio_spatial
 - MPEG_texture_video
 
-### Screeshot
+### Screenshot
 ![screenshot](metadata/gesthouse.png)
 
 ### Legal
