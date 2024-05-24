@@ -14,7 +14,7 @@ demonstrates interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERI
 - MPEG_scene_interactivity
 - MPEG_audio_spatial
 
-### Screeshot
+### Screenshot
 ![screenshot](metadata/UseCase_01-variant3-Interactivity.jpg)
 
 ### Legal
