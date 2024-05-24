@@ -12,7 +12,7 @@ Studio apartment Unity example is here https://vimeo.com/108045732
 - MPEG_audio_spatial
 - MPEG_texture_video
 
-### Screeshot
+### Screenshot
 ![screenshot](metadata/studio_apartment.png)
 
 ### Legal
