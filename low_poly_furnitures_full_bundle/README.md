@@ -12,7 +12,7 @@
 - MPEG_audio_spatial
 - MPEG_texture_video
 
-### Screeshot
+### Screenshot
 ![screenshot](metadata/low_poly_furnitures_full_bundle.png)
 
 ### Legal
