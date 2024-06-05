@@ -524,12 +524,9 @@
 		}
 	},
     "extensionsUsed": [
-		"MPEG_anchor",
-        "MPEG_media", 
-        "MPEG_accessor_timed", 
-        "MPEG_buffer_circular", 
-        "MPEG_texture_video", 
-        "KHR_materials_unlit",
-        "MPEG_audio_spatial"
+		"MPEG_anchor"
+    ],
+    "extensionsRequired": [
+		"MPEG_anchor"
     ]
 }
