@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "Faivre d'Arcier Etienne",
+            "owner": "Interdigital",
+            "year": "2023",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "Everything"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/anchorTest_viewer_n.png",
+    "name": "anchorTest_viewer_n",
+    "path": "anchorTest_viewer_n.gltf",
+    "summary": "Demonstrates AR anchoring of a node using TRACKABLE_VIEWER. The anchored node consists of the cone and cube meshes, which remain locked in front of the viewer when moving, while the rest of the scene (the textured plane) remains anchored to its original position in the real world. "
+}

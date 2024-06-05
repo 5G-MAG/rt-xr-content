@@ -1,0 +1,905 @@
+{
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v3.6.27",
+		"version":"2.0"
+	},
+	"extensionsUsed":[
+		"MPEG_media",
+		"MPEG_buffer_circular",
+		"MPEG_accessor_timed",
+		"MPEG_audio_spatial",
+		"KHR_lights_punctual",
+		"MPEG_scene_interactivity",
+		"MPEG_node_interactivity"
+	],
+	"extensionsRequired":[
+		"MPEG_media",
+		"MPEG_buffer_circular",
+		"MPEG_accessor_timed",
+		"MPEG_audio_spatial",
+		"KHR_lights_punctual",
+		"MPEG_scene_interactivity",
+		"MPEG_node_interactivity"
+	],
+	"extensions":{
+		"MPEG_media":{
+			"media":[
+				{
+					"alternatives":[
+						{
+							"mimeType":"audio/aac",
+							"uri":"pong.mp4"
+						}
+					],
+					"autoplay":false,
+					"loop":false
+				}
+			]
+		},
+		"KHR_lights_punctual":{
+			"lights":[
+				{
+					"color":[
+						1,
+						1,
+						1
+					],
+					"intensity":1,
+					"type":"point",
+					"name":"PointLight"
+				}
+			]
+		}
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"name":"Scene",
+			"nodes":[
+				1,
+				3,
+				5,
+				6,
+				7,
+				8
+			],
+            "extensions": {
+                "MPEG_scene_interactivity": {
+                    "triggers": [
+                        {                    
+							"type": 0,
+							"nodes":[1,6]
+                        },
+                        {                    
+							"type": 0,
+							"nodes":[3,6]
+                        },
+                        {                    
+							"type": 0,
+							"nodes":[5,6]
+                        },
+						{
+							"type": 1,
+							"distanceUpperLimit": 1.5,
+							"nodes":[1]
+                        },
+						{                    
+							"type": 1,
+							"distanceLowerLimit": 28,
+							"distanceUpperLimit": 1e9,
+							"nodes":[6]
+                        },
+						{  
+							"type": 3,
+							"cameraNode": 7,
+							"nodes":[1]
+                        },
+						{  
+							"type": 3,
+							"cameraNode": 7,
+							"nodes":[5]
+                        },
+						{
+							"type": 1,
+							"distanceLowerLimit": 125,
+							"distanceUpperLimit": 1e9,
+							"nodes":[1]
+						},
+						{
+							"type": 1,
+							"distanceLowerLimit": 125,
+							"distanceUpperLimit": 1e9,
+							"nodes":[3]
+						},
+						{
+							"type": 1,
+							"distanceLowerLimit": 125,
+							"distanceUpperLimit": 1e9,
+							"nodes":[5]
+						},
+						{ 
+                            "type": 2,
+                            "userInputDescription": "/user/hand/left/input/select/click",
+                            "nodes":[6]
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "type": 6, 
+                            "material":0,
+                            "nodes":[6]
+                        },
+						{
+                            "type": 6, 
+                            "material":1,
+                            "nodes":[6]
+                        },
+						{
+                            "type": 6, 
+                            "material":2,
+                            "nodes":[6]
+						},
+                        {                    
+                            "type": 4,
+                            "media":0,
+                            "mediaControl": 0
+                        },
+						{
+							"type": 2,
+							"nodes":[1,3,5]
+						},
+						{
+							"type": 0,
+							"activationStatus": 0,
+							"nodes":[6]
+						},
+						{
+							"type": 0,
+							"activationStatus": 1,
+							"nodes":[6]
+						},
+						{
+							"type": 1,
+							"transform": [
+							  1, 0, 0, -3,
+							  0, 1, 0, 15,
+							  0, 0, 1, 0,
+							  0, 0, 0, 1
+							],
+							"nodes":[1]
+						},
+						{
+							"type": 1,
+							"transform": [
+							  1, 0, 0, -3,
+							  0, 1, 0, 10,
+							  0, 0, 1, -6,
+							  0, 0, 0, 1
+							],
+							"nodes":[3]
+						},
+						{
+							"type": 1,
+							"transform": [
+							  1, 0, 0, 3,
+							  0, 1, 0, 5,
+							  0, 0, 1, 0,
+							  0, 0, 0, 1
+							],
+							"nodes":[5]
+						}
+                    ],
+                    "behaviors": [
+                        {
+                            "triggers":[0],
+                            "actions":[0,3],
+                            "triggersCombinationControl":"#0",
+                            "triggersActivationControl": 1, 
+                            "actionsControl":1
+                        },
+						{
+                            "triggers":[1],
+                            "actions":[1,3],
+                            "triggersCombinationControl":"#1",
+                            "triggersActivationControl": 1, 
+                            "actionsControl":1
+                        },
+						{
+                            "triggers":[2],
+                            "actions":[2,3],
+                            "triggersCombinationControl":"#2",
+                            "triggersActivationControl": 1, 
+							"actionsControl":1
+                        },
+						{
+                            "triggers":[3],
+                            "actions":[4],
+                            "triggersCombinationControl":"#3",
+                            "triggersActivationControl": 2, 
+							"actionsControl":1
+                        },
+						{
+                            "triggers":[4],
+                            "actions":[5],
+                            "triggersCombinationControl":"#4",
+                            "triggersActivationControl": 1,
+							"actionsControl":1
+                        },
+						{
+                            "triggers":[5],
+                            "actions":[6,7,8,9],
+                            "triggersCombinationControl":"#5",
+                            "triggersActivationControl": 4, 
+							"actionsControl":1
+                        },
+						{
+                            "triggers":[6,7,8],
+                            "actions":[6,7,8,9],
+                            "triggersCombinationControl":"#6|#7|#8",
+                            "triggersActivationControl": 2, 
+							"actionsControl":1
+                        },
+						{
+                            "triggers":[9, 10],
+                            "actions":[6,7,8,9],
+                            "triggersCombinationControl":"#9",
+                            "triggersActivationControl": 2, 
+							"actionsControl":1
+                        }
+                    ]
+                }
+            }
+		}
+	],
+	"nodes":[
+		{
+			"extensions":{
+				"MPEG_audio_spatial":{
+					"sources":[
+						{
+							"id":0,
+							"type":"Object",
+							"targetSampleRate":48000,
+							"accessors":[
+								0
+							],
+							"attenuation":"inverse_distance",
+							"attenuationParameters":[
+								340282346638528859811704183484516925440,
+								1
+							],
+							"referenceDistance":1
+						}
+					]
+				}
+			},
+			"name":"Sphere_Yellow_Speaker"
+		},
+		{
+			"children":[
+				0
+			],
+			"mesh":0,
+			"name":"Sphere_Yellow",
+			"translation":[
+				-3,
+				15,
+				0
+			],
+			"extensions": {
+                "MPEG_node_interactivity": {
+                    "triggers": [{
+                        "type": 0,
+                        "collider": 0,
+                        "isStatic": false,
+                        "usePhysics": true,
+                        "useGravity": true,
+                        "mass": 1,
+                        "restitution": 0.5,
+                        "staticFriction": 0.5,
+                        "dynamicFriction": 0.5
+                    }]
+                }
+			}
+		},
+		{
+			"extensions":{
+				"MPEG_audio_spatial":{
+					"sources":[
+						{
+							"id":1,
+							"type":"Object",
+							"targetSampleRate":48000,
+							"accessors":[
+								5
+							],
+							"attenuation":"inverse_distance",
+							"attenuationParameters":[
+								340282346638528859811704183484516925440,
+								1
+							],
+							"referenceDistance":1
+						}
+					]
+				}
+			},
+			"name":"Sphere_Red_Speaker"
+		},
+		{
+			"children":[
+				2
+			],
+			"mesh":1,
+			"name":"Sphere_Red",
+			"translation":[
+				-3,
+				10,
+				-6
+			],
+			"extensions": {
+                "MPEG_node_interactivity": {
+                    "triggers": [
+						{
+							"type": 0,
+							"collider": 1,
+							"isStatic": false,
+							"usePhysics": true,
+							"useGravity": true,
+							"mass": 1,
+							"restitution": 0.5,
+							"staticFriction": 0.5,
+							"dynamicFriction": 0.5
+						}
+					]
+                }
+			}
+		},
+		{
+			"extensions":{
+				"MPEG_audio_spatial":{
+					"sources":[
+						{
+							"id":2,
+							"type":"Object",
+							"targetSampleRate":48000,
+							"accessors":[
+								9
+							],
+							"attenuation":"inverse_distance",
+							"attenuationParameters":[
+								340282346638528859811704183484516925440,
+								1
+							],
+							"referenceDistance":1
+						}
+					]
+				}
+			},
+			"name":"Sphere_Gray_Speaker"
+		},
+		{
+			"children":[
+				4
+			],
+			"mesh":2,
+			"name":"Sphere_Gray",
+			"translation":[
+				3,
+				5,
+				0
+			],
+			"extensions": {
+                "MPEG_node_interactivity": {
+                    "triggers": [
+						{
+							"type": 0,
+							"collider": 2,
+							"isStatic": false,
+							"usePhysics": true,
+							"useGravity": true,
+							"mass": 1,
+							"restitution": 0.5,
+							"staticFriction": 0.5,
+							"dynamicFriction": 0.5
+						}
+					]
+                }
+			}
+		},
+		{
+			"mesh":3,
+			"name":"Floor",
+			"translation":[
+				-0.028940200805664062,
+				-1.4228076934814453,
+				-2.389873504638672
+			],
+			"extensions": {
+                "MPEG_node_interactivity": {
+                    "triggers": [{
+                        "type": 0,
+                        "collider": 3,
+                        "isStatic": true,
+                        "usePhysics": true,
+                        "useGravity": false,
+                        "mass": 1,
+                        "restitution": 0.5,
+                        "staticFriction": 0.5,
+                        "dynamicFriction": 0.5
+                    }]
+                }
+            }
+		},
+		{
+			"camera":0,
+			"name":"Camera.001",
+			"rotation":[
+				0.03315829858183861,
+				0.9035139679908752,
+				-0.07110809534788132,
+				0.421315461397171
+			],
+			"translation":[
+				20,
+				1,
+				-20
+			]
+		},
+		{
+			"extensions":{
+				"KHR_lights_punctual":{
+					"light":0
+				}
+			},
+			"name":"Point",
+			"rotation":[
+				-0.7071068286895752,
+				0,
+				0,
+				0.7071068286895752
+			],
+			"translation":[
+				0,
+				83.24929809570312,
+				0
+			]
+		}
+	],
+	"cameras":[
+		{
+			"name":"Camera.001",
+			"perspective":{
+				"aspectRatio":1.7777777777777777,
+				"yfov":0.7175413966178894,
+				"zfar":100,
+				"znear":0.10000000149011612
+			},
+			"type":"perspective"
+		}
+	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"name":"Yellow_mat",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.8000000715255737,
+					0.3926287591457367,
+					0,
+					1
+				],
+				"metallicFactor":0,
+				"roughnessFactor":0.5
+			}
+		},
+		{
+			"doubleSided":true,
+			"name":"Red_mat",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.8000000715255737,
+					0.003907732665538788,
+					0,
+					1
+				],
+				"metallicFactor":0,
+				"roughnessFactor":0.5
+			}
+		},
+		{
+			"doubleSided":true,
+			"name":"Gray_mat",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.4479789137840271,
+					0.4479789137840271,
+					0.4479789137840271,
+					1
+				],
+				"metallicFactor":0,
+				"roughnessFactor":0.5
+			}
+		}
+	],
+	"meshes":[
+		{
+			"name":"Sphere_Yellow",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":1,
+						"NORMAL":2,
+						"TEXCOORD_0":3
+					},
+					"indices":4,
+					"material":0
+				}
+			]
+		},
+		{
+			"name":"Sphere_Red",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":6,
+						"NORMAL":7,
+						"TEXCOORD_0":8
+					},
+					"indices":4,
+					"material":1
+				}
+			]
+		},
+		{
+			"name":"Sphere_Gray",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":10,
+						"NORMAL":11,
+						"TEXCOORD_0":12
+					},
+					"indices":4,
+					"material":2
+				}
+			]
+		},
+		{
+			"name":"Floor",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":13,
+						"NORMAL":14,
+						"TEXCOORD_0":15
+					},
+					"indices":16,
+					"material":2
+				}
+			]
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"byteOffset":0,
+			"componentType":5126,
+			"count":1024,
+			"extensions":{
+				"MPEG_accessor_timed":{
+					"suggestedUpdateRate":46.875,
+					"bufferView":1
+				}
+			},
+			"name":"MPEG_media.accessor",
+			"normalized":false,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":2,
+			"componentType":5126,
+			"count":2018,
+			"max":[
+				1.5052361488342285,
+				1.5052366256713867,
+				1.5052356719970703
+			],
+			"min":[
+				-1.505235195159912,
+				-1.5052366256713867,
+				-1.505234718322754
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":3,
+			"componentType":5126,
+			"count":2018,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":4,
+			"componentType":5126,
+			"count":2018,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":5,
+			"componentType":5123,
+			"count":2880,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":6,
+			"byteOffset":0,
+			"componentType":5126,
+			"count":1024,
+			"extensions":{
+				"MPEG_accessor_timed":{
+					"suggestedUpdateRate":46.875,
+					"bufferView":7
+				}
+			},
+			"name":"MPEG_media.accessor",
+			"normalized":false,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":8,
+			"componentType":5126,
+			"count":2018,
+			"max":[
+				1.5052361488342285,
+				1.5052366256713867,
+				1.5052356719970703
+			],
+			"min":[
+				-1.505235195159912,
+				-1.5052366256713867,
+				-1.505234718322754
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":9,
+			"componentType":5126,
+			"count":2018,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":10,
+			"componentType":5126,
+			"count":2018,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":11,
+			"byteOffset":0,
+			"componentType":5126,
+			"count":1024,
+			"extensions":{
+				"MPEG_accessor_timed":{
+					"suggestedUpdateRate":46.875,
+					"bufferView":12
+				}
+			},
+			"name":"MPEG_media.accessor",
+			"normalized":false,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":13,
+			"componentType":5126,
+			"count":2018,
+			"max":[
+				1.5052361488342285,
+				1.5052366256713867,
+				1.5052356719970703
+			],
+			"min":[
+				-1.505235195159912,
+				-1.5052366256713867,
+				-1.505234718322754
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":14,
+			"componentType":5126,
+			"count":2018,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":15,
+			"componentType":5126,
+			"count":2018,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":16,
+			"componentType":5126,
+			"count":24,
+			"max":[
+				5.942234039306641,
+				0.024617671966552734,
+				5.942234039306641
+			],
+			"min":[
+				-5.942234039306641,
+				-0.024617671966552734,
+				-5.942234039306641
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":17,
+			"componentType":5126,
+			"count":24,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":18,
+			"componentType":5126,
+			"count":24,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":19,
+			"componentType":5123,
+			"count":36,
+			"type":"SCALAR"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":8192,
+			"byteOffset":32,
+			"name":"MPEG_media.frame"
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"name":"MPEG_accessor_timed.header"
+		},
+		{
+			"buffer":3,
+			"byteLength":24216,
+			"byteOffset":0,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":24216,
+			"byteOffset":24216,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":16144,
+			"byteOffset":48432,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":5760,
+			"byteOffset":64576,
+			"target":34963
+		},
+		{
+			"buffer":1,
+			"byteLength":8192,
+			"byteOffset":32,
+			"name":"MPEG_media.frame"
+		},
+		{
+			"buffer":1,
+			"byteLength":32,
+			"name":"MPEG_accessor_timed.header"
+		},
+		{
+			"buffer":3,
+			"byteLength":24216,
+			"byteOffset":70336,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":24216,
+			"byteOffset":94552,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":16144,
+			"byteOffset":118768,
+			"target":34962
+		},
+		{
+			"buffer":2,
+			"byteLength":8192,
+			"byteOffset":32,
+			"name":"MPEG_media.frame"
+		},
+		{
+			"buffer":2,
+			"byteLength":32,
+			"name":"MPEG_accessor_timed.header"
+		},
+		{
+			"buffer":3,
+			"byteLength":24216,
+			"byteOffset":134912,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":24216,
+			"byteOffset":159128,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":16144,
+			"byteOffset":183344,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":288,
+			"byteOffset":199488,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":288,
+			"byteOffset":199776,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":192,
+			"byteOffset":200064,
+			"target":34962
+		},
+		{
+			"buffer":3,
+			"byteLength":72,
+			"byteOffset":200256,
+			"target":34963
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":8224,
+			"extensions":{
+				"MPEG_buffer_circular":{
+					"media":0
+				}
+			},
+			"name":"MPEG_media.frame.buffer"
+		},
+		{
+			"byteLength":8224,
+			"extensions":{
+				"MPEG_buffer_circular":{
+					"media":0
+				}
+			},
+			"name":"MPEG_media.frame.buffer"
+		},
+		{
+			"byteLength":8224,
+			"extensions":{
+				"MPEG_buffer_circular":{
+					"media":0
+				}
+			},
+			"name":"MPEG_media.frame.buffer"
+		},
+		{
+			"byteLength":200328,
+			"uri":"gravity.bin"
+		}
+	]
+}

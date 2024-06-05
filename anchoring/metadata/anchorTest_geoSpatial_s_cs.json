@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "Faivre d'Arcier Etienne",
+            "owner": "Interdigital",
+            "year": "2023",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "Everything"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/anchoring-test-scene.png",
+    "name": "anchorTest_geoSpatial_s_cs",
+    "path": "anchorTest_geoSpatial_s_cs.gltf",
+    "summary": "demonstrates anchoring using MPEG_anchor at the scene level using TRACKABLE_MARKER_GEO."
+}
