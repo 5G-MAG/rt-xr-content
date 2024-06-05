@@ -8,8 +8,8 @@
         {
             "name" : "Scene",
             "nodes" : [
-                1,
-                4            ],
+                6
+            ],
 			"extensions": {	
 				"MPEG_anchor": {
 					"anchor": 0
@@ -80,6 +80,17 @@
                 1,
                 2,
                 1
+            ]
+        },
+        {
+            "scale" : [
+                0.125,
+                0.125,
+                0.125
+            ],
+            "children" : [
+                1,
+                4
             ]
         }
     ],
