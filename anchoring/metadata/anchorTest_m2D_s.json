@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_m2D_s.jpg",
+    "screenshot": "metadata/anchoring-test-scene.png",
     "name": "anchorTest_m2D_s",
     "path": "anchorTest_m2D_s.gltf",
-    "summary": "demonstrates anchoring using MPEG_anchor at the scene level using TRACKABLE_MARKER_2D."
+    "summary": "Demonstrates anchoring a whole scene using TRACKABLE_MARKER_2D.\nThe file `textures/metro_box.png` is the marker and should be printed on a sheet of paper, or displaid on a screen.\nWhen loading the scene, nothing is displaid until the marker is detected, then the scene remains anchored to the marker as the viewer moves around."
 }

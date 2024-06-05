@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_floor_n.jpg",
+    "screenshot": "metadata/anchoring-test-scene.png",
     "name": "anchorTest_floor_n",
     "path": "anchorTest_floor_n.gltf",
-    "summary": "demonstrates anchoring using MPEG_anchor at the node level using TRACKABLE_FLOOR."
+    "summary": "Demonstrates AR anchoring of a node using TRACKABLE_FLOOR. The 'Cone' node position depends on the detected floor, while the rest of the scene's position is relative to the XR space origin."
 }

@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_viewer_n.jpg",
+    "screenshot": "metadata/anchorTest_viewer_n.png",
     "name": "anchorTest_viewer_n",
     "path": "anchorTest_viewer_n.gltf",
-    "summary": "demonstrates anchoring using MPEG_anchor at the node level using TRACKABLE_VIEWER."
+    "summary": "Demonstrates AR anchoring of a node using TRACKABLE_VIEWER. The anchored node consists of the cone and cube meshes, which remain locked in front of the viewer when moving, while the rest of the scene (the textured plane) remains anchored to its original position in the real world. "
 }

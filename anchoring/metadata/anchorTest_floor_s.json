@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_viewer_s.png",
-    "name": "anchorTest_viewer_s",
-    "path": "anchorTest_viewer_s.gltf",
-    "summary": "Demonstrates AR anchoring a **scene** using TRACKABLE_VIEWER. The whole scene is anchored to the viewer, making it appear staticaly in the middle of the screen as the viewer moves around."
+    "screenshot": "metadata/anchoring-test-scene.png",
+    "name": "anchorTest_floor_s",
+    "path": "anchorTest_floor_s.gltf",
+    "summary": "Demonstrates AR anchoring of a node using TRACKABLE_FLOOR. The whole scene is anchored to the floor."
 }

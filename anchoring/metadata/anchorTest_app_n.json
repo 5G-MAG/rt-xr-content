@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_app_n.jpg",
+    "screenshot": "metadata/anchoring-test-scene.png",
     "name": "anchorTest_app_n",
     "path": "anchorTest_app_n.gltf",
-    "summary": "demonstrates anchoring using MPEG_anchor at the node level using TRACKABLE_APPLICATION."
+    "summary": "sample glTF scene demonstrating anchoring using MPEG_anchor at the node level using TRACKABLE_APPLICATION."
 }

@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_m2D_n.jpg",
+    "screenshot": "metadata/anchoring-test-scene.png",
     "name": "anchorTest_m2D_n",
     "path": "anchorTest_m2D_n.gltf",
-    "summary": "demonstrates anchoring using MPEG_anchor at the node level using TRACKABLE_MARKER_2D."
+    "summary": "Demonstrates anchoring a node TRACKABLE_MARKER_2D.\nThe file `textures/metro_box.png` is the marker and should be printed on a sheet of paper, or displaid on a screen.\nWhen loading the scene only a plane is displaid. The red 'Cone' displays when the marker is detected, and its position is anchored to the marker."
 }

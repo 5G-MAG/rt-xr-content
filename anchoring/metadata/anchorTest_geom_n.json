@@ -13,7 +13,7 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_geom_n.jpg",
+    "screenshot": "metadata/anchoring-test-scene.png",
     "name": "anchorTest_geom_n",
     "path": "anchorTest_geom_n.gltf",
     "summary": "demonstrates anchoring using MPEG_anchor at the node level using TRACKABLE_GEOMETRY."

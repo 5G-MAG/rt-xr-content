@@ -13,7 +13,7 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_m3D_n.jpg",
+    "screenshot": "metadata/anchoring-test-scene.png",
     "name": "anchorTest_m3D_n",
     "path": "anchorTest_m3D_n.gltf",
     "summary": "(not implemented) anchoring using MPEG_anchor at the node level using TRACKABLE_MARKER_3D."

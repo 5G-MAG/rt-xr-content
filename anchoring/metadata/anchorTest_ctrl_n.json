@@ -13,7 +13,7 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_ctrl_n.jpg",
+    "screenshot": "metadata/anchoring-test-scene.png",
     "name": "anchorTest_ctrl_n",
     "path": "anchorTest_ctrl_n.gltf",
     "summary": "demonstrates anchoring using MPEG_anchor at the node level using TRACKABLE_CONTROLLER."

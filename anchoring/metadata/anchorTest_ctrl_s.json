@@ -13,7 +13,7 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_app_s.jpg",
+    "screenshot": "metadata/anchoring-test-scene.png",
     "name": "anchorTest_app_s",
     "path": "anchorTest_app_s.gltf",
     "summary": "demonstrates anchoring using MPEG_anchor at the scene level using TRACKABLE_CONTROLLER."

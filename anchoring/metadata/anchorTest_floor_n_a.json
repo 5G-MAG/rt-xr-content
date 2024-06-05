@@ -13,7 +13,7 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/anchorTest_floor_n_a.jpg",
+    "screenshot": "metadata/anchoring-test-scene.png",
     "name": "anchorTest_floor_n_a",
     "path": "anchorTest_floor_n_a.gltf",
     "summary": "demonstrates anchoring using MPEG_anchor at the node level using TRACKABLE_FLOOR with 2 nodes."
