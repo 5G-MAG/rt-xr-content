@@ -74,6 +74,40 @@ audio and video packaged in separate mp4 files<br>
 </td>
 <td>
 a living room scene demonstrating video texture<br>
+<tr>
+
+<td>
+<a href="guesthouse">guesthouse</a><br>
+<img src="guesthouse/metadata/guesthouse.png" alt="guesthouse"/>
+</td>
+<td>
+Tiny House - Two Story Little House.<br>
+<tr>
+
+<td>
+<a href="low_poly_furnitures_full_bundle">low_poly_furnitures_full_bundle</a><br>
+<img src="low_poly_furnitures_full_bundle/metadata/low_poly_furnitures_full_bundle.png" alt="low_poly_furnitures_full_bundle"/>
+</td>
+<td>
+33 pieces low poly furnitures for mobile games Blender + Substance Painter<br>
+<tr>
+
+<td>
+<a href="post_modern_furniture">post_modern_furniture</a><br>
+<img src="post_modern_furniture/metadata/post_modern_furniture.png" alt="post_modern_furniture"/>
+</td>
+<td>
+Post modern furniture assets<br>
+<tr>
+
+<td>
+<a href="studio_apartment">studio_apartment</a><br>
+<img src="studio_apartment/metadata/studio_apartment.png" alt="studio_apartment"/>
+</td>
+<td>
+Studio apartment <br>
+<tr>
+  
 </table>
 
 
@@ -112,7 +146,7 @@ The metadata file json format is as follow:
 ```
 
 - **path** : is relative to the gltf file.
-- **tags** : tags will be currated. Currently, "testing" is the only tag used. 
+- **tags** : tags will be curated. Currently, "testing" is the only tag used. 
 
 ## Questions or Comments
 
