@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "eyglohildur",
+            "owner": "https://sketchfab.com/eyglohildur",
+            "year": "2024",
+            "license": "CC-BY-4.0",
+            "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+            "what": "Post Modern Furniture - a collection of furniture models from which the model was taken."
+        },
+        {
+            "artist": "Nils DUVAL",
+            "owner": "MotionSpell",
+            "year": "2024",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "prepare the original asset for 5G-MAG with MPEG extensions."
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/floor_anchor.jpg",
+    "name": "tall lamp",
+    "path": "floor_anchor.gltf",
+    "summary": "Demonstrates AR anchoring of the model to the floor on compatible devices. Use the camera to scan a scene, making sure to cover the floor. The lamp model will display as soon as the floor is detected."
+}

@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "RDW MIC, Małopolska’s Virtual Museums project.",
+            "owner": "https://muzea.malopolska.pl/en/objects-list/448",
+            "year": "2016",
+            "license": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "what": "Stereoscopic camera by Heinrich Ernemann"
+        },
+        {
+            "artist": "Nils DUVAL",
+            "owner": "MotionSpell",
+            "year": "2024",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "prepare the original asset for 5G-MAG with MPEG extensions."
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/marker_anchor.jpg",
+    "name": "Antique Stereo Camera - AR marker",
+    "path": "marker_anchor.gltf",
+    "summary": "Demonstrates AR anchoring of the model to a 2D marker. Print the textures/5GMAG.jpg image to paper or on a screen, point the AR device to the marker, the camera model will display anchored to it."
+}

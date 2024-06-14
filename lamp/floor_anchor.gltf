@@ -1,0 +1,504 @@
+{
+    "asset": {
+        "generator": "Khronos glTF Blender I/O v3.6.27",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Scene",
+            "nodes": [
+                6
+            ],
+            "extensions": {
+                "MPEG_anchor": {
+                    "anchor": 0
+                }
+            }
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "S_floorlamp_A_EHH_01_gullfloorlamp_0"
+        },
+        {
+            "mesh": 1,
+            "name": "S_floorlamp_A_EHH_01_ljosfloorlamp_0"
+        },
+        {
+            "mesh": 2,
+            "name": "S_floorlamp_A_EHH_01_svartfloorlamp_0"
+        },
+        {
+            "children": [
+                0,
+                1,
+                2
+            ],
+            "name": "S_floorlamp_A_EHH_01",
+            "rotation": [
+                -0.7071066498756409,
+                0,
+                0,
+                0.70710688829422
+            ],
+            "scale": [
+                1.1364691257476807,
+                1.1364693641662598,
+                1.1364693641662598
+            ]
+        },
+        {
+            "children": [
+                3
+            ],
+            "name": "RootNode"
+        },
+        {
+            "children": [
+                4
+            ],
+            "name": "eab454fd16ae4b96940798ae308a831f.fbx",
+            "rotation": [
+                0.70710688829422,
+                0,
+                0,
+                0.7071066498756409
+            ]
+        },
+        {
+            "children": [
+                5
+            ],
+            "name": "Sketchfab_model.001",
+            "rotation": [
+                -0.7071066498756409,
+                0,
+                0,
+                0.70710688829422
+            ],
+            "scale": [
+                0.008500000461935997,
+                0.008500001393258572,
+                0.008500001393258572
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "doubleSided": true,
+            "name": "gullfloorlamp",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.41025152802467346,
+                    0.41025152802467346,
+                    0.41025152802467346,
+                    1
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "roughnessFactor": 0.12023627758026123
+            }
+        },
+        {
+            "alphaMode": "BLEND",
+            "doubleSided": true,
+            "emissiveFactor": [
+                1,
+                1,
+                1
+            ],
+            "emissiveTexture": {
+                "index": 1
+            },
+            "name": "ljosfloorlamp",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1,
+                    1,
+                    1,
+                    0.04439786449074745
+                ],
+                "baseColorTexture": {
+                    "index": 2
+                },
+                "metallicFactor": 0.6907393336296082,
+                "roughnessFactor": 0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "svartfloorlamp",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.026105182245373726,
+                    0.026105182245373726,
+                    0.026105182245373726,
+                    1
+                ],
+                "roughnessFactor": 0.6385289430618286
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "S_floorlamp_A_EHH_01_gullfloorlamp_0",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2,
+                        "TEXCOORD_1": 3,
+                        "TEXCOORD_2": 4
+                    },
+                    "indices": 5,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "S_floorlamp_A_EHH_01_ljosfloorlamp_0",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 6,
+                        "NORMAL": 7,
+                        "TEXCOORD_0": 8,
+                        "TEXCOORD_1": 9,
+                        "TEXCOORD_2": 10
+                    },
+                    "indices": 11,
+                    "material": 1
+                }
+            ]
+        },
+        {
+            "name": "S_floorlamp_A_EHH_01_svartfloorlamp_0",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 12,
+                        "NORMAL": 13,
+                        "TEXCOORD_0": 14,
+                        "TEXCOORD_1": 15,
+                        "TEXCOORD_2": 16
+                    },
+                    "indices": 17,
+                    "material": 2
+                }
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        },
+        {
+            "sampler": 0,
+            "source": 1
+        },
+        {
+            "sampler": 0,
+            "source": 1
+        }
+    ],
+    "images": [
+        {
+            "mimeType": "image/png",
+            "name": "gullfloorlamp_baseColor",
+            "uri": "textures/gullfloorlamp_baseColor.png"
+        },
+        {
+            "mimeType": "image/png",
+            "name": "ljosfloorlamp_baseColor",
+            "uri": "textures/ljosfloorlamp_baseColor.png"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 3940,
+            "max": [
+                14.20718765258789,
+                10.553366661071777,
+                165.0015411376953
+            ],
+            "min": [
+                -16.778610229492188,
+                -14.218147277832031,
+                4.0093817710876465
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 3940,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 3940,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5126,
+            "count": 3940,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 4,
+            "componentType": 5126,
+            "count": 3940,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 5,
+            "componentType": 5123,
+            "count": 13260,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 6,
+            "componentType": 5126,
+            "count": 1350,
+            "max": [
+                12.38720703125,
+                8.874321937561035,
+                154.9231719970703
+            ],
+            "min": [
+                -15.553703308105469,
+                -12.917463302612305,
+                114.47138214111328
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 7,
+            "componentType": 5126,
+            "count": 1350,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 8,
+            "componentType": 5126,
+            "count": 1350,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 9,
+            "componentType": 5126,
+            "count": 1350,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 10,
+            "componentType": 5126,
+            "count": 1350,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 11,
+            "componentType": 5123,
+            "count": 6840,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 12,
+            "componentType": 5126,
+            "count": 3464,
+            "max": [
+                18.748720169067383,
+                13.714584350585938,
+                161.4785614013672
+            ],
+            "min": [
+                -20.934667587280273,
+                -20.177799224853516,
+                -8.269965417056775e-16
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 13,
+            "componentType": 5126,
+            "count": 3464,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 14,
+            "componentType": 5126,
+            "count": 3464,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 15,
+            "componentType": 5126,
+            "count": 3464,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 16,
+            "componentType": 5126,
+            "count": 3464,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 17,
+            "componentType": 5123,
+            "count": 14232,
+            "type": "SCALAR"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 47280,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 47280,
+            "byteOffset": 47280,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 31520,
+            "byteOffset": 94560,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 31520,
+            "byteOffset": 126080,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 31520,
+            "byteOffset": 157600,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 26520,
+            "byteOffset": 189120,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 16200,
+            "byteOffset": 215640,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 16200,
+            "byteOffset": 231840,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 10800,
+            "byteOffset": 248040,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 10800,
+            "byteOffset": 258840,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 10800,
+            "byteOffset": 269640,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 13680,
+            "byteOffset": 280440,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 41568,
+            "byteOffset": 294120,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 41568,
+            "byteOffset": 335688,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 27712,
+            "byteOffset": 377256,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 27712,
+            "byteOffset": 404968,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 27712,
+            "byteOffset": 432680,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 28464,
+            "byteOffset": 460392,
+            "target": 34963
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 488856,
+            "uri": "lamp.bin"
+        }
+    ],
+    "extensions": {
+        "MPEG_anchor": {
+            "anchors": [
+                {
+                    "trackable": 0,
+                    "requiresAnchoring": true
+                }
+            ],
+            "trackables": [
+                {
+                    "type": 0
+                }
+            ]
+        }
+    },
+    "extensionsUsed": [
+        "MPEG_anchor"
+    ],
+    "extensionsRequired": [
+        "MPEG_anchor"
+    ]
+}
