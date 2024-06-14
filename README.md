@@ -74,6 +74,16 @@ audio and video packaged in separate mp4 files<br>
 </td>
 <td>
 a living room scene demonstrating video texture<br>
+<tr>
+
+<td>
+<a href="studio_apartment">studio_apartment</a><br>
+<img src="studio_apartment/metadata/studio_apartment.png" alt="studio_apartment"/>
+</td>
+<td>
+Studio apartment <br>
+<tr>
+  
 </table>
 
 
@@ -112,7 +122,7 @@ The metadata file json format is as follow:
 ```
 
 - **path** : is relative to the gltf file.
-- **tags** : tags will be currated. Currently, "testing" is the only tag used. 
+- **tags** : tags will be curated. Currently, "testing" is the only tag used. 
 
 ## Questions or Comments
 

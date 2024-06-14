@@ -1,0 +1,19 @@
+{
+    "version": 1,
+    "legal": [
+        {
+            "owner": "zamorev4d",
+            "year": "2016",
+            "license": "Creative Commons Attribution",
+            "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+            "what": "Studio apartment (vray baked textures included) (https://skfb.ly/WwBD)"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/studio_apartment.png",
+    "name": "studio_apartment",
+    "path": "studio_apartment.gltf",
+    "summary": "Studio apartment"
+}
