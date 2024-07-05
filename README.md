@@ -14,6 +14,7 @@ Additional information can be found at: https://5g-mag.github.io/Getting-Started
 See individual directories for detailed information.
 
 ### Reference assets for demonstration
+
 <table>
 <tr>
 <th>Asset</th>
@@ -23,21 +24,21 @@ See individual directories for detailed information.
 
 <tr>
 <td>
-<a href="interactivity">UseCase_01-variant3-Interactivity</a><br>
-<img src="interactivity/metadata/UseCase_01-variant3-Interactivity.jpg"  alt="UseCase_01-variant3-Interactivity"/>
+<a href="studio_apartment"><b>studio_apartment</a></b><br>
+<img src="studio_apartment/metadata/studio_apartment.png"  alt="studio_apartment"/>
 </td>
 <td>
-Asset to test interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERIAL and ACTION_MEDIA<br>
+Asset to test ... Studio apartment<br>
 </td>
 <td>
-"MPEG_media"<br>
-"MPEG_accessor_timed"<br>
-"MPEG_buffer_circular"<br>
-"MPEG_texture_video"<br>
-"KHR_materials_unlit"<br>
-"MPEG_scene_interactivity"<br>
-"MPEG_audio_spatial"<br>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>MPEG_audio_spatial</b><br>
+<b>KHR_materials_unlit</b><br>
 <tr>
+  
 </table>
 
 ### Reference assets for testing
@@ -51,94 +52,159 @@ Asset to test interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATER
 
 <tr>
 <td>
-<a href="interactivity">UseCase_01-variant3-Interactivity</a><br>
+<a href="interactivity"><b>UseCase_01-variant3-Interactivity</a></b><br>
 <img src="interactivity/metadata/UseCase_01-variant3-Interactivity.jpg"  alt="UseCase_01-variant3-Interactivity"/>
 </td>
 <td>
-Asset to test interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERIAL and ACTION_MEDIA<br>
+Asset to test INTERACTIVITY using <b>TRIGGER_COLLISION</b> to activate <b>ACTION_SET_MATERIAL</b> and <b>ACTION_MEDIA</b><br>
 </td>
 <td>
-"MPEG_media"<br>
-"MPEG_accessor_timed"<br>
-"MPEG_buffer_circular"<br>
-"MPEG_texture_video"<br>
-"KHR_materials_unlit"<br>
-"MPEG_scene_interactivity"<br>
-"MPEG_audio_spatial"<br>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>KHR_materials_unlit</b><br>
+<b>MPEG_scene_interactivity</b><br>
+<b>MPEG_audio_spatial</b><br>
 <tr>
 
+<tr>
 <td>
-<a href="interactivity">UseCase_02-variant3-Interactivity</a><br>
+<a href="interactivity"><b>UseCase_02-variant3-Interactivity</a></b><br>
 <img src="interactivity/metadata/UseCase_02-variant3-Interactivity.jpg"  alt="UseCase_02-variant3-Interactivity"/>
 </td>
-
 <td>
-Asset to test interactivity using TRIGGER_VISIBILTIY to activate ACTION_MEDIA<br>
+Asset to test INTERACTIVITY using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTION_MEDIA</b><br>
+</td>
+<td>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>KHR_materials_unlit</b><br>
+<b>MPEG_scene_interactivity</b><br>
+<b>MPEG_node_interactivity</b><br>
+<b>MPEG_audio_spatial</b><br>
 <tr>
 
+<tr>
 <td>
-<a href="interactivity">UseCase_03-variant1-Interactivity</a><br>
+<a href="interactivity"><b>UseCase_03-variant1-Interactivity</a></b><br>
 <img src="interactivity/metadata/UseCase_03-variant1-Interactivity.jpg"  alt="UseCase_03-variant1-Interactivity"/>
 </td>
-
 <td>
-Asset to test interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION and ACTION_MEDIA<br>
+Asset to test INTERACTIVITY using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION_ANIMATION</b> and <b>ACTION_MEDIA</b><br>
+</td>
+<td>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>KHR_materials_unlit</b><br>
+<b>MPEG_scene_interactivity</b><br>
+<b>MPEG_audio_spatial</b><br>
 <tr>
 
+<tr>
 <td>
-<a href="interactivity">UseCase_03-variant3-Interactivity</a><br>
+<a href="interactivity"><b>UseCase_03-variant3-Interactivity</a></b><br>
 <img src="interactivity/metadata/UseCase_03-variant3-Interactivity.jpg"  alt="UseCase_03-variant3-Interactivity"/>
 </td>
-
 <td>
-Asset to test interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION<br>
+Asset to test INTERACTIVITY using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTION_ANIMATION</b><br>
+</td>
+<td>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>KHR_materials_unlit</b><br>
+<b>MPEG_scene_interactivity</b><br>
+<b>MPEG_audio_spatial</b><br>
 <tr>
 
+<tr>
 <td>
-<a href="TV">scene</a><br>
+<a href="TV"><b>Scene</a></b><br>
 <img src="TV/metadata/scene.jpg"  alt="scene"/>
 </td>
-
 <td>
-a CRT TV set playing a movie<br>
+Asset to test ... <br>
+</td>
+<td>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>MPEG_audio_spatial</b><br>
 <tr>
 
+<tr>
 <td>
-<a href="video">scene-av-combined</a><br>
+<a href="video"><b>scene-av-combined</a></b><br>
 <img src="video/metadata/scene.jpg"  alt="scene-av-combined"/>
 </td>
-
 <td>
-audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br>
+Asset to test ... audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br>
+</td>
+<td>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>MPEG_audio_spatial</b><br>
+<b>KHR_materials_unlit</b><br>
 <tr>
 
+<tr>
 <td>
-<a href="video">scene-av-independant</a><br>
+<a href="video"><b>scene-av-independant</a></b><br>
 <img src="video/metadata/scene.jpg"  alt="scene-av-independant"/>
 </td>
-
 <td>
-audio and video packaged in separate mp4 files<br>
+Asset to test ... audio and video packaged in separate mp4 files<br>
+</td>
+<td>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>MPEG_audio_spatial</b><br>
+<b>KHR_materials_unlit</b><br>
 <tr>
 
+<tr>
 <td>
-<a href="video">scene</a><br>
+<a href="video"><b>scene</a></b><br>
 <img src="video/metadata/scene.jpg"  alt="scene"/>
 </td>
-
 <td>
-a living room scene demonstrating video texture<br>
+Asset to test ... a living room scene demonstrating video texture<br>
+</td>
+<td>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
 <tr>
 
+<tr>
 <td>
-<a href="studio_apartment">studio_apartment</a><br>
+<a href="studio_apartment"><b>studio_apartment</a></b><br>
 <img src="studio_apartment/metadata/studio_apartment.png"  alt="studio_apartment"/>
 </td>
-
 <td>
-Studio apartment <br>
+Asset to test ... Studio apartment<br>
+</td>
+<td>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>MPEG_audio_spatial</b><br>
+<b>KHR_materials_unlit</b><br>
 <tr>
-  
+
 </table>
 
 
