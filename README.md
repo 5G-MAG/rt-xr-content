@@ -4,16 +4,16 @@
   <img src="https://img.shields.io/github/v/tag/5G-MAG/rt-xr-content?label=version" alt="Version">
 </p>
 
-## Introduction
+# Introduction
 This repository provides test content for the XR Player.
 
 Additional information can be found at: https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/
 
-## Available content
+# Available content
 
 See individual directories for detailed information.
 
-### Reference assets for demonstration
+## Reference assets for demonstration
 
 <table>
 <tr>
@@ -23,7 +23,7 @@ See individual directories for detailed information.
 </tr>
 
 <tr>
-<td>
+<td width="400px">
 <a href="studio_apartment"><b>studio_apartment</a></b><br>
 <img src="studio_apartment/metadata/studio_apartment.png"  alt="studio_apartment"/>
 </td>
@@ -41,7 +41,9 @@ Asset to test ... Studio apartment<br>
   
 </table>
 
-### Reference assets for testing
+## Reference assets for testing
+
+### Interactivity
 
 <table>
 <tr>
@@ -51,9 +53,9 @@ Asset to test ... Studio apartment<br>
 </tr>
 
 <tr>
-<td>
+<td width="400px">
 <a href="interactivity"><b>UseCase_01-variant3-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_01-variant3-Interactivity.jpg"  alt="UseCase_01-variant3-Interactivity"/>
+<img src="interactivity/metadata/UseCase_01-variant3-Interactivity.jpg" alt="UseCase_01-variant3-Interactivity"/>
 </td>
 <td>
 Asset to test INTERACTIVITY using <b>TRIGGER_COLLISION</b> to activate <b>ACTION_SET_MATERIAL</b> and <b>ACTION_MEDIA</b><br>
@@ -69,9 +71,9 @@ Asset to test INTERACTIVITY using <b>TRIGGER_COLLISION</b> to activate <b>ACTION
 <tr>
 
 <tr>
-<td>
+<td width="400px">
 <a href="interactivity"><b>UseCase_02-variant3-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_02-variant3-Interactivity.jpg"  alt="UseCase_02-variant3-Interactivity"/>
+<img src="interactivity/metadata/UseCase_02-variant3-Interactivity.jpg" alt="UseCase_02-variant3-Interactivity"/>
 </td>
 <td>
 Asset to test INTERACTIVITY using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTION_MEDIA</b><br>
@@ -88,9 +90,9 @@ Asset to test INTERACTIVITY using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTIO
 <tr>
 
 <tr>
-<td>
+<td width="400px">
 <a href="interactivity"><b>UseCase_03-variant1-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_03-variant1-Interactivity.jpg"  alt="UseCase_03-variant1-Interactivity"/>
+<img src="interactivity/metadata/UseCase_03-variant1-Interactivity.jpg" alt="UseCase_03-variant1-Interactivity"/>
 </td>
 <td>
 Asset to test INTERACTIVITY using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION_ANIMATION</b> and <b>ACTION_MEDIA</b><br>
@@ -106,9 +108,9 @@ Asset to test INTERACTIVITY using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION
 <tr>
 
 <tr>
-<td>
+<td width="400px">
 <a href="interactivity"><b>UseCase_03-variant3-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_03-variant3-Interactivity.jpg"  alt="UseCase_03-variant3-Interactivity"/>
+<img src="interactivity/metadata/UseCase_03-variant3-Interactivity.jpg" alt="UseCase_03-variant3-Interactivity"/>
 </td>
 <td>
 Asset to test INTERACTIVITY using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTION_ANIMATION</b><br>
@@ -123,10 +125,22 @@ Asset to test INTERACTIVITY using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTIO
 <b>MPEG_audio_spatial</b><br>
 <tr>
 
+</table>
+
+
+### Media
+
+<table>
 <tr>
-<td>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
+<tr>
+<td width="400px">
 <a href="TV"><b>Scene</a></b><br>
-<img src="TV/metadata/scene.jpg"  alt="scene"/>
+<img src="TV/metadata/scene.jpg" alt="scene"/>
 </td>
 <td>
 Asset to test ... <br>
@@ -140,9 +154,9 @@ Asset to test ... <br>
 <tr>
 
 <tr>
-<td>
+<td width="400px">
 <a href="video"><b>scene-av-combined</a></b><br>
-<img src="video/metadata/scene.jpg"  alt="scene-av-combined"/>
+<img src="video/metadata/scene.jpg" alt="scene-av-combined"/>
 </td>
 <td>
 Asset to test ... audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br>
@@ -157,9 +171,9 @@ Asset to test ... audio and video packaged as seperate tracks of a single mp4, e
 <tr>
 
 <tr>
-<td>
+<td width="400px">
 <a href="video"><b>scene-av-independant</a></b><br>
-<img src="video/metadata/scene.jpg"  alt="scene-av-independant"/>
+<img src="video/metadata/scene.jpg" alt="scene-av-independant"/>
 </td>
 <td>
 Asset to test ... audio and video packaged in separate mp4 files<br>
@@ -174,9 +188,9 @@ Asset to test ... audio and video packaged in separate mp4 files<br>
 <tr>
 
 <tr>
-<td>
+<td width="400px">
 <a href="video"><b>scene</a></b><br>
-<img src="video/metadata/scene.jpg"  alt="scene"/>
+<img src="video/metadata/scene.jpg" alt="scene"/>
 </td>
 <td>
 Asset to test ... a living room scene demonstrating video texture<br>
@@ -189,9 +203,9 @@ Asset to test ... a living room scene demonstrating video texture<br>
 <tr>
 
 <tr>
-<td>
+<td width="400px">
 <a href="studio_apartment"><b>studio_apartment</a></b><br>
-<img src="studio_apartment/metadata/studio_apartment.png"  alt="studio_apartment"/>
+<img src="studio_apartment/metadata/studio_apartment.png" alt="studio_apartment"/>
 </td>
 <td>
 Asset to test ... Studio apartment<br>
@@ -208,7 +222,7 @@ Asset to test ... Studio apartment<br>
 </table>
 
 
-## Contributing 
+# Contributing 
 
 In order to contribute, open a pull request on the `development` branch.
 
@@ -245,6 +259,6 @@ The metadata file json format is as follow:
 - **path** : is relative to the gltf file.
 - **tags** : tags will be curated. Currently, "testing" is the only tag used. 
 
-## Questions or Comments
+# Questions or Comments
 
 If you have any questions, please submit an issue.
