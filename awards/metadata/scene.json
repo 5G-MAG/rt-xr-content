@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "owner": "Virtual Museums of Małopolska (https://sketchfab.com/WirtualneMuzeaMalopolski)",
+            "year": "2021",
+            "license": "CC0 Public Domain",
+            "licenseUrl": "https://creativecommons.org/public-domain/cc0/",
+            "what": "The Academy Award - statuette - https://skfb.ly/6Z7JQ"
+        }
+    ],
+    "tags": [
+        "demo"
+    ],
+    "screenshot": "metadata/scene.jpg",
+    "name": "Academy Award statuette",
+    "path": "scene.gltf",
+    "summary": "3D model of the academy award statuette"
+}
