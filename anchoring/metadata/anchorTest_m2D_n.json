@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "Faivre d'Arcier Etienne",
+            "owner": "Interdigital",
+            "year": "2023",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "Everything"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/anchoring-test-scene.png",
+    "name": "anchorTest_m2D_n",
+    "path": "anchorTest_m2D_n.gltf",
+    "summary": "Demonstrates anchoring a node TRACKABLE_MARKER_2D.\nThe file `textures/metro_box.png` is the marker and should be printed on a sheet of paper, or displaid on a screen.\nWhen loading the scene only a plane is displaid. The red 'Cone' displays when the marker is detected, and its position is anchored to the marker."
+}
