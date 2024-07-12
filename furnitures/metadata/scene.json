@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "owner": "https://sketchfab.com/eyglohildur",
+            "year": "2019",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "what": "Post Modern Furniture - https://skfb.ly/6WOrs"
+        }
+    ],
+    "tags": [
+        "demo"
+    ],
+    "screenshot": "metadata/scene.png",
+    "name": "mini sofa",
+    "path": "scene.gltf",
+    "summary": "3D model of a small sofa"
+}
