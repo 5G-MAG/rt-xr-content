@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/UseCase_02-variant3-Interactivity.jpg",
-    "name": "UseCase_02-variant3-Interactivity",
-    "path": "UseCase_02-variant3-Interactivity.gltf",
+    "screenshot": "metadata/UseCase_02-variant3-geometry.jpg",
+    "name": "UseCase_02-variant3-geometry",
+    "path": "UseCase_02-variant3-geometry.gltf",
     "summary": "demonstrates interactivity behavior using TRIGGER_VISIBILTIY to activate ACTION_MEDIA"
 }
