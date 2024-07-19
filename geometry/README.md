@@ -1,5 +1,5 @@
 
-## UseCase_01-variant3-Interactivity
+## UseCase_01-variant3-geometry
 
 ### Summary
 demonstrates interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERIAL and ACTION_MEDIA
@@ -15,7 +15,7 @@ demonstrates interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERI
 - MPEG_audio_spatial
 
 ### Screeshot
-![screenshot](metadata/UseCase_01-variant3-Interactivity.jpg)
+![screenshot](metadata/UseCase_01-variant3-geometry.jpg)
 
 ### Legal
 
@@ -24,7 +24,7 @@ demonstrates interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERI
   - Lelievre Sylvain for Everything
 
 
-## UseCase_02-variant3-Interactivity
+## UseCase_02-variant3-geometry
 
 ### Summary
 demonstrates interactivity behavior using TRIGGER_VISIBILTIY to activate ACTION_MEDIA
@@ -41,7 +41,7 @@ demonstrates interactivity behavior using TRIGGER_VISIBILTIY to activate ACTION_
 - MPEG_audio_spatial
 
 ### Screeshot
-![screenshot](metadata/UseCase_02-variant3-Interactivity.jpg)
+![screenshot](metadata/UseCase_02-variant3-geometry.jpg)
 
 ### Legal
 
@@ -50,7 +50,7 @@ demonstrates interactivity behavior using TRIGGER_VISIBILTIY to activate ACTION_
   - Lelievre Sylvain for Everything
 
 
-## UseCase_03-variant1-Interactivity
+## UseCase_03-variant1-geometry
 
 ### Summary
 demonstrates interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION and ACTION_MEDIA
@@ -66,7 +66,7 @@ demonstrates interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION 
 - MPEG_audio_spatial
 
 ### Screeshot
-![screenshot](metadata/UseCase_03-variant1-Interactivity.jpg)
+![screenshot](metadata/UseCase_03-variant1-geometry.jpg)
 
 ### Legal
 
@@ -75,7 +75,7 @@ demonstrates interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION 
   - Lelievre Sylvain for Everything
 
 
-## UseCase_03-variant3-Interactivity
+## UseCase_03-variant3-geometry
 
 ### Summary
 demonstrates interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION
@@ -91,7 +91,7 @@ demonstrates interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION
 - MPEG_audio_spatial
 
 ### Screeshot
-![screenshot](metadata/UseCase_03-variant3-Interactivity.jpg)
+![screenshot](metadata/UseCase_03-variant3-geometry.jpg)
 
 ### Legal
 
