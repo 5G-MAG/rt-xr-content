@@ -314,7 +314,7 @@ Demonstrates AR anchoring of a node using TRACKABLE_VIEWER. The anchored node co
 - MPEG_anchor
 
 ### Screeshot
-![screenshot](metadata/anchorTest_viewer_n.png)
+![screenshot](metadata/anchorTest_viewer_n.jpg)
 
 ### Legal
 
@@ -334,7 +334,7 @@ Demonstrates AR anchoring a **scene** using TRACKABLE_VIEWER. The whole scene is
 - MPEG_anchor
 
 ### Screeshot
-![screenshot](metadata/anchorTest_viewer_s.png)
+![screenshot](metadata/anchorTest_viewer_s.jpg)
 
 ### Legal
 
