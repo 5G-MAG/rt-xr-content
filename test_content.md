@@ -31,7 +31,6 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_COLLISION</b> to a
 <b>MPEG_accessor_timed</b><br>
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
-<b>KHR_materials_unlit</b><br>
 <b>MPEG_scene_geometry</b><br>
 <b>MPEG_audio_spatial</b><br>
 <tr>
@@ -49,7 +48,6 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_VISIBILTIY</b> to 
 <b>MPEG_accessor_timed</b><br>
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
-<b>KHR_materials_unlit</b><br>
 <b>MPEG_scene_interactivity</b><br>
 <b>MPEG_node_interactivity</b><br>
 <b>MPEG_audio_spatial</b><br>
@@ -68,7 +66,6 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_PROXIMITY</b> to a
 <b>MPEG_accessor_timed</b><br>
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
-<b>KHR_materials_unlit</b><br>
 <b>MPEG_scene_interactivity</b><br>
 <b>MPEG_audio_spatial</b><br>
 <tr>
@@ -86,7 +83,6 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_USER_INPUT</b> to 
 <b>MPEG_accessor_timed</b><br>
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
-<b>KHR_materials_unlit</b><br>
 <b>MPEG_scene_interactivity</b><br>
 <b>MPEG_audio_spatial</b><br>
 <tr>
@@ -143,7 +139,6 @@ Reference asset to test <b>MEDIA</b> with audio and video packaged as seperate t
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
 <b>MPEG_audio_spatial</b><br>
-<b>KHR_materials_unlit</b><br>
 <tr>
 
 <tr>
@@ -160,7 +155,6 @@ Reference asset to test <b>MEDIA</b> with audio and video packaged in separate m
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
 <b>MPEG_audio_spatial</b><br>
-<b>KHR_materials_unlit</b><br>
 <tr>
 
 <tr>
