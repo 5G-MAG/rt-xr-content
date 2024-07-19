@@ -38,9 +38,8 @@ Reference asset to demo <b>MEDIA</b> in a scene represeting a studio apartment<b
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
 <b>MPEG_audio_spatial</b><br>
-<b>KHR_materials_unlit</b><br>
 <tr>
-  
+
 </table>
 
 ### The Academy Award
