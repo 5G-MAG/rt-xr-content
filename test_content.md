@@ -180,34 +180,6 @@ Reference asset to test <b>MEDIA</b> living room scene demonstrating video textu
 
 </table>
 
-### Studio Apartment
-
-<table>
-<tr>
-<th>Asset</th>
-<th>Description</th>
-<th>Properties</th>
-</tr>
-
-<tr>
-<td width="400px">
-<a href="studio_apartment"><b>studio_apartment</a></b><br>
-<img src="studio_apartment/metadata/studio_apartment.png" alt="studio_apartment"/>
-</td>
-<td>
-Asset to test ... Studio apartment<br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<b>MPEG_audio_spatial</b><br>
-<b>KHR_materials_unlit</b><br>
-<tr>
-
-</table>
-
 # Contributing 
 
 In order to contribute, open a pull request on the `development` branch.
