@@ -9,7 +9,7 @@ See individual directories for detailed information.
 
 ## Reference assets for testing
 
-### Interactivity
+### Solid geometries
 
 <table>
 <tr>
@@ -20,8 +20,8 @@ See individual directories for detailed information.
 
 <tr>
 <td width="400px">
-<a href="interactivity"><b>UseCase_01-variant3-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_01-variant3-Interactivity.jpg" alt="UseCase_01-variant3-Interactivity"/>
+<a href="geometry"><b>UseCase_01-variant3-geometry</a></b><br>
+<img src="geometry/metadata/UseCase_01-variant3-geometry.jpg" alt="UseCase_01-variant3-geometry"/>
 </td>
 <td>
 Asset to test INTERACTIVITY using <b>TRIGGER_COLLISION</b> to activate <b>ACTION_SET_MATERIAL</b> and <b>ACTION_MEDIA</b><br>
@@ -32,14 +32,14 @@ Asset to test INTERACTIVITY using <b>TRIGGER_COLLISION</b> to activate <b>ACTION
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
 <b>KHR_materials_unlit</b><br>
-<b>MPEG_scene_interactivity</b><br>
+<b>MPEG_scene_geometry</b><br>
 <b>MPEG_audio_spatial</b><br>
 <tr>
 
 <tr>
 <td width="400px">
-<a href="interactivity"><b>UseCase_02-variant3-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_02-variant3-Interactivity.jpg" alt="UseCase_02-variant3-Interactivity"/>
+<a href="geometry"><b>UseCase_02-variant3-geometry</a></b><br>
+<img src="geometry/metadata/UseCase_02-variant3-geometry.jpg" alt="UseCase_02-variant3-geometry"/>
 </td>
 <td>
 Asset to test INTERACTIVITY using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTION_MEDIA</b><br>
@@ -57,8 +57,8 @@ Asset to test INTERACTIVITY using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTIO
 
 <tr>
 <td width="400px">
-<a href="interactivity"><b>UseCase_03-variant1-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_03-variant1-Interactivity.jpg" alt="UseCase_03-variant1-Interactivity"/>
+<a href="geometry"><b>UseCase_03-variant1-geometry</a></b><br>
+<img src="geometry/metadata/UseCase_03-variant1-geometry.jpg" alt="UseCase_03-variant1-geometry"/>
 </td>
 <td>
 Asset to test INTERACTIVITY using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION_ANIMATION</b> and <b>ACTION_MEDIA</b><br>
@@ -75,8 +75,8 @@ Asset to test INTERACTIVITY using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION
 
 <tr>
 <td width="400px">
-<a href="interactivity"><b>UseCase_03-variant3-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_03-variant3-Interactivity.jpg" alt="UseCase_03-variant3-Interactivity"/>
+<a href="geometry"><b>UseCase_03-variant3-geometry</a></b><br>
+<img src="geometry/metadata/UseCase_03-variant3-geometry.jpg" alt="UseCase_03-variant3-geometry"/>
 </td>
 <td>
 Asset to test INTERACTIVITY using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTION_ANIMATION</b><br>
@@ -93,7 +93,7 @@ Asset to test INTERACTIVITY using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTIO
 
 </table>
 
-### Media
+### TV
 
 <table>
 <tr>
@@ -104,11 +104,11 @@ Asset to test INTERACTIVITY using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTIO
 
 <tr>
 <td width="400px">
-<a href="TV"><b>Scene</a></b><br>
+<a href="TV"><b>scene.gltf</a></b><br>
 <img src="TV/metadata/scene.jpg" alt="scene"/>
 </td>
 <td>
-Asset to test ... <br>
+Reference asset to test <b>MEDIA</b>. <br>
 </td>
 <td>
 <b>MPEG_media</b><br>
@@ -118,13 +118,24 @@ Asset to test ... <br>
 <b>MPEG_audio_spatial</b><br>
 <tr>
 
+</table>
+
+### Video
+
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
 <tr>
 <td width="400px">
-<a href="video"><b>scene-av-combined</a></b><br>
+<a href="video"><b>scene-av-combined.gltf</a></b><br>
 <img src="video/metadata/scene.jpg" alt="scene-av-combined"/>
 </td>
 <td>
-Asset to test ... audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br>
+Reference asset to test <b>MEDIA</b> with audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br>
 </td>
 <td>
 <b>MPEG_media</b><br>
@@ -137,11 +148,11 @@ Asset to test ... audio and video packaged as seperate tracks of a single mp4, e
 
 <tr>
 <td width="400px">
-<a href="video"><b>scene-av-independant</a></b><br>
+<a href="video"><b>scene-av-independant.gltf</a></b><br>
 <img src="video/metadata/scene.jpg" alt="scene-av-independant"/>
 </td>
 <td>
-Asset to test ... audio and video packaged in separate mp4 files<br>
+Reference asset to test <b>MEDIA</b> with audio and video packaged in separate mp4 files<br>
 </td>
 <td>
 <b>MPEG_media</b><br>
@@ -154,11 +165,11 @@ Asset to test ... audio and video packaged in separate mp4 files<br>
 
 <tr>
 <td width="400px">
-<a href="video"><b>scene</a></b><br>
+<a href="video"><b>scene.gltf</a></b><br>
 <img src="video/metadata/scene.jpg" alt="scene"/>
 </td>
 <td>
-Asset to test ... a living room scene demonstrating video texture<br>
+Reference asset to test <b>MEDIA</b> living room scene demonstrating video texture<br>
 </td>
 <td>
 <b>MPEG_media</b><br>
@@ -166,6 +177,17 @@ Asset to test ... a living room scene demonstrating video texture<br>
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
 <tr>
+
+</table>
+
+### Studio Apartment
+
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
 
 <tr>
 <td width="400px">
