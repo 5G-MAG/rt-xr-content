@@ -9,7 +9,7 @@ See individual directories for detailed information.
 
 ## Reference assets for testing
 
-### Solid geometries
+### Solid geometries for INTERACTIVITIY
 
 <table>
 <tr>
