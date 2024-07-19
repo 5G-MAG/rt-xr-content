@@ -24,7 +24,7 @@ See individual directories for detailed information.
 
 <tr>
 <td width="400px">
-<a href="studio_apartment"><b>studio_apartment</a></b><br>
+<a href="studio_apartment"><b>studio_apartment.gltf</a></b><br>
 <img src="studio_apartment/metadata/studio_apartment.png"  alt="studio_apartment"/>
 </td>
 <td>
