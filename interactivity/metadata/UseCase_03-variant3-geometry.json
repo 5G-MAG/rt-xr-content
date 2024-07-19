@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/UseCase_03-variant3-Interactivity.jpg",
-    "name": "UseCase_03-variant3-Interactivity",
-    "path": "UseCase_03-variant3-Interactivity.gltf",
+    "screenshot": "metadata/UseCase_03-variant3-geometry.jpg",
+    "name": "UseCase_03-variant3-geometry",
+    "path": "UseCase_03-variant3-geometry.gltf",
     "summary": "demonstrates interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION"
 }
