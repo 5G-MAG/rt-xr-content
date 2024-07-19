@@ -24,7 +24,7 @@ See individual directories for detailed information.
 <img src="geometry/metadata/UseCase_01-variant3-geometry.jpg" alt="UseCase_01-variant3-geometry"/>
 </td>
 <td>
-Asset to test INTERACTIVITY using <b>TRIGGER_COLLISION</b> to activate <b>ACTION_SET_MATERIAL</b> and <b>ACTION_MEDIA</b><br>
+Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_COLLISION</b> to activate <b>ACTION_SET_MATERIAL</b> and <b>ACTION_MEDIA</b><br>
 </td>
 <td>
 <b>MPEG_media</b><br>
@@ -42,7 +42,7 @@ Asset to test INTERACTIVITY using <b>TRIGGER_COLLISION</b> to activate <b>ACTION
 <img src="geometry/metadata/UseCase_02-variant3-geometry.jpg" alt="UseCase_02-variant3-geometry"/>
 </td>
 <td>
-Asset to test INTERACTIVITY using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTION_MEDIA</b><br>
+Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTION_MEDIA</b><br>
 </td>
 <td>
 <b>MPEG_media</b><br>
@@ -61,7 +61,7 @@ Asset to test INTERACTIVITY using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTIO
 <img src="geometry/metadata/UseCase_03-variant1-geometry.jpg" alt="UseCase_03-variant1-geometry"/>
 </td>
 <td>
-Asset to test INTERACTIVITY using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION_ANIMATION</b> and <b>ACTION_MEDIA</b><br>
+Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION_ANIMATION</b> and <b>ACTION_MEDIA</b><br>
 </td>
 <td>
 <b>MPEG_media</b><br>
@@ -79,7 +79,7 @@ Asset to test INTERACTIVITY using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION
 <img src="geometry/metadata/UseCase_03-variant3-geometry.jpg" alt="UseCase_03-variant3-geometry"/>
 </td>
 <td>
-Asset to test INTERACTIVITY using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTION_ANIMATION</b><br>
+Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTION_ANIMATION</b><br>
 </td>
 <td>
 <b>MPEG_media</b><br>
