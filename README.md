@@ -66,6 +66,29 @@ Reference asset to demo <b>ANCHORING</b> with a 3D model of the Academy Award st
   
 </table>
 
+### Furnitures
+
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
+<tr>
+<td width="400px">
+<a href="furnitures"><b>scene.gltf</a></b><br>
+<img src="furnitures/metadata/scene.jpg"  alt="scene"/>
+</td>
+<td>
+Reference asset to demo <b>ANCHORING</b> with a 3D model of a small sofa<br>
+</td>
+<td>
+<b>MPEG_anchor</b><br>
+<tr>
+  
+</table>
+
 ## Reference assets for testing
 
 Reference assets for testing are listed [here](/test_content.md).
