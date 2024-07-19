@@ -20,7 +20,7 @@ See individual directories for detailed information.
 
 <tr>
 <td width="400px">
-<a href="geometry"><b>UseCase_01-variant3-geometry</a></b><br>
+<a href="geometry"><b>UseCase_01-variant3-geometry.gltf</a></b><br>
 <img src="geometry/metadata/UseCase_01-variant3-geometry.jpg" alt="UseCase_01-variant3-geometry"/>
 </td>
 <td>
@@ -38,7 +38,7 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_COLLISION</b> to a
 
 <tr>
 <td width="400px">
-<a href="geometry"><b>UseCase_02-variant3-geometry</a></b><br>
+<a href="geometry"><b>UseCase_02-variant3-geometry.gltf</a></b><br>
 <img src="geometry/metadata/UseCase_02-variant3-geometry.jpg" alt="UseCase_02-variant3-geometry"/>
 </td>
 <td>
@@ -57,7 +57,7 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_VISIBILTIY</b> to 
 
 <tr>
 <td width="400px">
-<a href="geometry"><b>UseCase_03-variant1-geometry</a></b><br>
+<a href="geometry"><b>UseCase_03-variant1-geometry.gltf</a></b><br>
 <img src="geometry/metadata/UseCase_03-variant1-geometry.jpg" alt="UseCase_03-variant1-geometry"/>
 </td>
 <td>
@@ -75,7 +75,7 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_PROXIMITY</b> to a
 
 <tr>
 <td width="400px">
-<a href="geometry"><b>UseCase_03-variant3-geometry</a></b><br>
+<a href="geometry"><b>UseCase_03-variant3-geometry.gltf</a></b><br>
 <img src="geometry/metadata/UseCase_03-variant3-geometry.jpg" alt="UseCase_03-variant3-geometry"/>
 </td>
 <td>
