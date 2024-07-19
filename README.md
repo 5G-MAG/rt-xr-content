@@ -55,7 +55,7 @@ Reference asset to demo <b>MEDIA</b> in a scene represeting a studio apartment<b
 <tr>
 <td width="400px">
 <a href="awards"><b>scene_anchoring.gltf</a></b><br>
-<img src="awards/metadata/scene.jpg"  alt="scene"/>
+<img src="awards/metadata/scene.png"  alt="scene"/>
 </td>
 <td>
 Reference asset to demo <b>ANCHORING</b> with a 3D model of the Academy Award statuette<br>
