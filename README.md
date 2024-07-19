@@ -15,6 +15,8 @@ See individual directories for detailed information.
 
 ## Reference assets for demonstration
 
+### Studio apartment
+
 <table>
 <tr>
 <th>Asset</th>
@@ -28,7 +30,7 @@ See individual directories for detailed information.
 <img src="studio_apartment/metadata/studio_apartment.png"  alt="studio_apartment"/>
 </td>
 <td>
-Asset to test ... Studio apartment<br>
+Reference asset to demo <b>MEDIA</b> in a scene represeting a studio apartment<br>
 </td>
 <td>
 <b>MPEG_media</b><br>
@@ -37,6 +39,29 @@ Asset to test ... Studio apartment<br>
 <b>MPEG_texture_video</b><br>
 <b>MPEG_audio_spatial</b><br>
 <b>KHR_materials_unlit</b><br>
+<tr>
+  
+</table>
+
+### The Academy Award
+
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
+<tr>
+<td width="400px">
+<a href="awards"><b>scene_anchoring.gltf</a></b><br>
+<img src="awards/metadata/scene.jpg"  alt="scene"/>
+</td>
+<td>
+Reference asset to demo <b>ANCHORING</b> with a 3D model of the Academy Award statuette<br>
+</td>
+<td>
+<b>MPEG_anchor</b><br>
 <tr>
   
 </table>
