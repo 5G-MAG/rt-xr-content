@@ -5,7 +5,7 @@
 </p>
 
 # Introduction
-This repository provides test content for the XR Player.
+This repository provides reference content for testng and demos with the XR Player.
 
 Additional information can be found at: https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/
 
