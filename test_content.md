@@ -1,10 +1,4 @@
-<h1 align="center">Content for the XR Unity Player</h1>
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Under_Development-yellow" alt="Under Development">
-  <img src="https://img.shields.io/github/v/tag/5G-MAG/rt-xr-content?label=version" alt="Version">
-</p>
-
-# Introduction
+# Test content for the XR Unity Player
 This repository provides test content for the XR Player.
 
 Additional information can be found at: https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/
