@@ -89,6 +89,30 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_USER_INPUT</b> to 
 
 </table>
 
+### Solid geometries for ANCHORING
+
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
+<tr>
+<td width="400px">
+<a href="anchoring"><b>anchorTest_app_n.gltf</a></b><br>
+<img src="anchoring/metadata/anchoring-test-scene.png" alt="anchoring-test-scene"/>
+</td>
+<td>
+Reference asset to test <b>ANCHORING</b>. See all the available options <a href="anchoring"><b>here</a></b><br>
+<br>
+</td>
+<td>
+<b>MPEG_anchor</b><br>
+<tr>
+
+</table>
+
 ### TV
 
 <table>
