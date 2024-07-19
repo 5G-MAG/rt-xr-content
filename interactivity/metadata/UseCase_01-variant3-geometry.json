@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/UseCase_01-variant3-Interactivity.jpg",
-    "name": "UseCase_01-variant3-Interactivity",
-    "path": "UseCase_01-variant3-Interactivity.gltf",
+    "screenshot": "metadata/UseCase_01-variant3-geometry.jpg",
+    "name": "UseCase_01-variant3-geometry",
+    "path": "UseCase_01-variant3-geometry.gltf",
     "summary": "demonstrates interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERIAL and ACTION_MEDIA"
 }
