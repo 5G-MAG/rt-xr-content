@@ -21,7 +21,6 @@ See individual directories for detailed information.
 <tr>
 <td width="400px">
 <a href="geometry"><b>UseCase_01-variant3-geometry.gltf</a></b><br>
-<img src="geometry/metadata/UseCase_01-variant3-geometry.jpg" alt="UseCase_01-variant3-geometry"/>
 </td>
 <td>
 Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_COLLISION</b> to activate <b>ACTION_SET_MATERIAL</b> and <b>ACTION_MEDIA</b><br>
@@ -38,7 +37,6 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_COLLISION</b> to a
 <tr>
 <td width="400px">
 <a href="geometry"><b>UseCase_02-variant3-geometry.gltf</a></b><br>
-<img src="geometry/metadata/UseCase_02-variant3-geometry.jpg" alt="UseCase_02-variant3-geometry"/>
 </td>
 <td>
 Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTION_MEDIA</b><br>
@@ -56,7 +54,6 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_VISIBILTIY</b> to 
 <tr>
 <td width="400px">
 <a href="geometry"><b>UseCase_03-variant1-geometry.gltf</a></b><br>
-<img src="geometry/metadata/UseCase_03-variant1-geometry.jpg" alt="UseCase_03-variant1-geometry"/>
 </td>
 <td>
 Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION_ANIMATION</b> and <b>ACTION_MEDIA</b><br>
@@ -73,7 +70,6 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_PROXIMITY</b> to a
 <tr>
 <td width="400px">
 <a href="geometry"><b>UseCase_03-variant3-geometry.gltf</a></b><br>
-<img src="geometry/metadata/UseCase_03-variant3-geometry.jpg" alt="UseCase_03-variant3-geometry"/>
 </td>
 <td>
 Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTION_ANIMATION</b><br>
@@ -101,7 +97,6 @@ Reference asset to test <b>INTERACTIVITY</b> using <b>TRIGGER_USER_INPUT</b> to 
 <tr>
 <td width="400px">
 <a href="anchoring"><b>anchorTest_app_n.gltf</a></b><br>
-<img src="anchoring/metadata/anchoring-test-scene.png" alt="anchoring-test-scene"/>
 </td>
 <td>
 Reference asset to test <b>ANCHORING</b>. See all the available options <a href="anchoring"><b>here</a></b><br>
@@ -125,7 +120,6 @@ Reference asset to test <b>ANCHORING</b>. See all the available options <a href=
 <tr>
 <td width="400px">
 <a href="TV"><b>scene.gltf</a></b><br>
-<img src="TV/metadata/scene.jpg" alt="scene"/>
 </td>
 <td>
 Reference asset to test <b>MEDIA</b>. <br>
@@ -152,7 +146,6 @@ Reference asset to test <b>MEDIA</b>. <br>
 <tr>
 <td width="400px">
 <a href="video"><b>scene-av-combined.gltf</a></b><br>
-<img src="video/metadata/scene.jpg" alt="scene-av-combined"/>
 </td>
 <td>
 Reference asset to test <b>MEDIA</b> with audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br>
@@ -168,7 +161,6 @@ Reference asset to test <b>MEDIA</b> with audio and video packaged as seperate t
 <tr>
 <td width="400px">
 <a href="video"><b>scene-av-independant.gltf</a></b><br>
-<img src="video/metadata/scene.jpg" alt="scene-av-independant"/>
 </td>
 <td>
 Reference asset to test <b>MEDIA</b> with audio and video packaged in separate mp4 files<br>
@@ -184,7 +176,6 @@ Reference asset to test <b>MEDIA</b> with audio and video packaged in separate m
 <tr>
 <td width="400px">
 <a href="video"><b>scene.gltf</a></b><br>
-<img src="video/metadata/scene.jpg" alt="scene"/>
 </td>
 <td>
 Reference asset to test <b>MEDIA</b> living room scene demonstrating video texture<br>
