@@ -17,7 +17,7 @@ See individual directories for detailed information.
 <th>Directory</th>
 </tr>
 <tr>
-<td width="400px">
+<td width="300px">
 <img href="geometry" src="geometry/metadata/UseCase_01-variant3-geometry.jpg"  alt="geometry"/>
 </td>
 <td>
@@ -34,7 +34,7 @@ Click <a href="geometry"><b>here</a></b> to access the directory which contains 
 <th>Directory</th>
 </tr>
 <tr>
-<td width="200px">
+<td width="300px">
 <img href="anchoring" src="anchoring/metadata/anchorTest_viewer_n.jpg"  alt="anchoring"/>
 </td>
 <td>
@@ -51,7 +51,7 @@ Click <a href="anchoring"><b>here</a></b> to access the directory which contains
 <th>Directory</th>
 </tr>
 <tr>
-<td width="400px">
+<td width="300px">
 <img href="TV" src="TV/metadata/scene.jpg"  alt="TV"/>
 </td>
 <td>
@@ -59,7 +59,7 @@ Click <a href="TV"><b>here</a></b> to access the directory which contains <b>a m
 </td>
 <tr>
 <tr>
-<td width="400px">
+<td width="300px">
 <img href="video" src="video/metadata/scene.jpg"  alt="video"/>
 </td>
 <td>
