@@ -1,4 +1,4 @@
-test scene for MPEG_Node_interactivy_:
+test scene for MPEG_Node_interactivity_:
 
 INTERACTIVITY
 

@@ -5,7 +5,7 @@
 </p>
 
 # Introduction
-This repository provides test content for the XR Player.
+This repository provides reference content for testng and demos with the XR Player.
 
 Additional information can be found at: https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/
 
@@ -15,6 +15,8 @@ See individual directories for detailed information.
 
 ## Reference assets for demonstration
 
+### Studio apartment
+
 <table>
 <tr>
 <th>Asset</th>
@@ -24,11 +26,11 @@ See individual directories for detailed information.
 
 <tr>
 <td width="400px">
-<a href="studio_apartment"><b>studio_apartment</a></b><br>
+<a href="studio_apartment"><b>studio_apartment.gltf</a></b><br>
 <img src="studio_apartment/metadata/studio_apartment.png"  alt="studio_apartment"/>
 </td>
 <td>
-Asset to test ... Studio apartment<br>
+Reference asset to demo <b>MEDIA</b> in a scene represeting a studio apartment<br>
 </td>
 <td>
 <b>MPEG_media</b><br>
@@ -36,191 +38,59 @@ Asset to test ... Studio apartment<br>
 <b>MPEG_buffer_circular</b><br>
 <b>MPEG_texture_video</b><br>
 <b>MPEG_audio_spatial</b><br>
-<b>KHR_materials_unlit</b><br>
+<tr>
+
+</table>
+
+### The Academy Award
+
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
+<tr>
+<td width="400px">
+<a href="awards"><b>scene_anchoring.gltf</a></b><br>
+<img src="awards/metadata/scene.jpg"  alt="scene"/>
+</td>
+<td>
+Reference asset to demo <b>ANCHORING</b> with a 3D model of the Academy Award statuette<br>
+</td>
+<td>
+<b>MPEG_anchor</b><br>
+<tr>
+  
+</table>
+
+### Furnitures
+
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
+<tr>
+<td width="400px">
+<a href="furnitures"><b>scene.gltf</a></b><br>
+<img src="furnitures/metadata/scene.png"  alt="scene"/>
+</td>
+<td>
+Reference asset to demo <b>ANCHORING</b> with a 3D model of a small sofa<br>
+</td>
+<td>
+<b>MPEG_anchor</b><br>
 <tr>
   
 </table>
 
 ## Reference assets for testing
 
-### Interactivity
-
-<table>
-<tr>
-<th>Asset</th>
-<th>Description</th>
-<th>Properties</th>
-</tr>
-
-<tr>
-<td width="400px">
-<a href="interactivity"><b>UseCase_01-variant3-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_01-variant3-Interactivity.jpg" alt="UseCase_01-variant3-Interactivity"/>
-</td>
-<td>
-Asset to test INTERACTIVITY using <b>TRIGGER_COLLISION</b> to activate <b>ACTION_SET_MATERIAL</b> and <b>ACTION_MEDIA</b><br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<b>KHR_materials_unlit</b><br>
-<b>MPEG_scene_interactivity</b><br>
-<b>MPEG_audio_spatial</b><br>
-<tr>
-
-<tr>
-<td width="400px">
-<a href="interactivity"><b>UseCase_02-variant3-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_02-variant3-Interactivity.jpg" alt="UseCase_02-variant3-Interactivity"/>
-</td>
-<td>
-Asset to test INTERACTIVITY using <b>TRIGGER_VISIBILTIY</b> to activate <b>ACTION_MEDIA</b><br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<b>KHR_materials_unlit</b><br>
-<b>MPEG_scene_interactivity</b><br>
-<b>MPEG_node_interactivity</b><br>
-<b>MPEG_audio_spatial</b><br>
-<tr>
-
-<tr>
-<td width="400px">
-<a href="interactivity"><b>UseCase_03-variant1-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_03-variant1-Interactivity.jpg" alt="UseCase_03-variant1-Interactivity"/>
-</td>
-<td>
-Asset to test INTERACTIVITY using <b>TRIGGER_PROXIMITY</b> to activate <b>ACTION_ANIMATION</b> and <b>ACTION_MEDIA</b><br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<b>KHR_materials_unlit</b><br>
-<b>MPEG_scene_interactivity</b><br>
-<b>MPEG_audio_spatial</b><br>
-<tr>
-
-<tr>
-<td width="400px">
-<a href="interactivity"><b>UseCase_03-variant3-Interactivity</a></b><br>
-<img src="interactivity/metadata/UseCase_03-variant3-Interactivity.jpg" alt="UseCase_03-variant3-Interactivity"/>
-</td>
-<td>
-Asset to test INTERACTIVITY using <b>TRIGGER_USER_INPUT</b> to activate <b>ACTION_ANIMATION</b><br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<b>KHR_materials_unlit</b><br>
-<b>MPEG_scene_interactivity</b><br>
-<b>MPEG_audio_spatial</b><br>
-<tr>
-
-</table>
-
-
-### Media
-
-<table>
-<tr>
-<th>Asset</th>
-<th>Description</th>
-<th>Properties</th>
-</tr>
-
-<tr>
-<td width="400px">
-<a href="TV"><b>Scene</a></b><br>
-<img src="TV/metadata/scene.jpg" alt="scene"/>
-</td>
-<td>
-Asset to test ... <br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<b>MPEG_audio_spatial</b><br>
-<tr>
-
-<tr>
-<td width="400px">
-<a href="video"><b>scene-av-combined</a></b><br>
-<img src="video/metadata/scene.jpg" alt="scene-av-combined"/>
-</td>
-<td>
-Asset to test ... audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<b>MPEG_audio_spatial</b><br>
-<b>KHR_materials_unlit</b><br>
-<tr>
-
-<tr>
-<td width="400px">
-<a href="video"><b>scene-av-independant</a></b><br>
-<img src="video/metadata/scene.jpg" alt="scene-av-independant"/>
-</td>
-<td>
-Asset to test ... audio and video packaged in separate mp4 files<br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<b>MPEG_audio_spatial</b><br>
-<b>KHR_materials_unlit</b><br>
-<tr>
-
-<tr>
-<td width="400px">
-<a href="video"><b>scene</a></b><br>
-<img src="video/metadata/scene.jpg" alt="scene"/>
-</td>
-<td>
-Asset to test ... a living room scene demonstrating video texture<br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<tr>
-
-<tr>
-<td width="400px">
-<a href="studio_apartment"><b>studio_apartment</a></b><br>
-<img src="studio_apartment/metadata/studio_apartment.png" alt="studio_apartment"/>
-</td>
-<td>
-Asset to test ... Studio apartment<br>
-</td>
-<td>
-<b>MPEG_media</b><br>
-<b>MPEG_accessor_timed</b><br>
-<b>MPEG_buffer_circular</b><br>
-<b>MPEG_texture_video</b><br>
-<b>MPEG_audio_spatial</b><br>
-<b>KHR_materials_unlit</b><br>
-<tr>
-
-</table>
-
+Reference assets for testing are listed [here](/test_content.md).
 
 # Contributing 
 
