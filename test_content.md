@@ -198,43 +198,6 @@ Reference asset to test <b>MEDIA</b> living room scene demonstrating video textu
 
 </table>
 
-# Contributing 
-
-In order to contribute, open a pull request on the `development` branch.
-
-For all contributions, the following rules apply:
-
-- All submitted models must pass the glTF-Validator.
-
-- Each model must provide its own metadata and be illustrated with a screenshot. 
-
-- The metadata must include the correct and complete legal information (ownership, copyright, and license).
-
-- A README for the subdirectory containing the model must be created. A script is proposed to generate these README draft from the metadata files. The README files submitted can be extended with additionnal information (eg. usage, extended description, ...).
-
-The metadata file json format is as follow:
-```
-{
-    "legal": [
-        {
-            "owner": "",
-            "year": "",
-            "license": "",
-            "licenseUrl": "",
-            "what": ""
-        }
-    ],
-    "tags": [],
-    "screenshot": "metadata/screenshot.jpg",
-    "name": "",
-    "path": "",
-    "summary": ""
-}
-```
-
-- **path** : is relative to the gltf file.
-- **tags** : tags will be curated. Currently, "testing" is the only tag used. 
-
 # Questions or Comments
 
 If you have any questions, please submit an issue.
