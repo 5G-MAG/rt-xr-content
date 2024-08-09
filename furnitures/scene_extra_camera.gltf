@@ -30,7 +30,8 @@
 		{
 			"name":"Scene",
 			"nodes":[
-				4
+				4,
+				5
 			],
 			"extensions": {
 				"MPEG_anchor": {
@@ -81,6 +82,33 @@
 				3
 			],
 			"name":"RootNode"
+		},
+		{
+			"camera":0,
+			"name":"Camera",
+			"rotation":[
+				-0.11320321261882782,
+				0,
+				0,
+				0.993571937084198
+			],
+			"translation":[
+				0,
+				1.75,
+				5
+			]
+		}
+	],
+	"cameras":[
+		{
+			"name":"Camera.001",
+			"perspective":{
+				"aspectRatio":1.7777777777777777,
+				"yfov":0.39959648408210363,
+				"zfar":1000,
+				"znear":0.10000000149011612
+			},
+			"type":"perspective"
 		}
 	],
 	"materials":[
