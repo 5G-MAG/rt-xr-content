@@ -149,17 +149,17 @@
 		{
 			"mimeType":"image/png",
 			"name":"defaultMat_normal",
-			"uri":"updated/defaultMat_normal.png"
+			"uri":"textures/defaultMat_normal.png"
 		},
 		{
 			"mimeType":"image/png",
 			"name":"defaultMat_metallicRoughness",
-			"uri":"updated/defaultMat_metallicRoughness.png"
+			"uri":"textures/defaultMat_metallicRoughness.png"
 		},
 		{
 			"mimeType":"image/png",
 			"name":"defaultMat_baseColor",
-			"uri":"updated/defaultMat_baseColor.png"
+			"uri":"textures/defaultMat_baseColor.png"
 		}
 	],
 	"accessors":[
@@ -349,7 +349,7 @@
 	"buffers":[
 		{
 			"byteLength":9542944,
-			"uri":"award.bin"
+			"uri":"scene.bin"
 		}
   ],
 	"extensions": {	
