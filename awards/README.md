@@ -1,99 +1,43 @@
-## scene.gltf
-
-### Summary
+## Overview
 
 This directory contains a 3D asset figuring the academy statuette. 
 
-Two gltf documents are provided:
+Multiple variants of the gltf documents are provided. These are all based on the base `scene.gltf` document containing the bare model without any MPEG extension.
 
-- `scene.gltf` contains the bare model, without any extension.
-- `scene_anchoring.gltf` contains the same model, with MPEG_anchoring extension that allow anchoring to an horizontal plane.
+### Screeshot
 
- are used no gltf extension are used in this scene.
+![screenshot](metadata/scene.jpg)
 
+
+### Legal
+
+&#169; 2021, <a alt="sketchfab link" href="https://sketchfab.com/WirtualneMuzeaMalopolski">Virtual Museums of Małopolska</a>, <a alt="license" href="https://creativecommons.org/public-domain/cc0/">CC0 Public Domain</a>
+
+
+## scene.gltf
+
+A 3D asset figuring the academy statuette, no gltf extension are used in this scene.
 
 ### Extensions used
 
 None
 
-### Legal
 
-&#169; 2021, Virtual Museums of Małopolska, <a alt="license" href="https://creativecommons.org/public-domain/cc0/">CC0 Public Domain</a>
+## scene_floor_anchoring.gltf
+
+This variant of the base model uses `MPEG_anchor` extension to signal anchoring to the floor in XR applications. 
+
+### Extensions used
+
+- MPEG_anchor
 
 
+## scene_plane_anchoring.gltf
 
-## scene_anchoring.gltf
-
-### Summary
-
-A 3D asset figuring the academy statuette, no gltf extension are used in this scene.
+This variant of the base model uses `MPEG_anchor` extension to signal anchoring to an hortizontal plane in XR applications. 
 
 
 ### Extensions used
 
-- MPEG_media
-- MPEG_accessor_timed
-- MPEG_buffer_circular
-- MPEG_texture_video
-- MPEG_scene_interactivity
-- MPEG_node_interactivity
-- MPEG_audio_spatial
+- MPEG_anchor
 
-### Screeshot
-![screenshot](metadata/UseCase_02-variant3-geometry.jpg)
-
-### Legal
-
-&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a>
-
-  - Lelievre Sylvain for Everything
-
-
-## UseCase_03-variant1-geometry
-
-### Summary
-demonstrates interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION and ACTION_MEDIA
-
-
-### Extensions used
-
-- MPEG_media
-- MPEG_accessor_timed
-- MPEG_buffer_circular
-- MPEG_texture_video
-- MPEG_scene_interactivity
-- MPEG_audio_spatial
-
-### Screeshot
-![screenshot](metadata/UseCase_03-variant1-geometry.jpg)
-
-### Legal
-
-&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a>
-
-  - Lelievre Sylvain for Everything
-
-
-## UseCase_03-variant3-geometry
-
-### Summary
-demonstrates interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION
-
-
-### Extensions used
-
-- MPEG_media
-- MPEG_accessor_timed
-- MPEG_buffer_circular
-- MPEG_texture_video
-- MPEG_scene_interactivity
-- MPEG_audio_spatial
-
-### Screeshot
-![screenshot](metadata/UseCase_03-variant3-geometry.jpg)
-
-### Legal
-
-&#169; 2023, Interdigital, <a alt="license" href="https://www.5g-mag.com/license">5G MAG</a>
-
-  - Lelievre Sylvain for Everything
