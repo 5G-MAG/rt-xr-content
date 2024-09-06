@@ -59,7 +59,12 @@
 				0,
 				0,
 				2.2204500197172533e-16
-			]
+			],
+      "extensions": {
+        "MPEG_anchor": {
+          "anchor": 0
+        }
+      }
 		}
 	],
 	"materials":[
@@ -346,5 +351,27 @@
 			"byteLength":9542944,
 			"uri":"scene.bin"
 		}
-	]
+  ],
+	"extensions": {	
+		"MPEG_anchor": {
+			"anchors": [
+				{                    
+					"trackable": 0,
+					"requiresAnchoring":true
+				}
+			],
+			"trackables": [
+				{                    
+					"type": 3,
+					"geometricConstraint": 0
+				}
+			]
+		}
+	},
+    "extensionsUsed": [
+		"MPEG_anchor"
+    ],
+    "extensionsRequired": [
+		"MPEG_anchor"
+    ]
 }
