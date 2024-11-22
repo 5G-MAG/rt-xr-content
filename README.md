@@ -1,98 +1,110 @@
+<h1 align="center">Content for the XR Unity Player</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Under_Development-yellow" alt="Under Development">
+  <img src="https://img.shields.io/github/v/tag/5G-MAG/rt-xr-content?label=version" alt="Version">
+</p>
 
-## rt-xr-content
+# Introduction
+This repository provides reference content for testng and demos with the XR Player.
 
-This repository provides test content for the XR Player.
+Additional information can be found at: https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/
 
-Make sure to visit the [wiki section of the XR Player](https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/) for more information on the project.
+# Available content
 
+See individual directories for detailed information.
 
-## Questions or Comments
+## Reference assets for demonstration
 
-If you have any questions, please submit an issue.
-
-
-## Listing
-
-See individual directory for detailed informations.
+### Studio apartment
 
 <table>
 <tr>
-<th>Model</th>
+<th>Asset</th>
 <th>Description</th>
+<th>Properties</th>
 </tr>
+
 <tr>
-<td>
-<a href="interactivity">UseCase_01-variant3-Interactivity</a><br>
-<img src="interactivity/metadata/UseCase_01-variant3-Interactivity.jpg" alt="UseCase_01-variant3-Interactivity"/>
+<td width="400px">
+<a href="studio_apartment"><b>studio_apartment.gltf</a></b><br>
+<img src="studio_apartment/metadata/studio_apartment.png"  alt="studio_apartment"/>
 </td>
 <td>
-demonstrates interactivity using TRIGGER_COLLISION to activate ACTION_SET_MATERIAL and ACTION_MEDIA<br>
-<tr>
-<td>
-<a href="interactivity">UseCase_02-variant3-Interactivity</a><br>
-<img src="interactivity/metadata/UseCase_02-variant3-Interactivity.jpg" alt="UseCase_02-variant3-Interactivity"/>
+Reference asset to demo <b>MEDIA</b> in a scene represeting a studio apartment<br>
 </td>
 <td>
-demonstrates interactivity behavior using TRIGGER_VISIBILTIY to activate ACTION_MEDIA<br>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>MPEG_audio_spatial</b><br>
 <tr>
-<td>
-<a href="interactivity">UseCase_03-variant1-Interactivity</a><br>
-<img src="interactivity/metadata/UseCase_03-variant1-Interactivity.jpg" alt="UseCase_03-variant1-Interactivity"/>
-</td>
-<td>
-demonstrates interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION and ACTION_MEDIA<br>
-<tr>
-<td>
-<a href="interactivity">UseCase_03-variant3-Interactivity</a><br>
-<img src="interactivity/metadata/UseCase_03-variant3-Interactivity.jpg" alt="UseCase_03-variant3-Interactivity"/>
-</td>
-<td>
-demonstrates interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION<br>
-<tr>
-<td>
-<a href="TV">scene</a><br>
-<img src="TV/metadata/scene.jpg" alt="scene"/>
-</td>
-<td>
-a CRT TV set playing a movie<br>
-<tr>
-<td>
-<a href="video">scene-av-combined</a><br>
-<img src="video/metadata/scene.jpg" alt="scene-av-combined"/>
-</td>
-<td>
-audio and video packaged as seperate tracks of a single mp4, explicit track to buffer mapping<br>
-<tr>
-<td>
-<a href="video">scene-av-independant</a><br>
-<img src="video/metadata/scene.jpg" alt="scene-av-independant"/>
-</td>
-<td>
-audio and video packaged in separate mp4 files<br>
-<tr>
-<td>
-<a href="video">scene</a><br>
-<img src="video/metadata/scene.jpg" alt="scene"/>
-</td>
-<td>
-a living room scene demonstrating video texture<br>
+
 </table>
 
+### The Academy Award
 
-## Contributing 
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
+<tr>
+<td width="400px">
+<a href="awards"><b>scene_anchoring.gltf</a></b><br>
+<img src="awards/metadata/scene.jpg"  alt="scene"/>
+</td>
+<td>
+Reference asset to demo <b>ANCHORING</b> with a 3D model of the Academy Award statuette<br>
+</td>
+<td>
+<b>MPEG_anchor</b><br>
+<tr>
+  
+</table>
+
+### Furnitures
+
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
+<tr>
+<td width="400px">
+<a href="furnitures"><b>scene.gltf</a></b><br>
+<img src="furnitures/metadata/scene.png"  alt="scene"/>
+</td>
+<td>
+Reference asset to demo <b>ANCHORING</b> with a 3D model of a small sofa<br>
+</td>
+<td>
+<b>MPEG_anchor</b><br>
+<tr>
+  
+</table>
+
+## Reference assets for testing
+
+Reference assets for testing are listed [here](/test_content.md).
+
+# Contributing 
 
 In order to contribute, open a pull request on the `development` branch.
 
-For all contributions, the following items are expected:
+For all contributions, the following rules apply:
 
+- All submitted models must pass the glTF-Validator.
 
-All submitted models must pass the glTF-Validator.
+- Each model must provide its own metadata and be illustrated with a screenshot. 
 
-Each model must provide its own metadata and be illustrated with a screenshot. 
+- The metadata must include the correct and complete legal information (ownership, copyright, and license).
 
-The metadata must include the correct and complete legal information (ownership, copyright, and license).
-
-A README for the subdirectory containing the model. A script is proposed to generate these README draft from the metadata files. The README files submitted can be extended with additionnal information (eg. usage, extended description, ...).
+- A README for the subdirectory containing the model must be created. A script is proposed to generate these README draft from the metadata files. The README files submitted can be extended with additionnal information (eg. usage, extended description, ...).
 
 The metadata file json format is as follow:
 ```
@@ -115,4 +127,8 @@ The metadata file json format is as follow:
 ```
 
 - **path** : is relative to the gltf file.
-- **tags** : tags will be currated. Currently, "testing" is the only tag used. 
+- **tags** : tags will be curated. Currently, "testing" is the only tag used. 
+
+# Questions or Comments
+
+If you have any questions, please submit an issue.

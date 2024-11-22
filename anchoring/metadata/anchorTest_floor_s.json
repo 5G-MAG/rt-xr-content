@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "Faivre d'Arcier Etienne",
+            "owner": "Interdigital",
+            "year": "2023",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "Everything"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/anchoring-test-scene.png",
+    "name": "anchorTest_floor_s",
+    "path": "anchorTest_floor_s.gltf",
+    "summary": "Demonstrates AR anchoring of a node using TRACKABLE_FLOOR. The whole scene is anchored to the floor."
+}

@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "legal": [
+        {
+            "artist": "Faivre d'Arcier Etienne",
+            "owner": "Interdigital",
+            "year": "2023",
+            "license": "5G MAG",
+            "licenseUrl": "https://www.5g-mag.com/license",
+            "what": "Everything"
+        }
+    ],
+    "tags": [
+        "testing"
+    ],
+    "screenshot": "metadata/anchoring-test-scene.png",
+    "name": "anchorTest_m2D_s",
+    "path": "anchorTest_m2D_s.gltf",
+    "summary": "Demonstrates anchoring a whole scene using TRACKABLE_MARKER_2D.\nThe file `textures/metro_box.png` is the marker and should be printed on a sheet of paper, or displaid on a screen.\nWhen loading the scene, nothing is displaid until the marker is detected, then the scene remains anchored to the marker as the viewer moves around."
+}

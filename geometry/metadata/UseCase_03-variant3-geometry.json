@@ -13,8 +13,8 @@
     "tags": [
         "testing"
     ],
-    "screenshot": "metadata/UseCase_03-variant1-Interactivity.jpg",
-    "name": "UseCase_03-variant1-Interactivity",
-    "path": "UseCase_03-variant1-Interactivity.gltf",
-    "summary": "demonstrates interactivity using TRIGGER_PROXIMITY to activate ACTION_ANIMATION and ACTION_MEDIA"
+    "screenshot": "metadata/UseCase_03-variant3-geometry.jpg",
+    "name": "UseCase_03-variant3-geometry",
+    "path": "UseCase_03-variant3-geometry.gltf",
+    "summary": "demonstrates interactivity using TRIGGER_USER_INPUT to activate ACTION_ANIMATION"
 }
