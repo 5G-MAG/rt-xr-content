@@ -35,7 +35,7 @@
 				{
 					"alternatives":[
 						{
-							"mimeType":"audio/mp3",
+							"mimeType":"audio/aac",
 							"uri":"bbb_aac_4800_mono_fltp_0x6134706d.mp4"
 						}
 					],
@@ -47,8 +47,8 @@
 		"MPEG_anchor":{
 			"trackables":[
 				{
-					"type":"TRACKABLE_PLANE",
-					"geometricConstraint":1
+					"type":"TRACKABLE_MARKER_2D",
+					"markerNode":3
 				}
 			],
 			"anchors":[
@@ -79,9 +79,9 @@
 				0.7071068286895752
 			],
 			"scale":[
-				1.600000023841858,
+				0.8000000715255737,
 				1,
-				0.8999999761581421
+				0.44999998807907104
 			]
 		},
 		{
@@ -123,7 +123,21 @@
 					"anchor":0
 				}
 			},
-			"name":"Empty"
+			"name":"Empty",
+			"scale":[
+				0.75,
+				0.75,
+				0.75
+			],
+			"translation":[
+				0,
+				0.5,
+				0
+			]
+		},
+		{
+			"mesh":1,
+			"name":"5GMAG_logo.jpg"
 		}
 	],
 	"materials":[
@@ -135,6 +149,17 @@
 					"index":0
 				},
 				"metallicFactor":0
+			}
+		},
+		{
+			"doubleSided":true,
+			"name":"XRMarkerMaterial.001",
+			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":1
+				},
+				"metallicFactor":0,
+				"roughnessFactor":0.5
 			}
 		}
 	],
@@ -152,6 +177,20 @@
 					"material":0
 				}
 			]
+		},
+		{
+			"name":"Plane.001",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":6,
+						"NORMAL":7,
+						"TEXCOORD_0":8
+					},
+					"indices":3,
+					"material":1
+				}
+			]
 		}
 	],
 	"textures":[
@@ -166,6 +205,10 @@
 			},
 			"sampler":0,
 			"source":0
+		},
+		{
+			"sampler":0,
+			"source":1
 		}
 	],
 	"images":[
@@ -173,6 +216,11 @@
 			"mimeType":"image/png",
 			"name":"bbb_1080p30_avc_3000bkps_0x31637661",
 			"uri":"bbb_1080p30_avc_3000bkps_0x31637661.png"
+		},
+		{
+			"mimeType":"image/jpeg",
+			"name":"5GMAG_logo",
+			"uri":"5GMAG_logo.jpg"
 		}
 	],
 	"accessors":[
@@ -238,6 +286,34 @@
 			"name":"MPEG_texture_video.accessor",
 			"normalized":false,
 			"type":"SCALAR"
+		},
+		{
+			"bufferView":7,
+			"componentType":5126,
+			"count":4,
+			"max":[
+				0.5,
+				0,
+				0.5
+			],
+			"min":[
+				-0.5,
+				0,
+				-0.5
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":8,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":9,
+			"componentType":5126,
+			"count":4,
+			"type":"VEC2"
 		}
 	],
 	"bufferViews":[
@@ -281,6 +357,24 @@
 			"buffer":1,
 			"byteLength":32,
 			"name":"MPEG_accessor_timed.header"
+		},
+		{
+			"buffer":2,
+			"byteLength":48,
+			"byteOffset":140,
+			"target":34962
+		},
+		{
+			"buffer":2,
+			"byteLength":48,
+			"byteOffset":188,
+			"target":34962
+		},
+		{
+			"buffer":2,
+			"byteLength":32,
+			"byteOffset":236,
+			"target":34962
 		}
 	],
 	"samplers":[
@@ -309,8 +403,8 @@
 			"name":"MPEG_media.frame.buffer"
 		},
 		{
-			"byteLength":140,
-			"uri":"video_plane_ar.bin"
+			"byteLength":268,
+			"uri":"video_plane_marker2d.bin"
 		}
 	]
 }
