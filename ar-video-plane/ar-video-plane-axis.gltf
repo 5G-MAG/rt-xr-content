@@ -47,8 +47,8 @@
 		"MPEG_anchor":{
 			"trackables":[
 				{
-					"type":4,
-					"markerNode":4
+					"type":3,
+					"geometricConstraint":1
 				}
 			],
 			"anchors":[
@@ -135,10 +135,6 @@
 				}
 			},
 			"name":"MPEG_anchor"
-		},
-		{
-			"mesh":1,
-			"name":"5GMAG_logo.jpg"
 		}
 	],
 	"materials":[
@@ -150,17 +146,6 @@
 					"index":0
 				},
 				"metallicFactor":0
-			}
-		},
-		{
-			"doubleSided":true,
-			"name":"XRMarkerMaterial.002",
-			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":1
-				},
-				"metallicFactor":0,
-				"roughnessFactor":0.5
 			}
 		}
 	],
@@ -178,20 +163,6 @@
 					"material":0
 				}
 			]
-		},
-		{
-			"name":"Plane.001",
-			"primitives":[
-				{
-					"attributes":{
-						"POSITION":6,
-						"NORMAL":7,
-						"TEXCOORD_0":8
-					},
-					"indices":3,
-					"material":1
-				}
-			]
 		}
 	],
 	"textures":[
@@ -206,10 +177,6 @@
 			},
 			"sampler":0,
 			"source":0
-		},
-		{
-			"sampler":0,
-			"source":1
 		}
 	],
 	"images":[
@@ -217,11 +184,6 @@
 			"mimeType":"image/png",
 			"name":"ccma_1080p30_avc_2000kbps",
 			"uri":"ccma_1080p30_avc_2000kbps.png"
-		},
-		{
-			"mimeType":"image/jpeg",
-			"name":"5GMAG_logo",
-			"uri":"5GMAG_logo.jpg"
 		}
 	],
 	"accessors":[
@@ -287,34 +249,6 @@
 			"name":"MPEG_texture_video.accessor",
 			"normalized":false,
 			"type":"SCALAR"
-		},
-		{
-			"bufferView":7,
-			"componentType":5126,
-			"count":4,
-			"max":[
-				0.5,
-				0,
-				0.5
-			],
-			"min":[
-				-0.5,
-				0,
-				-0.5
-			],
-			"type":"VEC3"
-		},
-		{
-			"bufferView":8,
-			"componentType":5126,
-			"count":4,
-			"type":"VEC3"
-		},
-		{
-			"bufferView":9,
-			"componentType":5126,
-			"count":4,
-			"type":"VEC2"
 		}
 	],
 	"bufferViews":[
@@ -358,24 +292,6 @@
 			"buffer":1,
 			"byteLength":32,
 			"name":"MPEG_accessor_timed.header"
-		},
-		{
-			"buffer":2,
-			"byteLength":48,
-			"byteOffset":140,
-			"target":34962
-		},
-		{
-			"buffer":2,
-			"byteLength":48,
-			"byteOffset":188,
-			"target":34962
-		},
-		{
-			"buffer":2,
-			"byteLength":32,
-			"byteOffset":236,
-			"target":34962
 		}
 	],
 	"samplers":[
@@ -404,8 +320,8 @@
 			"name":"MPEG_media.frame.buffer"
 		},
 		{
-			"byteLength":268,
-			"uri":"ar-video-plane-marker.bin"
+			"byteLength":140,
+			"uri":"ar-video-plane-axis.bin"
 		}
 	]
 }

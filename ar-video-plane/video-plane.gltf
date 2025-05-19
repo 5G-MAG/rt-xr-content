@@ -102,12 +102,7 @@
 				0,
 				1
 			],
-			"name":"offset",
-			"translation":[
-				0,
-				1,
-				0.25
-			]
+			"name":"offset"
 		},
 		{
 			"children":[
