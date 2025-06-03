@@ -104,36 +104,6 @@ def push(ctx, target:str, content:tuple[str, ...]):
 
 
 
-# @cli.command(name="gen-config")
-# @click.pass_context
-# @click.argument('content', nargs=-1)
-# def config_gen(ctx, content:tuple[str, ...]):
-#     """generate a config file for a set directories
-#     """
-#     entrypoints = []
-#     for dirname in content:
-#         dp = Path(dirname)
-#         if dp.exists():
-#             for fp in dp.iterdir():
-#                 if fp.suffix in ('.gltf', '.glb'):
-#                     entrypoints.append(fp)
-#     with open('./Paths', 'w') as fo:
-#         fo.writelines([f'{fp}\n' for fp in entrypoints])
-#         
-# 
-# @cli.command(name="push-config")
-# @click.pass_context
-# @click.argument('target', type=str, default='com.fivegmag.rtxrplayer')
-# def config_push(ctx, target:str):
-#     """push config file to application directory to default adb device
-#     """
-#     if not target.startswith('/'):
-#         target = app_directory(target)
-#     config = Path('./Paths')
-#     assert config.exists(), 'config file missing: ./Paths'
-#     push_file(config, target)
-
-
 ############################################################################
 # gen metadata files, readme, etc ...
 ############################################################################
