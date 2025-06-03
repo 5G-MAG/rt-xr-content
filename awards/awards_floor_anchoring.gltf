@@ -3,6 +3,27 @@
 		"generator":"Khronos glTF Blender I/O v4.1.63",
 		"version":"2.0"
 	},
+	"extensionsUsed":[
+		"MPEG_anchor"
+	],
+	"extensionsRequired":[
+		"MPEG_anchor"
+	],
+	"extensions":{
+		"MPEG_anchor":{
+			"trackables":[
+				{
+					"type":0
+				}
+			],
+			"anchors":[
+				{
+					"trackable":0,
+					"requiresAnchoring":false
+				}
+			]
+		}
+	},
 	"scene":0,
 	"scenes":[
 		{
@@ -15,15 +36,30 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Object_2"
+			"name":"Object_2",
+			"translation":[
+				0,
+				1.52587890625e-05,
+				0
+			]
 		},
 		{
 			"mesh":1,
-			"name":"Object_3"
+			"name":"Object_3",
+			"translation":[
+				0,
+				1.52587890625e-05,
+				0
+			]
 		},
 		{
 			"mesh":2,
-			"name":"Object_4"
+			"name":"Object_4",
+			"translation":[
+				0,
+				1.52587890625e-05,
+				0
+			]
 		},
 		{
 			"children":[
@@ -33,38 +69,32 @@
 			],
 			"name":"17198_6506_IV_Oskar_FIN.obj.cleaner.materialmerger.gles",
 			"rotation":[
+				-0.8746196627616882,
 				0,
-				-0.9564664959907532,
-				0,
-				0.29184216260910034
+				0.4848097562789917,
+				3.823083716270048e-08
 			],
 			"scale":[
-				0.006250000558793545,
 				0.0062500000931322575,
-				0.006250000558793545
-			],
-			"translation":[
-				-0.02234683744609356,
-				0.003959259949624538,
-				7.397960871458054e-05
+				0.0062500000931322575,
+				0.0062500000931322575
 			]
 		},
 		{
 			"children":[
 				3
 			],
+			"extensions":{
+				"MPEG_anchor":{
+					"anchor":0
+				}
+			},
 			"name":"Sketchfab_model",
-			"rotation":[
-				-1,
+			"translation":[
 				0,
-				0,
-				2.2204500197172533e-16
-			],
-      "extensions": {
-        "MPEG_anchor": {
-          "anchor": 0
-        }
-      }
+				1.25,
+				0
+			]
 		}
 	],
 	"materials":[
@@ -349,28 +379,7 @@
 	"buffers":[
 		{
 			"byteLength":9542944,
-			"uri":"scene.bin"
+			"uri":"awards_floor_anchoring.bin"
 		}
-  ],
-	"extensions": {	
-		"MPEG_anchor": {
-			"anchors": [
-				{                    
-					"trackable": 0,
-					"requiresAnchoring":true
-				}
-			],
-			"trackables": [
-				{
-					"type": 0
-				}
-			]
-		}
-	},
-    "extensionsUsed": [
-		"MPEG_anchor"
-    ],
-    "extensionsRequired": [
-		"MPEG_anchor"
-    ]
+	]
 }
