@@ -49,11 +49,19 @@
 				{
 					"type":4,
 					"markerNode":4
+				},
+				{
+					"type":3,
+					"geometricConstraint":1
 				}
 			],
 			"anchors":[
 				{
 					"trackable":0,
+					"requiresAnchoring":false
+				},
+				{
+					"trackable":1,
 					"requiresAnchoring":false
 				}
 			]
@@ -118,6 +126,11 @@
 				0,
 				1
 			],
+			"extensions":{
+				"MPEG_anchor":{
+					"anchor":0
+				}
+			},
 			"name":"offset",
 			"translation":[
 				0,
@@ -131,14 +144,14 @@
 			],
 			"extensions":{
 				"MPEG_anchor":{
-					"anchor":0
+					"anchor":1
 				}
 			},
 			"name":"MPEG_anchor"
 		},
 		{
 			"mesh":1,
-			"name":"5GMAG_logo.jpg"
+			"name":"5GMAG_logo.jpg.001"
 		}
 	],
 	"materials":[
@@ -154,7 +167,7 @@
 		},
 		{
 			"doubleSided":true,
-			"name":"XRMarkerMaterial.002",
+			"name":"XRMarkerMaterial",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":1
