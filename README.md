@@ -9,6 +9,16 @@ This repository provides reference content for testng and demos with the XR Play
 
 Additional information can be found at: https://5g-mag.github.io/Getting-Started/pages/xr-media-integration-in-5g/
 
+## Cloning
+
+[git lfs](https://git-lfs.com/) must be installed on your system in order to properly clone the repository.
+
+```
+git lfs install
+git clone git@github.com:5G-MAG/rt-xr-content.git
+```
+
+
 # Available content
 
 See individual directories for detailed information.
