@@ -15,7 +15,7 @@ Additional information can be found at: https://5g-mag.github.io/Getting-Started
 
 ```
 git lfs install
-git clone git@github.com:5G-MAG/rt-xr-content.git
+git clone https://github.com/5G-MAG/rt-xr-content.git
 ```
 
 
