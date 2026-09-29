@@ -147,6 +147,7 @@ Open pull requests against the `development` branch. Every contributed model mus
 The metadata file has this JSON format:
 ```
 {
+    "version": 2,
     "legal": [
         {
             "owner": "",
@@ -164,6 +165,7 @@ The metadata file has this JSON format:
 }
 ```
 
+- **version**: every metadata file in the repository sets it (2; 1 in `studio_apartment`). `rtxrcontent.py` does not read it, and `gen-metadata` writes it only if the template file passed to it contains it.
 - **path**: relative to the glTF file.
 - **tags**: curated. The tags in use are "testing" and "demo".
 
