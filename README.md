@@ -104,14 +104,16 @@ Reference asset to demonstrate <b>ANCHORING</b>, with a 3D model of the Academy 
 </tr>
 <tr>
 <td width="400px">
-<a href="furnitures"><b>sofa_floor_anchoring.gltf, scene_extra_camera.gltf</b></a><br>
+<a href="furnitures"><b>sofa_floor_anchoring.gltf, scene_extra_camera.gltf, scene_with_anchoring_and_interactivity.gltf</b></a><br>
 <img src="furnitures/metadata/scene.png" alt="scene"/>
 </td>
 <td>
-Reference asset to demonstrate <b>ANCHORING</b>, with a 3D model of a small sofa
+Reference asset to demonstrate <b>ANCHORING</b>, and in scene_with_anchoring_and_interactivity.gltf
+also <b>INTERACTIVITY</b>, with a 3D model of a small sofa
 </td>
 <td>
-<b>MPEG_anchor</b>
+<b>MPEG_anchor</b><br>
+<b>MPEG_scene_interactivity</b>
 </td>
 </tr>
 </table>
