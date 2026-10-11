@@ -544,7 +544,7 @@
 		}
 	},
     "extensionsUsed": [
-		"MPEG_anchor"
+		"MPEG_anchor", "MPEG_scene_interactivity"
     ],
     "extensionsRequired": [
 		"MPEG_anchor"
