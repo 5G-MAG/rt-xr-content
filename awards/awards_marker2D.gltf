@@ -20,7 +20,7 @@
 			"anchors":[
 				{
 					"trackable":0,
-					"requiresAnchoring":false
+					"requiresAnchoring":true
 				}
 			]
 		}
