@@ -157,7 +157,7 @@ def test_rules_reference_matches_the_code():
     import os, re
     from mpegi_sd_validator import dashboard
     src = open(os.path.join(os.path.dirname(dashboard.__file__), "validate.py"), encoding="utf-8").read()
-    raised = set(re.findall(r'self\.add\((?:ERROR|WARNING|INFO),\s*"([A-Z]+(?:-[A-Z0-9]+)?)"', src))
+    raised = set(re.findall(r'self\.add\((?:ERROR|WARNING|INFO),\s*"([A-Z]+(?:-[A-Z0-9]+)?)"', src)) | set(re.findall(r'"([A-Z]+-\d{3})"', src))
     listed = {r["rule"] for r in dashboard.rules()}
     assert raised <= listed, raised - listed
     assert listed - {"SCHEMA", "SCHEMA-000", "REPO-CONFLICT", "SCHEMA-TEXT"} <= raised | {"SCHEMA"}, listed - raised
@@ -185,7 +185,7 @@ def test_repository_governs_and_conflicts_are_information():
 
 def test_viewport_where_the_pdf_governs():
     d = good()
-    d["extensions"]["MPEG_viewport_recommended"] = {"name": "one"}
+    d["scenes"][0].setdefault("extensions", {})["MPEG_viewport_recommended"] = {"name": "one"}
     d["extensionsUsed"].append("MPEG_viewport_recommended")
     found = validate_document(d, "x.gltf")
     assert not [f for f in found if f.severity == "error"]
@@ -286,3 +286,97 @@ def test_behavior_refers_to_missing_trigger():
 def test_trigger_refers_to_missing_node():
     d = good(); interactive(d, triggers=[{"type": 0, "nodes": [7]}])
     assert ("INT-002", "error") in rules(d)
+
+
+def scene_ext(d, name, value):
+    d["extensionsUsed"].append(name)
+    d["scenes"][0].setdefault("extensions", {})[name] = value
+
+
+def test_extension_on_the_wrong_object():
+    for name in ("MPEG_scene_dynamic", "MPEG_viewport_recommended", "MPEG_animation_timing"):
+        d = good(); d["extensionsUsed"].append(name)
+        d["nodes"][0]["extensions"][name] = {}
+        assert ("EXT-003", "error") in rules(d), name
+    d = good(); d["extensionsUsed"].append("MPEG_mesh_linking")
+    d["scenes"][0].setdefault("extensions", {})["MPEG_mesh_linking"] = {}
+    assert ("EXT-003", "error") in rules(d)
+
+
+def test_timed_accessor_on_a_plain_buffer():
+    def m(d):
+        d["buffers"][0]["extensions"].pop("MPEG_buffer_circular")
+        d["buffers"][0]["uri"] = "x.bin"
+    case(m, "ACC-005")
+
+
+def test_buffer_mixing_header_and_headerless_accessors():
+    def m(d):
+        d["bufferViews"].append({"buffer": 0, "byteLength": 4})
+        d["accessors"][0]["extensions"]["MPEG_accessor_timed"].update({"bufferView": 1})
+        d["accessors"].append({"bufferView": 0, "componentType": 5121, "count": 1, "type": "SCALAR",
+                               "extensions": {"MPEG_accessor_timed": {"immutable": True}}})
+    case(m, "ACC-006")
+
+
+def audio_source(**src):
+    d = good()
+    d["extensionsUsed"].append("MPEG_audio_spatial")
+    d["nodes"][0]["extensions"]["MPEG_audio_spatial"] = {"sources": [dict({"type": "Object", "accessors": [0]}, **src)]}
+    return d
+
+
+def test_reverb_feed_gain_length():
+    assert ("AUD-003", "error") in rules(audio_source(reverbFeed=[{"reverb": 0}, {"reverb": 0}], reverbFeedGain=[1.0]))
+
+
+def test_cluster_needs_properties():
+    assert ("AUD-004", "error") in rules(audio_source(isCluster=True))
+
+
+def test_hoa_has_no_reference_distance():
+    assert ("AUD-005", "error") in rules(audio_source(type="HOA", referenceDistance=1.0))
+
+
+def test_openxr_path_names():
+    from mpegi_sd_validator.validate import openxr_path
+    assert openxr_path("/user/hand/left/input/select/click") and openxr_path("/user/hand/left/grip")
+    for bad in ("/Mouse/leftButton", "user/hand", "/user/", "/a//b", "/a/./b", "/a/..", "", "/"):
+        assert not openxr_path(bad), bad
+
+
+def test_user_input_path_is_an_openxr_path():
+    d = good(); interactive(d, triggers=[{"type": 2, "userInputDescription": "/Mouse/leftButton", "nodes": [0]}])
+    assert ("INT-003", "error") in rules(d)
+    d = good(); interactive(d, triggers=[{"type": 2, "userInputDescription": "/user/hand/left/grip", "nodes": [0]}])
+    assert ("INT-003", "error") not in rules(d)
+
+
+def accessor_case(name, key, comp, typ, rule, place):
+    d = good()
+    d["accessors"].append({"bufferView": 0, "componentType": comp, "count": 1, "type": typ})
+    d["extensionsUsed"].append(name)
+    if place == "scenes":
+        d["scenes"][0].setdefault("extensions", {})[name] = {key: len(d["accessors"]) - 1}
+    else:
+        d["meshes"] = [{}]
+        d["meshes"][0]["extensions"] = {name: {key: len(d["accessors"]) - 1}}
+    return d
+
+
+def test_viewport_accessor_formats():
+    for key, typ, rule in (("translation", "VEC3", "VIEW-001"), ("rotation", "VEC4", "VIEW-002"), ("parameters", "VEC4", "VIEW-003")):
+        assert (rule, "error") not in rules(accessor_case("MPEG_viewport_recommended", key, 5126, typ, rule, "scenes"))
+        assert (rule, "error") in rules(accessor_case("MPEG_viewport_recommended", key, 5125, typ, rule, "scenes"))
+
+
+def test_animation_timing_accessor_format():
+    assert ("ANIM-001", "error") not in rules(accessor_case("MPEG_animation_timing", "accessor", 5120, "SCALAR", "ANIM-001", "scenes"))
+    assert ("ANIM-001", "error") in rules(accessor_case("MPEG_animation_timing", "accessor", 5126, "SCALAR", "ANIM-001", "scenes"))
+
+
+def test_mesh_linking_accessors_and_mesh():
+    d = accessor_case("MPEG_mesh_linking", "pose", 5126, "VEC3", "MESH-002", "meshes")
+    d["meshes"][0]["extensions"]["MPEG_mesh_linking"].update({"mesh": 4, "correspondence": 0, "weights": 0})
+    got = rules(d)
+    assert {("MESH-001", "error"), ("MESH-002", "error"), ("MESH-003", "error"), ("MESH-004", "error")} <= got

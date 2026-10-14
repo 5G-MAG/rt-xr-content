@@ -31,6 +31,14 @@ SCHEMA_DISAGREES = {
 }
 
 
+def openxr_path(p):
+    """OpenXR 1.0, 6.2 "Path name strings": only a-z 0-9 - _ . and /; one leading slash; no trailing slash; no adjacent slashes; no
+    segment of periods only (two slashes separated only by periods, or only periods after the final slash)."""
+    if not re.fullmatch(r"[a-z0-9_./-]+", p) or not p.startswith("/") or p.endswith("/"):
+        return False
+    return all(seg and seg.strip(".") for seg in p[1:].split("/"))
+
+
 def _ptr(*parts):
     return "/" + "/".join(str(p).replace("~", "~0").replace("/", "~1") for p in parts)
 
@@ -151,6 +159,7 @@ class Checker:
 
     def accessors(self):
         views = self.d.get("bufferViews") or []
+        headers = {}  # buffer -> whether each of its timed accessors has a header bufferView
         for ai, a in enumerate(self.d.get("accessors") or []):
             if not isinstance(a, dict):
                 continue
@@ -162,7 +171,11 @@ class Checker:
                 self.add(ERROR, "ACC-001", "5.2.2.1", p, "an accessor on a buffer with MPEG_buffer_circular carries timed data and needs MPEG_accessor_timed")
             if not isinstance(ext, dict):
                 continue
+            if buf is not None and not self._buffer_has_circular(buf):
+                self.add(ERROR, "ACC-005", "5.2.2.1", p, "an accessor with MPEG_accessor_timed shall only point to a buffer with MPEG_buffer_circular")
             ebv = ext.get("bufferView")
+            if buf is not None:
+                headers.setdefault(buf, set()).add(ebv is not None)
             if ebv is None:
                 if ext.get("immutable") is not True:
                     self.add(ERROR, "ACC-002", "5.2.2.2", p + "/extensions/MPEG_accessor_timed", "without a bufferView the immutable flag shall be present and true")
@@ -170,6 +183,9 @@ class Checker:
                 self.add(ERROR, "ACC-003", "5.2.2.2", p + "/extensions/MPEG_accessor_timed/bufferView", f"bufferView {ebv} does not exist")
             elif buf is not None and views[ebv].get("buffer") != buf:
                 self.add(ERROR, "ACC-004", "5.2.2.2", p + "/extensions/MPEG_accessor_timed/bufferView", "the header bufferView shall point to the same buffer as the bufferView of the accessor")
+        for buf, kinds in sorted(headers.items()):
+            if len(kinds) > 1:
+                self.add(ERROR, "ACC-006", "5.2.2.3", _ptr("buffers", buf), "a buffer shall not mix accessors that have a timed accessor information header with accessors that do not")
 
     def textures(self):
         accs = self.d.get("accessors") or []
@@ -192,6 +208,37 @@ class Checker:
             if fmt in FORMAT_COMPONENTS and isinstance(w, int) and isinstance(h, int) and isinstance(a.get("count"), int) and a["count"] != w * h:
                 self.add(ERROR, "TEX-004", "5.3.1.3", p, f"the picture is {w} x {h} = {w * h} pixels but the accessor count is {a['count']}")
 
+    # ---------------------------------------------------------------- accessors of a given format
+    def accessor_format(self, ptr, index, component, typ, rule, clause, label):
+        accs = self.d.get("accessors") or []
+        if not (isinstance(index, int) and 0 <= index < len(accs)) or not isinstance(accs[index], dict):
+            return
+        a = accs[index]
+        if a.get("componentType") != component or a.get("type") != typ:
+            self.add(ERROR, rule, clause, ptr, f"the accessor {index} has componentType {a.get('componentType')} and type {a.get('type')}; {label}")
+
+    def accessor_formats(self):
+        for place, ptr, name, val, _ in self.ext_objects():
+            if not isinstance(val, dict):
+                continue
+            if name == "MPEG_viewport_recommended":
+                for here, v in [(ptr, val)] + [(f"{ptr}/viewports/{i}", x) for i, x in enumerate(val.get("viewports") or []) if isinstance(x, dict)]:
+                    self.accessor_format(here + "/translation", v.get("translation"), 5126, "VEC3", "VIEW-001", "5.5.1.2", "the componentType shall be FLOAT (5126) and the type VEC3")
+                    self.accessor_format(here + "/rotation", v.get("rotation"), 5126, "VEC4", "VIEW-002", "5.5.1.2", "the componentType shall be FLOAT (5126) and the type VEC4")
+                    self.accessor_format(here + "/parameters", v.get("parameters"), 5126, "VEC4", "VIEW-003", "5.5.1.2", "the componentType shall be FLOAT (5126) and the type VEC4")
+            elif name == "MPEG_animation_timing":
+                self.accessor_format(ptr + "/accessor", val.get("accessor"), 5120, "SCALAR", "ANIM-001", "5.5.2.2", "the componentType shall be BYTE (5120) and the type SCALAR")
+            elif name == "MPEG_mesh_linking":
+                accs = self.d.get("accessors") or []
+                ci = val.get("correspondence")
+                if isinstance(ci, int) and 0 <= ci < len(accs) and isinstance(accs[ci], dict) and accs[ci].get("type") != "SCALAR":
+                    self.add(ERROR, "MESH-001", "5.3.2.2", ptr + "/correspondence", f"the accessor {ci} has type {accs[ci].get('type')}; the type shall be SCALAR")
+                self.accessor_format(ptr + "/pose", val.get("pose"), 5126, "MAT4", "MESH-002", "5.3.2.2", "the componentType shall be FLOAT (5126) and the type MAT4")
+                self.accessor_format(ptr + "/weights", val.get("weights"), 5126, "SCALAR", "MESH-003", "5.3.2.2", "the componentType shall be FLOAT (5126) and the type SCALAR")
+                mi = val.get("mesh")
+                if isinstance(mi, int) and not 0 <= mi < len(self.d.get("meshes") or []):
+                    self.add(ERROR, "MESH-004", "5.3.2.2", ptr + "/mesh", f"mesh {mi} is not an item of the meshes array")
+
     # ---------------------------------------------------------------- audio
     def audio(self):
         for place, ptr, name, val, _ in self.ext_objects():
@@ -201,6 +248,17 @@ class Checker:
                 self.add(ERROR, "AUD-001", "5.4.1.1", ptr, "on a node, either sources or listener shall be present")
             if place == "root" and not val.get("reverbs") and "reverb" not in val:
                 self.add(ERROR, "AUD-002", "5.4.1.1", ptr, "at the glTF file level the reverb property shall be present")
+            for si, src in enumerate(val.get("sources") or []):
+                if not isinstance(src, dict):
+                    continue
+                here = f"{ptr}/sources/{si}"
+                feed, gain = src.get("reverbFeed"), src.get("reverbFeedGain")
+                if isinstance(feed, list) and isinstance(gain, list) and len(feed) != len(gain):
+                    self.add(ERROR, "AUD-003", "5.4.1.2", here + "/reverbFeedGain", f"reverbFeedGain has {len(gain)} elements, reverbFeed has {len(feed)}")
+                if src.get("isCluster") is True and "clusterProperties" not in src:
+                    self.add(ERROR, "AUD-004", "5.4.1.2", here, "clusterProperties shall be defined when isCluster is true")
+                if src.get("type") == "HOA" and "referenceDistance" in src:
+                    self.add(ERROR, "AUD-005", "5.4.1.2", here + "/referenceDistance", "referenceDistance shall not be present when type is HOA")
 
     # ---------------------------------------------------------------- anchors
     def anchors(self):
@@ -260,6 +318,9 @@ class Checker:
                             self.add(ERROR, "INT-001", "8.2.2.1", f"{ptr}/behaviors/{bi}/{key}", f"{label} {x} is not an item of the {key} array ({len(pool)} items)")
             for key, items in (("triggers", trig), ("actions", act)):
                 for i, it in enumerate(items):
+                    path = it.get("userInputDescription") if isinstance(it, dict) else None
+                    if isinstance(path, str) and not openxr_path(path):
+                        self.add(ERROR, "INT-003", "8.2.2.1", f"{ptr}/{key}/{i}/userInputDescription", f"{path!r} is not an OpenXR path name string (lower case a-z, 0-9, - _ . and /, one leading /, no trailing /, no empty or dot-only segment)")
                     for ni in (it.get("nodes") or []) if isinstance(it, dict) else []:
                         if isinstance(ni, int) and not 0 <= ni < len(nodes):
                             self.add(ERROR, "INT-002", "8.2.2.1", f"{ptr}/{key}/{i}/nodes", f"node {ni} does not exist")
@@ -299,6 +360,7 @@ class Checker:
         self.accessors()
         self.textures()
         self.audio()
+        self.accessor_formats()
         self.anchors()
         self.interactivity()
         self.gltf_base()

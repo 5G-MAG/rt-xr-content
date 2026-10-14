@@ -9,12 +9,12 @@ EXTENSIONS = {
     "MPEG_media": {"clause": "5.2.1", "at": {"root"}, "schema": "MPEG_media.schema.json"},
     "MPEG_accessor_timed": {"clause": "5.2.2", "at": {"accessors"}, "schema": "MPEG_accessor_timed.schema.json"},
     "MPEG_buffer_circular": {"clause": "5.2.3", "at": {"buffers"}, "schema": "MPEG_buffer_circular.schema.json"},
-    "MPEG_scene_dynamic": {"clause": "5.2.4", "at": None, "schema": "MPEG_scene_dynamic.schema.json"},
+    "MPEG_scene_dynamic": {"clause": "5.2.4", "at": {"scenes"}, "schema": "MPEG_scene_dynamic.schema.json"},
     "MPEG_texture_video": {"clause": "5.3.1", "at": {"textures"}, "schema": "MPEG_texture_video.schema.json"},
-    "MPEG_mesh_linking": {"clause": "5.3.2", "at": None, "schema": "MPEG_mesh_linking.schema.json"},
+    "MPEG_mesh_linking": {"clause": "5.3.2", "at": {"meshes"}, "schema": "MPEG_mesh_linking.schema.json"},
     "MPEG_audio_spatial": {"clause": "5.4.1", "at": {"root", "scenes", "nodes", "cameras"}, "schema": "MPEG_audio_spatial.schema.json"},
-    "MPEG_viewport_recommended": {"clause": "5.5.1", "at": None, "schema": "MPEG_viewport_recommended.schema.json"},
-    "MPEG_animation_timing": {"clause": "5.5.2", "at": None, "schema": "MPEG_animation_timing.schema.json"},
+    "MPEG_viewport_recommended": {"clause": "5.5.1", "at": {"scenes"}, "schema": "MPEG_viewport_recommended.schema.json"},
+    "MPEG_animation_timing": {"clause": "5.5.2", "at": {"scenes"}, "schema": "MPEG_animation_timing.schema.json"},
     # at the glTF file level the anchor extension holds the trackable and anchor definitions (8.1.2); a scene or a node
     # refers to an anchor (Table 31)
     "MPEG_anchor": {"clause": "8.1", "at": {"root", "scenes", "nodes"}, "schema": None},

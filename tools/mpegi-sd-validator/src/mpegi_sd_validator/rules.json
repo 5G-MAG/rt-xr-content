@@ -44,7 +44,44 @@
     "readme_changed": "2024-11-18",
     "readme_based_on": "ISO/IEC DIS 23090-14 2nd Edition"
    },
-   "note": "One sentence per extension; the quotation is the buffer one, the node one is in the MPEG README."
+   "note": "One sentence per extension: the first quotation is the buffer one, the others follow in spec_more; the node interactivity one is in the MPEG README.",
+   "spec_more": [
+    {
+     "doc": "ISO/IEC 23090-14:2024(E)",
+     "clause": "5.2.1.1",
+     "quote": "When present, the MPEG_media extension shall be included as a top-level extension."
+    },
+    {
+     "doc": "ISO/IEC 23090-14:2024(E)",
+     "clause": "5.2.4.1",
+     "quote": "When present, the MPEG_scene_dynamic extension shall be included as extension of a scene object defined in ISO/IEC 12113."
+    },
+    {
+     "doc": "ISO/IEC 23090-14:2024(E)",
+     "clause": "5.3.2.1",
+     "quote": "When present, the MPEG_mesh_linking extension shall be included as extension of a mesh object defined in ISO/IEC 12113."
+    },
+    {
+     "doc": "ISO/IEC 23090-14:2024(E)",
+     "clause": "5.4.1.1",
+     "quote": "When present, the MPEG_audio_spatial extension shall be included as extension of a camera object, or a scene object defined in ISO/IEC 12113."
+    },
+    {
+     "doc": "ISO/IEC 23090-14:2024(E)",
+     "clause": "5.5.1.1",
+     "quote": "When present, the MPEG_viewport_recommended extension shall be included as extension of a scene object defined in ISO/IEC 12113."
+    },
+    {
+     "doc": "ISO/IEC 23090-14:2024(E)",
+     "clause": "5.5.2.1",
+     "quote": "When present, the MPEG_animation_timing extension shall be included as extension of a scene object defined in ISO/IEC 12113."
+    },
+    {
+     "doc": "ISO/IEC 23090-14:2024(E)",
+     "clause": "8.2.1",
+     "quote": "When present, the MPEG_scene_interactivity extension shall be included as extension to the scene object."
+    }
+   ]
   },
   {
    "rule": "EXT-004",
@@ -182,13 +219,9 @@
    "clause": "5.2.2.1",
    "title": "An accessor on a buffer with MPEG_buffer_circular has MPEG_accessor_timed",
    "basis": "inference",
-   "spec": {
-    "doc": "ISO/IEC 23090-14:2024(E)",
-    "clause": "5.2.2.1",
-    "quote": "Accessors that include the \"MPEG_accessor_timed\" extension shall only point to buffers that include the \"MPEG_buffer_circular\" extension."
-   },
+   "spec": null,
    "mpeg": null,
-   "note": "The sentence states the converse (timed accessor, circular buffer). This rule is inferred from it and from 'Buffers that provide access to timed data shall include the MPEG_buffer_circular extension' (5.2.3.1). Open: whether it should stay an error."
+   "note": "The text states the converse (a timed accessor shall point to a circular buffer, ACC-005; a buffer that provides access to timed data shall include MPEG_buffer_circular, 5.2.3.1). This rule is inferred from them. Open: whether it should stay an error."
   },
   {
    "rule": "ACC-002",
@@ -242,6 +275,34 @@
     "readme_changed": "2023-02-13",
     "readme_based_on": "ISO/IEC FDIS 23090-14"
    },
+   "note": ""
+  },
+  {
+   "rule": "ACC-005",
+   "severity": "error",
+   "clause": "5.2.2.1",
+   "title": "A timed accessor points to a buffer with MPEG_buffer_circular",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.2.2.1",
+    "quote": "Accessors that include the \"MPEG_accessor_timed\" extension shall only point to buffers that include the \"MPEG_buffer_circular\" extension."
+   },
+   "mpeg": null,
+   "note": ""
+  },
+  {
+   "rule": "ACC-006",
+   "severity": "error",
+   "clause": "5.2.2.3",
+   "title": "A buffer does not mix accessors with and without a timed accessor information header",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.2.2.3",
+    "quote": "A buffer shall not mix data from dynamic and static components"
+   },
+   "mpeg": null,
    "note": ""
   },
   {
@@ -331,6 +392,54 @@
    },
    "mpeg": null,
    "note": ""
+  },
+  {
+   "rule": "AUD-003",
+   "severity": "error",
+   "clause": "5.4.1.2",
+   "title": "reverbFeedGain has as many elements as reverbFeed",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.4.1.2",
+    "quote": "The array shall have the same number of elements as the reverbFeed array field."
+   },
+   "mpeg": {
+    "file": "MPEG_audio_spatial/README.md",
+    "quote": "The array shall have the same  number of elements as the reverbFeed array field.",
+    "agrees": "yes",
+    "readme_changed": "2023-03-19",
+    "readme_based_on": "ISO/IEC FDIS 23090-14"
+   },
+   "note": ""
+  },
+  {
+   "rule": "AUD-004",
+   "severity": "error",
+   "clause": "5.4.1.2",
+   "title": "clusterProperties is defined when isCluster is true",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.4.1.2",
+    "quote": "This object shall be defined, when the isCluster attribute is set to True."
+   },
+   "mpeg": null,
+   "note": ""
+  },
+  {
+   "rule": "AUD-005",
+   "severity": "error",
+   "clause": "5.4.1.2",
+   "title": "referenceDistance is absent when the source type is HOA",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.4.1.2",
+    "quote": "When type equals 'HOA', the element shall not be present."
+   },
+   "mpeg": null,
+   "note": "The sentence says 'the element'; in Table 14 it follows the referenceDistance row, so referenceDistance is the element."
   },
   {
    "rule": "ANC-001",
@@ -469,6 +578,137 @@
    "spec": null,
    "mpeg": null,
    "note": "Index into the nodes array; no sentence."
+  },
+  {
+   "rule": "INT-003",
+   "severity": "error",
+   "clause": "8.2.2.1",
+   "title": "userInputDescription is an OpenXR path name string",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "8.2.2.1",
+    "quote": "The format shall follow the OpenXR input path description as defined in [OpenXR] section 6."
+   },
+   "mpeg": null,
+   "note": "Checked against the rules for path name strings in OpenXR 1.0, clause 6.2 (characters, leading slash, no trailing slash, no adjacent slashes, no period-only segment). The maximum length, XR_MAX_PATH_LENGTH, is not checked: its value is not in the specification.",
+   "ref": {
+    "doc": "OpenXR 1.0",
+    "clause": "6.2",
+    "quote": "Path name strings must be constructed entirely from characters on the following list."
+   }
+  },
+  {
+   "rule": "VIEW-001",
+   "severity": "error",
+   "clause": "5.5.1.2",
+   "title": "The translation accessor is FLOAT VEC3",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.5.1.2",
+    "quote": "The componentType of the referenced accessor shall be FLOAT and the type shall be VEC3, (x, y, z)."
+   },
+   "mpeg": null,
+   "note": ""
+  },
+  {
+   "rule": "VIEW-002",
+   "severity": "error",
+   "clause": "5.5.1.2",
+   "title": "The rotation accessor is FLOAT VEC4",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.5.1.2",
+    "quote": "The componentType of the referenced accessor shall be FLOAT and the type shall be VEC4, as a unit quaternion, (x, y, z, w)."
+   },
+   "mpeg": null,
+   "note": ""
+  },
+  {
+   "rule": "VIEW-003",
+   "severity": "error",
+   "clause": "5.5.1.2",
+   "title": "The parameters accessor is FLOAT VEC4",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.5.1.2",
+    "quote": "The componentType of the referenced accessor shall be FLOAT and the type shall be VEC4."
+   },
+   "mpeg": null,
+   "note": ""
+  },
+  {
+   "rule": "ANIM-001",
+   "severity": "error",
+   "clause": "5.5.2.2",
+   "title": "The animation timing accessor is BYTE SCALAR",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.5.2.2",
+    "quote": "The componentType of the referenced accessor shall be BYTE and the type shall be SCALAR."
+   },
+   "mpeg": null,
+   "note": ""
+  },
+  {
+   "rule": "MESH-001",
+   "severity": "error",
+   "clause": "5.3.2.2",
+   "title": "The correspondence accessor is SCALAR",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.3.2.2",
+    "quote": "The componentType of the referenced accessor shall be as indicated in subclause 7.4 and the type shall be SCALAR."
+   },
+   "mpeg": null,
+   "note": "The componentType of the correspondence accessor (subclause 7.4) is not checked."
+  },
+  {
+   "rule": "MESH-002",
+   "severity": "error",
+   "clause": "5.3.2.2",
+   "title": "The pose accessor is FLOAT MAT4",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.3.2.2",
+    "quote": "The componentType of the referenced accessor shall be FLOAT and the type shall be MAT4."
+   },
+   "mpeg": null,
+   "note": ""
+  },
+  {
+   "rule": "MESH-003",
+   "severity": "error",
+   "clause": "5.3.2.2",
+   "title": "The weights accessor is FLOAT SCALAR",
+   "basis": "sentence",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.3.2.2",
+    "quote": "The componentType of the referenced accessor shall be FLOAT and the type shall be SCALAR."
+   },
+   "mpeg": null,
+   "note": ""
+  },
+  {
+   "rule": "MESH-004",
+   "severity": "error",
+   "clause": "5.3.2.2",
+   "title": "The shadow mesh is an item of the meshes array",
+   "basis": "reference",
+   "spec": {
+    "doc": "ISO/IEC 23090-14:2024(E)",
+    "clause": "5.3.2.2",
+    "quote": "Provides a reference to the shadow mesh, by specifying the mesh index in meshes array"
+   },
+   "mpeg": null,
+   "note": ""
   },
   {
    "rule": "GLTF-001",

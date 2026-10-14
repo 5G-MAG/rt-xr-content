@@ -57,15 +57,16 @@ every rule, and exports the result as Markdown or JSON. It uses the same checks 
 |---|---|---|
 | EXT-001, EXT-004 | 5.1.1 | every extension used is in `extensionsUsed`, every required one is too |
 | EXT-002 | 5.1.1 | an `MPEG_*` name that the specification does not define, with the name the text uses (for example `MPEG_node_avatar`) |
-| EXT-003 | by extension | an extension sits only where its clause allows (`MPEG_media` at the top level, `MPEG_buffer_circular` on a buffer, ...) |
+| EXT-003 | by extension | an extension sits only where its clause allows (`MPEG_media` at the top level, `MPEG_buffer_circular` on a buffer, `MPEG_viewport_recommended` on a scene, ...) |
 | MEDIA-001, 002 | 5.2.1.2 | `autoplayGroup` is an integer and only with `autoplay` true |
 | MEDIA-003, 004 | 5.2.1.2 | `startTime` with `autoplay` true (warning); `endTimeOffset` not after `startTimeOffset` (warning) |
 | BUF-001 to 004 | 5.2.3 | no `uri`; `media` and `tracks` exist; `byteLength` holds `count` frames |
-| ACC-001 to 004 | 5.2.2 | timed data has `MPEG_accessor_timed`; without a header `immutable` is true; the header bufferView is in the same buffer |
+| ACC-001 to 006 | 5.2.2 | timed data has `MPEG_accessor_timed`; without a header `immutable` is true; the header bufferView is in the same buffer; a timed accessor is on a circular buffer; a buffer does not mix accessors with and without header |
 | TEX-001 to 004 | 5.3.1 | the accessor exists and is timed; the format has as many components as the accessor type; width x height equals the accessor count |
-| AUD-001, 002 | 5.4.1.1 | a node has sources or a listener; the file level has a reverb |
+| AUD-001 to 005 | 5.4.1 | a node has sources or a listener; the file level has a reverb; `reverbFeedGain` and `reverbFeed` have the same length; `clusterProperties` with `isCluster`; no `referenceDistance` for HOA |
 | ANC-001 to 008 | 8.1 | anchors defined at file level; not at scene and node level together; anchor and trackable indices; required properties per trackable type; geographic coordinates longitude first, in range |
-| INT-001, 002 | 8.2.2.1 | behavior triggers and actions exist; node indices exist |
+| INT-001 to 003 | 8.2.2.1 | behavior triggers and actions exist; node indices exist; `userInputDescription` is an OpenXR path name string (clause 6.2 of OpenXR 1.0) |
+| VIEW-001 to 003, ANIM-001, MESH-001 to 004 | 5.5.1.2, 5.5.2.2, 5.3.2.2 | the componentType and type of the accessors these extensions reference; the shadow mesh exists |
 | GLTF-001, 002 | glTF 2.0 3.6.1.1, 3.6.2.4 | a buffer file is at least `byteLength` long; each accessor fits its bufferView |
 
 ## Where the rules come from
@@ -114,15 +115,14 @@ text states the converse) and TEX-004 (width x height equals the accessor count)
 - The base glTF 2.0 beyond the two integrity rules above: use the Khronos glTF Validator for it.
 - The media itself: whether a declared picture size matches the stream, the codec, or whether a URL answers.
 - The `#` index of `triggersCombinationControl` (the text gives an example starting at `#1` and does not say what the number counts).
-- Placement of `MPEG_scene_dynamic`, `MPEG_mesh_linking`, `MPEG_viewport_recommended`, `MPEG_animation_timing`, lights and haptics: their
-  schemas are applied wherever they are found.
+- Placement of lights and haptics: their schemas are applied wherever they are found.
 - The carriage formats of clause 7 (ISO base media file boxes).
 
 ## Tests
 
     pip install -e ".[test]" && pytest
 
-`tests/test_rules.py` builds a small valid scene, breaks it in one way per test, and expects the rule (41 tests, every rule above
+`tests/test_rules.py` builds a small valid scene, breaks it in one way per test, and expects the rule (52 tests, every rule above
 except `SCHEMA` and `SCHEMA-000` has one).
 
 ## License
