@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mpegi-sd-validator"
+version = "0.1.0"
+description = "MPEG-I Scene Description - XR/3D Scene Validator: checks glTF files that use the MPEG-I Scene Description extensions (ISO/IEC 23090-14) against the specification"
+license = {text = "5G-MAG Public License v1.0"}
+requires-python = ">=3.9"
+dependencies = ["jsonschema>=4.17"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+mpegi-sd-validate = "mpegi_sd_validator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mpegi_sd_validator = ["schemas/mpeg/*.json", "schemas/mpeg/NOTICE.md", "schemas/gltf/*.json", "static/*", "static/images/*", "rules.json"]
