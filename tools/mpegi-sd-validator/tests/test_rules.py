@@ -32,6 +32,12 @@ def rules(doc):
     return {(f.rule, f.severity) for f in validate_document(doc)}
 
 
+def warn(mutate, rule):
+    d = good()
+    mutate(d)
+    assert (rule, "warning") in rules(d), [f.line() for f in validate_document(d)]
+
+
 def test_good_scene_has_no_errors():
     assert not [f for f in validate_document(good()) if f.severity == "error"]
 
@@ -51,7 +57,7 @@ def test_unknown_mpeg_extension_with_hint():
     d["nodes"][0]["extensions"]["MPEG_avatar"] = {}
     d["extensionsUsed"].append("MPEG_avatar")
     f = [x for x in validate_document(d) if x.rule == "EXT-002"]
-    assert f and "MPEG_node_avatar" in f[0].message
+    assert f and f[0].severity == "warning" and "MPEG_node_avatar" in f[0].message
 
 
 def test_media_not_at_root():
@@ -75,7 +81,7 @@ def test_circular_buffer_media_index():
 
 
 def test_circular_buffer_holds_count_frames():
-    case(lambda d: d["buffers"][0].update({"byteLength": 12}), "BUF-004")
+    warn(lambda d: d["buffers"][0].update({"byteLength": 12}), "BUF-004")
 
 
 def test_timed_accessor_without_header_is_immutable():
@@ -182,12 +188,6 @@ def test_viewport_where_the_pdf_governs():
     found = validate_document(d, "x.gltf")
     assert not [f for f in found if f.severity == "error"]
     assert any(f.rule == "SCHEMA-TEXT" and f.severity == "info" for f in found)
-
-
-def warn(mutate, rule):
-    d = good()
-    mutate(d)
-    assert (rule, "warning") in rules(d), [f.line() for f in validate_document(d)]
 
 
 def test_required_extension_not_used():

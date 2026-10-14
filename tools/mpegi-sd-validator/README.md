@@ -56,11 +56,11 @@ every rule, and exports the result as Markdown or JSON. It uses the same checks 
 | Rule | Clause | What it checks |
 |---|---|---|
 | EXT-001, EXT-004 | 5.1.1 | every extension used is in `extensionsUsed`, every required one is too |
-| EXT-002 | 5.1.1 | an `MPEG_*` name that the specification does not define, with the name the text uses (for example `MPEG_node_avatar`) |
+| EXT-002 | 5.1.1 | an `MPEG_*` name that this document does not define (warning), with the name the text uses (for example `MPEG_node_avatar`) |
 | EXT-003 | by extension | an extension sits only where its clause allows (`MPEG_media` at the top level, `MPEG_buffer_circular` on a buffer, `MPEG_viewport_recommended` on a scene, ...) |
 | MEDIA-001, 002 | 5.2.1.2 | `autoplayGroup` is an integer and only with `autoplay` true |
 | MEDIA-003, 004 | 5.2.1.2 | `startTime` with `autoplay` true (warning); `endTimeOffset` not after `startTimeOffset` (warning) |
-| BUF-001 to 004 | 5.2.3 | no `uri`; `media` and `tracks` exist; `byteLength` holds `count` frames |
+| BUF-001 to 004 | 5.2.3 | no `uri`; `media` and `tracks` exist; `byteLength` holds `count` frames (warning) |
 | ACC-002 to 006 | 5.2.2 | without a header `immutable` is true; the header bufferView is in the same buffer; a timed accessor is on a circular buffer; a buffer does not mix accessors with and without header |
 | TEX-001 to 003 | 5.3.1 | the accessor exists and is timed; the format has as many components as the accessor type |
 | AUD-001 to 005 | 5.4.1 | a node has sources or a listener; the file level has a reverb; `reverbFeedGain` and `reverbFeed` have the same length; `clusterProperties` with `isCluster`; no `referenceDistance` for HOA |

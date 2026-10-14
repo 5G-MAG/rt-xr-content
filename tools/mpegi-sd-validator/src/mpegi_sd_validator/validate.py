@@ -70,7 +70,7 @@ class Checker:
             info = EXTENSIONS.get(name)
             if info is None:
                 hint = RENAMED.get(name) or (difflib.get_close_matches(name, list(EXTENSIONS), 1, 0.8) or [None])[0]
-                self.add(ERROR, "EXT-002", "5.1.1", ptr, f"{name} is not an extension of the specification" + (f"; the text uses {hint}" if hint else ""))
+                self.add(WARNING, "EXT-002", "5.1.1", ptr, f"{name} is not an extension this document defines" + (f"; the text uses {hint}" if hint else ""))
                 continue
             if info["at"] is not None and place not in info["at"]:
                 self.add(ERROR, "EXT-003", info["clause"], ptr, f"{name} may only appear at {', '.join(sorted(info['at']))}, not at {place}")
@@ -154,7 +154,7 @@ class Checker:
                 if isinstance(v, dict) and v.get("buffer") == bi:
                     frame = max(frame, v.get("byteOffset", 0) + v.get("byteLength", 0))
             if isinstance(count, int) and frame and isinstance(b.get("byteLength"), int) and b["byteLength"] < frame * count:
-                self.add(ERROR, "BUF-004", "5.2.3.1", p + "/byteLength",
+                self.add(WARNING, "BUF-004", "5.2.3.1", p + "/byteLength",
                          f"byteLength {b['byteLength']} holds {b['byteLength'] / frame:.2f} frames of {frame} bytes; count is {count}")
 
     def accessors(self):

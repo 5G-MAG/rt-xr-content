@@ -18,13 +18,13 @@
   },
   {
    "rule": "EXT-002",
-   "severity": "error",
+   "severity": "warning",
    "clause": "5.1.1",
-   "title": "An MPEG_* extension name is one the specification defines",
+   "title": "An MPEG_* extension name is one this document defines",
    "basis": "reference",
    "spec": null,
    "mpeg": null,
-   "note": "No single sentence: the names are those the clauses of the extensions define. Wrong names seen in practice are reported with the name the text uses."
+   "note": "A warning: the text lists the extensions this document defines and does not forbid other MPEG_ names (other documents or editions may define more). Names the text uses in place of an older name are given as a hint."
   },
   {
    "rule": "EXT-003",
@@ -201,7 +201,7 @@
   },
   {
    "rule": "BUF-004",
-   "severity": "error",
+   "severity": "warning",
    "clause": "5.2.3.1",
    "title": "byteLength holds count frames",
    "basis": "sentence",
@@ -211,7 +211,7 @@
     "quote": "the buffer element property byteLength shall indicate the maximum possible size of the buffer"
    },
    "mpeg": null,
-   "note": ""
+   "note": "A warning: the frame size is taken as the extent of the bufferViews of the buffer, which the text does not define; timed data may carry a header or a size the static views do not show."
   },
   {
    "rule": "ACC-002",
@@ -357,7 +357,7 @@
     "quote": "either MPEG_audio_spatial.source or MPEG_audio_spatial.listener properties of the extension shall be present."
    },
    "mpeg": null,
-   "note": ""
+   "note": "The sentence says source or listener; Table 13 names the property sources. Both spellings are accepted."
   },
   {
    "rule": "AUD-002",
@@ -371,7 +371,7 @@
     "quote": "MPEG_audio_spatial.reverb property shall be present."
    },
    "mpeg": null,
-   "note": ""
+   "note": "The sentence says the reverb property; Table 13 and the schema call it reverbs. Both are accepted, an empty reverbs array is not."
   },
   {
    "rule": "AUD-003",
