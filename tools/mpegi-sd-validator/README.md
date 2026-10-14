@@ -61,8 +61,8 @@ every rule, and exports the result as Markdown or JSON. It uses the same checks 
 | MEDIA-001, 002 | 5.2.1.2 | `autoplayGroup` is an integer and only with `autoplay` true |
 | MEDIA-003, 004 | 5.2.1.2 | `startTime` with `autoplay` true (warning); `endTimeOffset` not after `startTimeOffset` (warning) |
 | BUF-001 to 004 | 5.2.3 | no `uri`; `media` and `tracks` exist; `byteLength` holds `count` frames |
-| ACC-001 to 006 | 5.2.2 | timed data has `MPEG_accessor_timed`; without a header `immutable` is true; the header bufferView is in the same buffer; a timed accessor is on a circular buffer; a buffer does not mix accessors with and without header |
-| TEX-001 to 004 | 5.3.1 | the accessor exists and is timed; the format has as many components as the accessor type; width x height equals the accessor count |
+| ACC-002 to 006 | 5.2.2 | without a header `immutable` is true; the header bufferView is in the same buffer; a timed accessor is on a circular buffer; a buffer does not mix accessors with and without header |
+| TEX-001 to 003 | 5.3.1 | the accessor exists and is timed; the format has as many components as the accessor type |
 | AUD-001 to 005 | 5.4.1 | a node has sources or a listener; the file level has a reverb; `reverbFeedGain` and `reverbFeed` have the same length; `clusterProperties` with `isCluster`; no `referenceDistance` for HOA |
 | ANC-001 to 008 | 8.1 | anchors defined at file level; not at scene and node level together; anchor and trackable indices; required properties per trackable type; geographic coordinates longitude first, in range |
 | INT-001 to 003 | 8.2.2.1 | behavior triggers and actions exist; node indices exist; `userInputDescription` is an OpenXR path name string (clause 6.2 of OpenXR 1.0) |
@@ -72,7 +72,7 @@ every rule, and exports the result as Markdown or JSON. It uses the same checks 
 ## Where the rules come from
 
 `src/mpegi_sd_validator/rules.json` lists every rule with its clause, the single sentence of ISO/IEC 23090-14:2024(E) that
-obliges it (or its basis when no sentence does: a table, a reference between indices, an inference, the tool itself), and,
+obliges it (or its basis when no sentence does: a table, a reference between indices, the tool itself), and,
 where it has one, the matching sentence of the README files in the MPEG repository, with the edition that README says it is based
 on and the date it last changed (the READMEs of the first-edition extensions are from 2023). The Rules tab shows it.
 
@@ -107,8 +107,9 @@ file differs from it, the finding is `SCHEMA-TEXT` information. Known cases:
   the tool resolves both names;
 - `MPEG_lights_texture_based.schema.json` is not valid JSON in the repository and is left out (`SCHEMA-000`).
 
-Two rules are inferences, not sentences of the text: ACC-001 (an accessor on a circular buffer has `MPEG_accessor_timed`; the
-text states the converse) and TEX-004 (width x height equals the accessor count). `rules.json` marks them as such.
+Every rule rests on a sentence, a table or an index reference of the text, or on the tool itself (`basis` in `rules.json`). Two
+candidate rules were left out because no sentence states them: an accessor on a circular buffer needing `MPEG_accessor_timed` (the text
+states the converse, `ACC-005`) and width x height equalling the accessor count.
 
 ## What is not checked
 
@@ -122,7 +123,7 @@ text states the converse) and TEX-004 (width x height equals the accessor count)
 
     pip install -e ".[test]" && pytest
 
-`tests/test_rules.py` builds a small valid scene, breaks it in one way per test, and expects the rule (52 tests, every rule above
+`tests/test_rules.py` builds a small valid scene, breaks it in one way per test, and expects the rule (50 tests, every rule above
 except `SCHEMA` and `SCHEMA-000` has one).
 
 ## License

@@ -167,8 +167,6 @@ class Checker:
             p = _ptr("accessors", ai)
             bv = a.get("bufferView")
             buf = views[bv].get("buffer") if isinstance(bv, int) and 0 <= bv < len(views) and isinstance(views[bv], dict) else None
-            if ext is None and buf is not None and self._buffer_has_circular(buf):
-                self.add(ERROR, "ACC-001", "5.2.2.1", p, "an accessor on a buffer with MPEG_buffer_circular carries timed data and needs MPEG_accessor_timed")
             if not isinstance(ext, dict):
                 continue
             if buf is not None and not self._buffer_has_circular(buf):
@@ -204,9 +202,6 @@ class Checker:
             fmt = ext.get("format", "RGB")
             if fmt in FORMAT_COMPONENTS and a.get("type") in TYPE_COMPONENTS and FORMAT_COMPONENTS[fmt] != TYPE_COMPONENTS[a["type"]]:
                 self.add(ERROR, "TEX-003", "5.3.1.2", p + "/format", f"format {fmt} has {FORMAT_COMPONENTS[fmt]} components but the accessor type {a['type']} has {TYPE_COMPONENTS[a['type']]}")
-            w, h = ext.get("width"), ext.get("height")
-            if fmt in FORMAT_COMPONENTS and isinstance(w, int) and isinstance(h, int) and isinstance(a.get("count"), int) and a["count"] != w * h:
-                self.add(ERROR, "TEX-004", "5.3.1.3", p, f"the picture is {w} x {h} = {w * h} pixels but the accessor count is {a['count']}")
 
     # ---------------------------------------------------------------- accessors of a given format
     def accessor_format(self, ptr, index, component, typ, rule, clause, label):

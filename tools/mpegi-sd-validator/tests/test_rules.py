@@ -78,20 +78,12 @@ def test_circular_buffer_holds_count_frames():
     case(lambda d: d["buffers"][0].update({"byteLength": 12}), "BUF-004")
 
 
-def test_timed_accessor_needs_extension():
-    case(lambda d: d["accessors"][0]["extensions"].pop("MPEG_accessor_timed"), "ACC-001")
-
-
 def test_timed_accessor_without_header_is_immutable():
     case(lambda d: d["accessors"][0]["extensions"]["MPEG_accessor_timed"].pop("immutable"), "ACC-002")
 
 
 def test_video_texture_components_match_accessor_type():
     case(lambda d: d["textures"][0]["extensions"]["MPEG_texture_video"].update({"format": "RGBA"}), "TEX-003")
-
-
-def test_video_texture_picture_size_matches_accessor_count():
-    case(lambda d: d["textures"][0]["extensions"]["MPEG_texture_video"].update({"width": 3}), "TEX-004")
 
 
 def test_anchor_at_scene_and_node_level():
@@ -162,7 +154,7 @@ def test_rules_reference_matches_the_code():
     assert raised <= listed, raised - listed
     assert listed - {"SCHEMA", "SCHEMA-000", "REPO-CONFLICT", "SCHEMA-TEXT"} <= raised | {"SCHEMA"}, listed - raised
     for r in dashboard.rules():
-        assert r["basis"] in ("sentence", "table", "reference", "inference", "tool")
+        assert r["basis"] in ("sentence", "table", "reference", "tool")
         if r["basis"] == "sentence":
             assert r["spec"], r["rule"]
         if r["spec"]:

@@ -214,16 +214,6 @@
    "note": ""
   },
   {
-   "rule": "ACC-001",
-   "severity": "error",
-   "clause": "5.2.2.1",
-   "title": "An accessor on a buffer with MPEG_buffer_circular has MPEG_accessor_timed",
-   "basis": "inference",
-   "spec": null,
-   "mpeg": null,
-   "note": "The text states the converse (a timed accessor shall point to a circular buffer, ACC-005; a buffer that provides access to timed data shall include MPEG_buffer_circular, 5.2.3.1). This rule is inferred from them. Open: whether it should stay an error."
-  },
-  {
    "rule": "ACC-002",
    "severity": "error",
    "clause": "5.2.2.2",
@@ -354,16 +344,6 @@
     "readme_based_on": "ISO/IEC FDIS 23090-14"
    },
    "note": ""
-  },
-  {
-   "rule": "TEX-004",
-   "severity": "error",
-   "clause": "5.3.1.3",
-   "title": "width x height equals the accessor count",
-   "basis": "inference",
-   "spec": null,
-   "mpeg": null,
-   "note": "Inferred: 5.3.1.3 says the texture data has the declared format and the picture size is given to the renderer, but states no equality with the accessor count. Limited to RGB-like formats. Open: whether it should stay an error."
   },
   {
    "rule": "AUD-001",
