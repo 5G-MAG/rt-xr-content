@@ -1,0 +1,228 @@
+<!--
+style.css and blue-bar.css: the shared 5G-MAG reference tools look and feel
+(design tokens, light/dark theming), reused from the FLUTE Protocol Validator / netemu-dashboard with the Ubuntu font.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MPEG-I Scene Description - XR/3D Scene Validator</title>
+<link rel="shortcut icon" type="image/png" href="/static/images/favicon.png">
+<script>
+  try {
+    if (localStorage.getItem('mpegi-sd-validator-theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="/static/blue-bar.css"/>
+<link rel="stylesheet" href="/static/style.css"/>
+<style>
+  .main { max-width: 1240px; }
+  .tab-nav { margin-bottom: 1rem; flex-wrap: wrap; }
+  .tab-panel[hidden] { display: none; }
+  table.grid { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+  table.grid th, table.grid td { text-align: left; padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  table.grid th { color: var(--text-3); font-weight: 600; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr.scene { cursor: pointer; }
+  tr.scene:hover { background: var(--surface-2); }
+  tr.scene.sel { background: rgba(0,160,210,0.10); }
+  .mono { font-family: ui-monospace, 'Ubuntu Mono', monospace; font-size: 0.8rem; }
+  .src { color: var(--text-3); font-size: 0.74rem; }
+  .status-pass { color: var(--success); font-weight: 700; }
+  .status-fail { color: var(--danger); font-weight: 700; }
+  .sev-error { color: var(--danger); font-weight: 700; }
+  .sev-warning { color: var(--warning); font-weight: 700; }
+  .sev-info { color: var(--text-3); font-weight: 700; }
+  .layer { display: inline-block; padding: 1px 7px; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--border); font-size: 0.76rem; margin: 1px 3px 1px 0; }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 0.7rem; margin-bottom: 0.8rem; }
+  .stat-tile { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 0.8rem; }
+  .stat-tile .label { font-size: 0.72rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+  .stat-tile .val { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+  .scroll { overflow-x: auto; }
+  a.btn { text-decoration: none; display: inline-block; }
+  #detail .card-title { text-transform: none; letter-spacing: 0; font-family: ui-monospace, monospace; }
+  .note { font-size: 0.82rem; color: var(--text-2); margin: 0.3rem 0 0.8rem; }
+  .inline-form { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-end; }
+  .inline-form input[type=text] { min-width: 260px; }
+  #bar.indeterminate { width: 30% !important; animation: slide 1.1s ease-in-out infinite alternate; }
+  @keyframes slide { from { margin-left: 0; } to { margin-left: 70%; } }
+  @media (prefers-reduced-motion: reduce) { #bar.indeterminate { animation: none; margin-left: 35%; } }
+  .find { padding: 0.5rem 0.8rem; border-left: 3px solid var(--border); background: var(--surface-2); border-radius: 0 8px 8px 0; margin: 0.45rem 0; }
+  .find.error { border-color: var(--danger); } .find.warning { border-color: var(--warning); }
+  .find .where { color: var(--text-3); }
+  @media (max-width: 520px) {
+    .blue-bar { padding: 0 16px; justify-content: space-between; }
+    .blue-bar-logo img { height: 40px; }
+    .blue-bar-title { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="blue-bar">
+  <div class="blue-bar-logo"><img src="/static/images/5gmag.png" alt="5G-MAG logo"></div>
+  <div class="blue-bar-title">MPEG-I Scene Description - XR/3D Scene Validator</div>
+  <div class="blue-bar-actions">
+    <button id="theme-toggle" class="blue-bar-btn" type="button" aria-pressed="false">&#9790;&nbsp;Dark mode</button>
+  </div>
+</header>
+
+<div id="toast" role="status" aria-live="polite" hidden></div>
+
+<main class="main">
+
+  <nav class="tab-nav" role="tablist">
+    <button class="tab-btn active" data-tab="scenes" type="button">Scenes</button>
+    <button class="tab-btn" data-tab="rules" type="button">Rules</button>
+  </nav>
+
+  <section class="tab-panel" id="tab-scenes">
+    <div class="card">
+      <div class="card-title">Scenes under test</div>
+      <div class="note" id="spec"></div>
+      <div class="inline-form">
+        <div class="form-row" style="margin-bottom:0;flex:1;">
+          <label class="form-label">Folder or git repository</label>
+          <input type="text" id="src" style="width:100%;">
+        </div>
+        <div class="form-row" style="margin-bottom:0;">
+          <label class="form-label">branch, tag or commit</label>
+          <input type="text" id="ref" placeholder="default branch" style="min-width:160px;">
+        </div>
+        <button class="btn btn-primary btn-sm" id="go" type="button">Validate</button>
+      </div>
+      <div id="prog" hidden style="margin-top:0.9rem;">
+        <div style="height:10px;border-radius:999px;background:var(--surface-2);border:1px solid var(--border);overflow:hidden;">
+          <div id="bar" style="height:100%;width:0;background:var(--accent);transition:width .2s;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:0.35rem;" class="note">
+          <span id="phase"></span><span id="timer"></span>
+        </div>
+      </div>
+      <div class="note" id="msg" style="color:var(--danger);margin-bottom:0;"></div>
+    </div>
+
+    <div class="card" id="resultCard" hidden>
+      <div class="card-title">Result</div>
+      <div class="stat-grid" id="tiles"></div>
+      <div class="note" id="head"></div>
+      <div class="scroll"><table class="grid"><thead><tr><th>Scene</th><th>MPEG extensions</th><th>Errors</th><th>Warnings</th><th>Result</th></tr></thead><tbody id="rows"></tbody></table></div>
+      <div class="toolbar" style="justify-content:flex-start;gap:8px;margin-top:0.8rem;margin-bottom:0;">
+        <a class="btn btn-ghost btn-sm" id="md" target="_blank">Report (Markdown)</a>
+        <a class="btn btn-ghost btn-sm" id="js" target="_blank">Report (JSON)</a>
+      </div>
+    </div>
+
+    <div class="card" id="detail" hidden></div>
+  </section>
+
+  <section class="tab-panel" id="tab-rules" hidden>
+    <div class="card">
+      <div class="card-title">The rules</div>
+      <div class="note">The JSON schemas of the MPEG repository check each extension object; these rules check what a schema cannot
+        express. Each names the clause of the specification it rests on. The MPEG repository governs the extensions it changed after the PDF, the PDF governs the others; a conflict inside the repository is REPO-CONFLICT information, a schema that differs from the PDF where the PDF governs is SCHEMA-TEXT information.</div>
+      <div class="scroll"><table class="grid"><thead><tr><th>Rule</th><th>Severity</th><th>Clause</th><th>What it checks</th><th>Basis</th></tr></thead><tbody id="rrows"></tbody></table></div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); };
+  var count = function (f, s) { return f.findings.filter(function (x) { return x.severity === s; }).length; };
+
+  document.querySelectorAll('.tab-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.tab-btn').forEach(function (x) { x.classList.toggle('active', x === b); });
+      document.querySelectorAll('.tab-panel').forEach(function (p) { p.hidden = p.id !== 'tab-' + b.dataset.tab; });
+    });
+  });
+
+  function show(f, tr) {
+    document.querySelectorAll('tr.scene').forEach(function (r) { r.classList.toggle('sel', r === tr); });
+    var d = $('detail'); d.hidden = false;
+    d.innerHTML = '<div class="card-title">' + esc(f.file) + '</div>' + (f.findings.length ? f.findings.map(function (x) {
+      return '<div class="find ' + x.severity + '"><span class="sev-' + x.severity + '">' + x.severity + '</span> <b class="mono">' + x.rule + '</b>'
+        + (x.clause ? ' &middot; clause ' + esc(x.clause) : ' &middot; no clause governs this')
+        + '<div>' + esc(x.message) + '</div><div class="where mono">at ' + esc(x.path || '/') + '</div></div>';
+    }).join('') : '<p class="status-pass">No findings.</p>');
+    d.scrollIntoView({ block: 'nearest' });
+  }
+
+  var sleep = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+  async function go() {
+    $('msg').textContent = ''; $('go').disabled = true; $('go').textContent = 'Running\u2026';
+    $('prog').hidden = false; $('bar').style.background = ''; $('bar').style.width = '0'; $('bar').className = 'indeterminate'; $('phase').textContent = 'Starting'; $('timer').textContent = '';
+    var q = new URLSearchParams({ source: $('src').value, ref: $('ref').value });
+    try {
+      var id = (await (await fetch('/api/start?' + q)).json()).id, j;
+      for (;;) {
+        var st = await (await fetch('/api/job?id=' + id)).json();
+        if (st.error && !st.finished) throw new Error(st.error);
+        var det = st.total > 0;
+        $('bar').className = det ? '' : 'indeterminate';
+        if (det) $('bar').style.width = Math.round(100 * st.done / st.total) + '%';
+        $('phase').textContent = st.phase + (det ? ' ' + st.done + ' of ' + st.total : '') + (st.current ? ': ' + st.current : '');
+        $('timer').textContent = st.elapsed + ' s' + (st.idle > 15 && !st.finished && st.total > 0 ? ' \u00b7 no progress for ' + Math.round(st.idle) + ' s' : '');
+        $('timer').style.color = st.idle > 15 && !st.finished && st.total > 0 ? 'var(--warning)' : '';
+        if (st.finished) { if (st.error) throw new Error(st.error); j = st.result; break; }
+        await sleep(250);
+      }
+      $('bar').className = ''; $('bar').style.width = '100%';
+      var bad = j.files.filter(function (f) { return count(f, 'error'); }).length;
+      var E = j.files.reduce(function (a, f) { return a + count(f, 'error'); }, 0);
+      var W = j.files.reduce(function (a, f) { return a + count(f, 'warning'); }, 0);
+      var tile = function (l, v, c) { return '<div class="stat-tile"><div class="label">' + l + '</div><div class="val ' + (c || '') + '">' + v + '</div></div>'; };
+      $('tiles').innerHTML = tile('Scenes', j.files.length) + tile('Without errors', j.files.length - bad, 'status-pass')
+        + tile('With errors', bad, bad ? 'status-fail' : '') + tile('Errors / warnings', E + ' / ' + W);
+      $('head').textContent = j.head || j.source;
+      $('rows').innerHTML = j.files.map(function (f, i) {
+        var e = count(f, 'error');
+        return '<tr class="scene" data-i="' + i + '"><td class="mono">' + esc(f.file) + '</td><td>'
+          + f.extensions.map(function (x) { return '<span class="layer">' + esc(x) + '</span>'; }).join('')
+          + '</td><td>' + e + '</td><td>' + count(f, 'warning') + '</td><td class="' + (e ? 'status-fail' : 'status-pass') + '">' + (e ? 'FAIL' : 'ok') + '</td></tr>';
+      }).join('');
+      $('rows').querySelectorAll('tr').forEach(function (t) { t.addEventListener('click', function () { show(j.files[t.dataset.i], t); }); });
+      $('resultCard').hidden = false; $('detail').hidden = true;
+      $('md').href = '/report.md?' + q; $('js').href = '/report.json?' + q;
+      $('prog').hidden = true;
+    } catch (e) { $('msg').textContent = e.message; $('bar').className = ''; $('bar').style.background = 'var(--danger)'; }
+    $('go').disabled = false; $('go').textContent = 'Validate';
+  }
+  $('go').addEventListener('click', go);
+  fetch('/api/config').then(function (r) { return r.json(); }).then(function (c) {
+    $('src').value = c.source; $('spec').textContent = c.specification + ' \u00b7 mpegi-sd-validator ' + c.tool; go();
+  });
+  fetch('/api/rules').then(function (r) { return r.json(); }).then(function (rs) {
+    $('rrows').innerHTML = rs.map(function (r) {
+      var b = '<span class="layer">' + esc(r.basis) + '</span>';
+      if (r.spec) b += '<div class="note" style="margin:0.3rem 0 0;">\u201c' + esc(r.spec.quote) + '\u201d <span class="src">' + esc(r.spec.doc) + ', clause ' + esc(r.spec.clause) + '</span></div>';
+      if (r.mpeg) b += '<div class="note" style="margin:0.3rem 0 0;">MPEG repository: \u201c' + esc(r.mpeg.quote) + '\u201d <span class="src">' + esc(r.mpeg.file) + ', last changed ' + esc(r.mpeg.readme_changed) + ', based on ' + esc(r.mpeg.readme_based_on) + '</span></div>';
+      if (r.note) b += '<div class="src" style="margin-top:0.3rem;">' + esc(r.note) + '</div>';
+      return '<tr><td class="mono">' + r.rule + '</td><td class="sev-' + r.severity + '">' + r.severity + '</td><td>' + esc(r.clause || '\u2014') + '</td><td>' + esc(r.title) + '</td><td>' + b + '</td></tr>';
+    }).join('');
+  });
+
+  // Theme toggle -- shared 5G-MAG reference tools pattern.
+  (function () {
+    var btn = $('theme-toggle');
+    var STORAGE_KEY = 'mpegi-sd-validator-theme';
+    function applyTheme(theme) {
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      else document.documentElement.removeAttribute('data-theme');
+      btn.innerHTML = theme === 'dark' ? '&#9728;&nbsp;Light mode' : '&#9790;&nbsp;Dark mode';
+      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    }
+    applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+    btn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem(STORAGE_KEY, next); } catch (e) {}
+      applyTheme(next);
+    });
+  })();
+</script>
+</body>
+</html>
