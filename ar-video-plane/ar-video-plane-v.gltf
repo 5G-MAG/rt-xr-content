@@ -54,7 +54,7 @@
 			"anchors":[
 				{
 					"trackable":0,
-					"requiresAnchoring":false
+					"requiresAnchoring":true
 				}
 			]
 		}
@@ -228,6 +228,7 @@
 			"count":2073600,
 			"extensions":{
 				"MPEG_accessor_timed":{
+					"immutable":true,
 					"suggestedUpdateRate":24
 				}
 			},
@@ -302,7 +303,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":8294400,
+			"byteLength":16588800,
 			"extensions":{
 				"MPEG_buffer_circular":{
 					"media":0
@@ -311,7 +312,7 @@
 			"name":"MPEG_media.frame.buffer"
 		},
 		{
-			"byteLength":8224,
+			"byteLength":16448,
 			"extensions":{
 				"MPEG_buffer_circular":{
 					"media":1

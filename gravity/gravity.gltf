@@ -263,7 +263,7 @@
 							"accessors":[
 								0
 							],
-							"attenuation":"inverse_distance",
+							"attenuation":"inverseDistance",
 							"attenuationParameters":[
 								340282346638528859811704183484516925440,
 								1
@@ -313,7 +313,7 @@
 							"accessors":[
 								5
 							],
-							"attenuation":"inverse_distance",
+							"attenuation":"inverseDistance",
 							"attenuationParameters":[
 								340282346638528859811704183484516925440,
 								1
@@ -365,7 +365,7 @@
 							"accessors":[
 								9
 							],
-							"attenuation":"inverse_distance",
+							"attenuation":"inverseDistance",
 							"attenuationParameters":[
 								340282346638528859811704183484516925440,
 								1
@@ -871,7 +871,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":8224,
+			"byteLength":16448,
 			"extensions":{
 				"MPEG_buffer_circular":{
 					"media":0
@@ -880,7 +880,7 @@
 			"name":"MPEG_media.frame.buffer"
 		},
 		{
-			"byteLength":8224,
+			"byteLength":16448,
 			"extensions":{
 				"MPEG_buffer_circular":{
 					"media":0
@@ -889,7 +889,7 @@
 			"name":"MPEG_media.frame.buffer"
 		},
 		{
-			"byteLength":8224,
+			"byteLength":16448,
 			"extensions":{
 				"MPEG_buffer_circular":{
 					"media":0

@@ -19,7 +19,7 @@
 			"anchors":[
 				{
 					"trackable":0,
-					"requiresAnchoring":false
+					"requiresAnchoring":true
 				}
 			]
 		}
@@ -92,7 +92,7 @@
 			"name":"Sketchfab_model",
 			"translation":[
 				0,
-				1.25,
+				0,
 				0
 			]
 		}

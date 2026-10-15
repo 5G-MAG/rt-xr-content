@@ -2169,6 +2169,7 @@
 			"count":230400,
 			"extensions":{
 				"MPEG_accessor_timed":{
+					"immutable":true,
 					"suggestedUpdateRate":24
 				}
 			},
@@ -2910,7 +2911,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":8224,
+			"byteLength":16448,
 			"extensions":{
 				"MPEG_buffer_circular":{
 					"media":0
@@ -2919,7 +2920,7 @@
 			"name":"MPEG_media.frame.buffer"
 		},
 		{
-			"byteLength":921600,
+			"byteLength":1843200,
 			"extensions":{
 				"MPEG_buffer_circular":{
 					"media":1
