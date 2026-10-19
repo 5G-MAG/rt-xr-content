@@ -8,8 +8,7 @@
 </p>
 
 <p align="center">
-  <img alt="Status: Under Development"
-    src="https://img.shields.io/badge/Status-Under%20Development-e67e22">
+  <img alt="Status" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.5g-mag.com%2Fbadges%2Fstatus%2Frt-xr-content.json">
   <a href="https://github.com/5G-MAG/rt-xr-content/releases"><img alt="Version"
     src="https://img.shields.io/github/v/release/5G-MAG/rt-xr-content?label=Version"></a>
   <a href="LICENSE"><img alt="License: multiple, per asset"
@@ -28,7 +27,7 @@
 
 |  |  |
 |---|---|
-| **Part of** | [XR/3D Scenes with MPEG-I Scene Description](https://www.5g-mag.com/reference-tools/xr/), alongside [rt-xr-unity-player](https://github.com/5G-MAG/rt-xr-unity-player), [rt-xr-gITFast](https://github.com/5G-MAG/rt-xr-gITFast), [rt-xr-maf-native](https://github.com/5G-MAG/rt-xr-maf-native) and [rt-xr-blender-exporter](https://github.com/5G-MAG/rt-xr-blender-exporter) |
+| **Part of** | [XR/3D Scenes with MPEG-I Scene Description](https://www.5g-mag.com/reference-tools/xr/), alongside [rt-xr-blender-exporter](https://github.com/5G-MAG/rt-xr-blender-exporter), [rt-xr-gITFast](https://github.com/5G-MAG/rt-xr-gITFast), [rt-xr-maf-native](https://github.com/5G-MAG/rt-xr-maf-native), [rt-xr-unity-player](https://github.com/5G-MAG/rt-xr-unity-player) |
 
 ## Introduction
 
