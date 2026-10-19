@@ -1,0 +1,406 @@
+{
+ "specification": "ISO/IEC 23090-14",
+ "mpeg_repository": "https://github.com/MPEGGroup/Scene-Description (commit 5e39101)",
+ "rules": [
+  {
+   "rule": "EXT-001",
+   "severity": "error",
+   "clause": "5.1.1",
+   "title": "An extension used anywhere in the file is listed in extensionsUsed",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "EXT-002",
+   "severity": "warning",
+   "clause": "5.1.1",
+   "title": "An MPEG_* extension name is one this document defines",
+   "basis": "reference",
+   "note": "A warning: the text lists the extensions this document defines and does not forbid other MPEG_ names (other documents or editions may define more). Names the text uses in place of an older name are given as a hint."
+  },
+  {
+   "rule": "EXT-003",
+   "severity": "error",
+   "clause": "by extension",
+   "title": "An extension appears only on the object its clause names",
+   "basis": "sentence",
+   "note": "One sentence per extension: the first quotation is the buffer one, the others follow in spec_more; the node interactivity one is in the MPEG README."
+  },
+  {
+   "rule": "EXT-004",
+   "severity": "error",
+   "clause": "5.1.1",
+   "title": "An extension in extensionsRequired is also in extensionsUsed",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "MEDIA-001",
+   "severity": "error",
+   "clause": "5.2.1.2",
+   "title": "autoplayGroup is present only when autoplay is true",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "MEDIA-002",
+   "severity": "error",
+   "clause": "5.2.1.2",
+   "title": "autoplayGroup is an integer",
+   "basis": "table",
+   "note": "Table of 5.2.1.2 gives the type integer; no sentence."
+  },
+  {
+   "rule": "MEDIA-003",
+   "severity": "warning",
+   "clause": "5.2.1.2",
+   "title": "startTime is not present when autoplay is true",
+   "basis": "sentence",
+   "note": "A warning, not an error, because the clause lets the client ignore the value. The MPEG README of this extension (older than the PDF) states a further requirement that the PDF does not; it is not a rule."
+  },
+  {
+   "rule": "MEDIA-004",
+   "severity": "warning",
+   "clause": "",
+   "title": "endTimeOffset is after startTimeOffset",
+   "basis": "tool",
+   "note": "No clause governs this; an empty range is reported as a warning."
+  },
+  {
+   "rule": "BUF-001",
+   "severity": "error",
+   "clause": "5.2.3.1",
+   "title": "A buffer with MPEG_buffer_circular has no uri",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "BUF-002",
+   "severity": "error",
+   "clause": "5.2.3.2",
+   "title": "media is an entry of MPEG_media",
+   "basis": "reference",
+   "note": ""
+  },
+  {
+   "rule": "BUF-003",
+   "severity": "error",
+   "clause": "5.2.3.2",
+   "title": "A listed track exists in every alternative of the media",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "BUF-004",
+   "severity": "warning",
+   "clause": "5.2.3.1",
+   "title": "byteLength holds count frames",
+   "basis": "sentence",
+   "note": "A warning: the frame size is taken as the extent of the bufferViews of the buffer, which the text does not define; timed data may carry a header or a size the static views do not show."
+  },
+  {
+   "rule": "ACC-002",
+   "severity": "error",
+   "clause": "5.2.2.2",
+   "title": "Without a header bufferView the immutable flag is present and true",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "ACC-003",
+   "severity": "error",
+   "clause": "5.2.2.1",
+   "title": "The header bufferView exists",
+   "basis": "reference",
+   "note": ""
+  },
+  {
+   "rule": "ACC-004",
+   "severity": "error",
+   "clause": "5.2.2.2",
+   "title": "The header bufferView is in the same buffer as the accessor's bufferView",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "ACC-005",
+   "severity": "error",
+   "clause": "5.2.2.1",
+   "title": "A timed accessor points to a buffer with MPEG_buffer_circular",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "ACC-006",
+   "severity": "error",
+   "clause": "5.2.2.3",
+   "title": "A buffer does not mix accessors with and without a timed accessor information header",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "TEX-001",
+   "severity": "error",
+   "clause": "5.3.1.2",
+   "title": "The texture's accessor exists",
+   "basis": "reference",
+   "note": "Index into the accessors array; no sentence."
+  },
+  {
+   "rule": "TEX-002",
+   "severity": "error",
+   "clause": "5.3.1.2",
+   "title": "The accessor has MPEG_accessor_timed",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "TEX-003",
+   "severity": "error",
+   "clause": "5.3.1.2",
+   "title": "The format has as many components as the accessor type",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "AUD-001",
+   "severity": "error",
+   "clause": "5.4.1.1",
+   "title": "On a node, source or listener is present",
+   "basis": "sentence",
+   "note": "The sentence says source or listener; Table 13 names the property sources. Both spellings are accepted."
+  },
+  {
+   "rule": "AUD-002",
+   "severity": "error",
+   "clause": "5.4.1.1",
+   "title": "At file level the reverb property is present",
+   "basis": "sentence",
+   "note": "The sentence says the reverb property; Table 13 and the schema call it reverbs. Both are accepted, an empty reverbs array is not."
+  },
+  {
+   "rule": "AUD-003",
+   "severity": "error",
+   "clause": "5.4.1.2",
+   "title": "reverbFeedGain has as many elements as reverbFeed",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "AUD-004",
+   "severity": "error",
+   "clause": "5.4.1.2",
+   "title": "clusterProperties is defined when isCluster is true",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "AUD-005",
+   "severity": "error",
+   "clause": "5.4.1.2",
+   "title": "referenceDistance is absent when the source type is HOA",
+   "basis": "sentence",
+   "note": "The clause speaks of 'the element' after the referenceDistance row of the source table, so referenceDistance is taken as the element."
+  },
+  {
+   "rule": "ANC-001",
+   "severity": "error",
+   "clause": "8.1.3",
+   "title": "MPEG_anchor is not at scene and node level together",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "ANC-002",
+   "severity": "error",
+   "clause": "8.1.2",
+   "title": "Trackables and anchors are defined at glTF file level",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "ANC-003",
+   "severity": "error",
+   "clause": "8.1.2",
+   "title": "An anchor reference is an item of the anchors array",
+   "basis": "reference",
+   "note": "Index into the anchors array; no sentence."
+  },
+  {
+   "rule": "ANC-004",
+   "severity": "error",
+   "clause": "8.1.2",
+   "title": "An anchor's trackable is an item of the trackables array",
+   "basis": "reference",
+   "note": "Index into the trackables array; no sentence."
+  },
+  {
+   "rule": "ANC-005",
+   "severity": "error",
+   "clause": "8.1.2",
+   "title": "A trackable has the properties its type requires",
+   "basis": "table",
+   "note": "Table 29 marks path, geometricConstraint, markerNode, coordinates and trackableId mandatory (M) for their types; no sentence. A scene that spells coordinates as coordinate is REPO-CONFLICT information."
+  },
+  {
+   "rule": "ANC-006",
+   "severity": "error",
+   "clause": "8.1.2",
+   "title": "markerNode is a node",
+   "basis": "reference",
+   "note": ""
+  },
+  {
+   "rule": "ANC-007",
+   "severity": "error",
+   "clause": "8.1.2",
+   "title": "The longitude lies in -180 to 180 degrees",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "ANC-008",
+   "severity": "error",
+   "clause": "8.1.2",
+   "title": "The latitude lies in -90 to 90 degrees",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "INT-001",
+   "severity": "error",
+   "clause": "8.2.2.1",
+   "title": "A behavior's triggers and actions are items of their arrays",
+   "basis": "reference",
+   "note": "Index into the triggers and actions arrays; no sentence."
+  },
+  {
+   "rule": "INT-002",
+   "severity": "error",
+   "clause": "8.2.2.1",
+   "title": "The nodes a trigger or action lists exist",
+   "basis": "reference",
+   "note": "Index into the nodes array; no sentence."
+  },
+  {
+   "rule": "INT-003",
+   "severity": "error",
+   "clause": "8.2.2.1",
+   "title": "userInputDescription is an OpenXR path name string",
+   "basis": "sentence",
+   "note": "Checked against the rules for path name strings in OpenXR 1.0, clause 6.2 (characters, leading slash, no trailing slash, no adjacent slashes, no period-only segment). The maximum length, XR_MAX_PATH_LENGTH, is not checked: its value is not in the specification."
+  },
+  {
+   "rule": "VIEW-001",
+   "severity": "error",
+   "clause": "5.5.1.2",
+   "title": "The translation accessor is FLOAT VEC3",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "VIEW-002",
+   "severity": "error",
+   "clause": "5.5.1.2",
+   "title": "The rotation accessor is FLOAT VEC4",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "VIEW-003",
+   "severity": "error",
+   "clause": "5.5.1.2",
+   "title": "The parameters accessor is FLOAT VEC4",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "ANIM-001",
+   "severity": "error",
+   "clause": "5.5.2.2",
+   "title": "The animation timing accessor is BYTE SCALAR",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "MESH-001",
+   "severity": "error",
+   "clause": "5.3.2.2",
+   "title": "The correspondence accessor is SCALAR",
+   "basis": "sentence",
+   "note": "The componentType of the correspondence accessor (subclause 7.4) is not checked."
+  },
+  {
+   "rule": "MESH-002",
+   "severity": "error",
+   "clause": "5.3.2.2",
+   "title": "The pose accessor is FLOAT MAT4",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "MESH-003",
+   "severity": "error",
+   "clause": "5.3.2.2",
+   "title": "The weights accessor is FLOAT SCALAR",
+   "basis": "sentence",
+   "note": ""
+  },
+  {
+   "rule": "MESH-004",
+   "severity": "error",
+   "clause": "5.3.2.2",
+   "title": "The shadow mesh is an item of the meshes array",
+   "basis": "reference",
+   "note": ""
+  },
+  {
+   "rule": "GLTF-001",
+   "severity": "error",
+   "clause": "",
+   "title": "A buffer file exists and is as long as byteLength",
+   "basis": "tool",
+   "note": "glTF 2.0 3.6.1.1, not opened in this work: unverified. The Khronos glTF Validator covers it."
+  },
+  {
+   "rule": "GLTF-002",
+   "severity": "error",
+   "clause": "",
+   "title": "An accessor fits its bufferView",
+   "basis": "tool",
+   "note": "glTF 2.0 3.6.2.4, not opened in this work: unverified. The Khronos glTF Validator covers it."
+  },
+  {
+   "rule": "SCHEMA",
+   "severity": "error",
+   "clause": "by extension",
+   "title": "The extension object satisfies its JSON schema from the MPEG repository",
+   "basis": "tool",
+   "note": "Structure only: required properties, types and ranges. Where the repository governs the extension, what a schema requires is an error. Where the PDF governs and a schema differs from it, the finding is SCHEMA-TEXT."
+  },
+  {
+   "rule": "SCHEMA-000",
+   "severity": "info",
+   "clause": "by extension",
+   "title": "No usable JSON schema exists for the extension",
+   "basis": "tool",
+   "note": "For example MPEG_lights_texture_based, whose schema file is not valid JSON in the repository."
+  },
+  {
+   "rule": "REPO-CONFLICT",
+   "severity": "info",
+   "clause": "by extension",
+   "title": "The repository contradicts itself (a README against a schema file); neither is chosen",
+   "basis": "tool",
+   "note": "the repository governs an extension changed after the PDF; where the repository contradicts itself neither side is chosen. Known case: MPEG_anchor coordinates (README) against coordinate (schema)."
+  },
+  {
+   "rule": "SCHEMA-TEXT",
+   "severity": "info",
+   "clause": "by extension",
+   "title": "A schema file differs from the PDF where the PDF governs",
+   "basis": "tool",
+   "note": "the PDF governs an extension whose repository files are older than it. Known case: MPEG_viewport_recommended (schema requires viewports, Table 19 defines one viewport)."
+  }
+ ]
+}
