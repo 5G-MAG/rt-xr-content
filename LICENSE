@@ -1,0 +1,25 @@
+Please note that this repository contains example content that is distributed under different licences.
+Assets with a metadata folder also record their owner and licence in the "legal" entry of its JSON files.
+
+1. Content contributed under the 5G-MAG Public License (v1.0)
+The licence text is in the LICENSE-5G-MAG-PL-1.0 file at the root of this repository.
+- anchoring: all anchoring test scenes (owner: InterDigital), see anchoring/metadata
+- geometry: all geometry test scenes (owner: InterDigital), see geometry/metadata
+- gravity: the gravity test scene
+
+2. Third-party content under Creative Commons licences
+Attribution requirements are those of each licence; the credit lines are in the README file of each folder.
+- awards: "Academy Award statuette", Virtual Museums of Małopolska
+  (https://sketchfab.com/WirtualneMuzeaMalopolski), CC0 Public Domain
+  (https://creativecommons.org/publicdomain/zero/1.0/), see awards/license.txt and awards/README.md
+- TV: model by RDW MIC, Małopolska's Virtual Museums project, CC0 Public Domain; Big Buck Bunny movie,
+  Blender Foundation, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/); added video texture and
+  audio source, MotionSpell, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), see TV/README.md
+- video: living room scene by Carlos Miguel Vieira Maciel, CC BY 4.0; Big Buck Bunny movie, Blender
+  Foundation, CC BY 3.0; added video texture and audio source, MotionSpell, CC BY 4.0, see video/README.md
+- studio_apartment: "Studio apartment (vray baked textures included)" (https://skfb.ly/WwBD) by zamorev4d,
+  CC BY 4.0, see studio_apartment/README.md
+- furnitures: "mini sofa" by https://sketchfab.com/eyglohildur, CC BY 4.0, see furnitures/metadata
+
+3. Content courtesy of third parties
+- ar-video-plane: courtesy of CCMA
