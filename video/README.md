@@ -120,7 +120,7 @@ Same as `scene`.
 ### Summary
 `scene-video-header` with the picture at byte 32 of the buffer frame, the next 4-byte boundary after the 30-byte header. This is the layout `gltf-mpeg-media add --video-header` writes.
 
-rt-xr-maf-native 44d697d writes the picture right after the header (byte 30), not at the offset of the bufferView, so the player reads it 2 bytes off: the colours are wrong.
+The scene checks that the player takes the position of the picture from the header, not from the bufferView. The media pipeline may store the picture elsewhere in the buffer frame, and the header gives where it is (ISO/IEC 23090-14:2024, 5.2.2). rt-xr-maf-native 44d697d stores it at byte 30 and writes 30 in the header. A player that reads the picture at the bufferView offset (byte 32) shows wrong colours.
 
 
 ### Extensions used

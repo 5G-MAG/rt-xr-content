@@ -101,7 +101,7 @@ Last checked: 2026-11-03.
 Notes:
 - "auto" means the buffer has no `tracks`: the media pipeline picks the media's track of the matching kind.
 - All timed accessors are immutable. The audio headers are 32 bytes, and the audio data starts right after them. The video header of an RGB accessor is 30 bytes.
-- `video/scene-video-header-aligned` shows wrong colours in the player: rt-xr-maf-native 44d697d writes the picture right after the header instead of at the offset of its bufferView.
+- `video/scene-video-header-aligned` checks that the player takes the position of the picture from the header: the media pipeline stores it at byte 30, the bufferView says 32.
 - Five media never play: media 0 and 1 of `UseCase_02-variant3`, and all three of `UseCase_03-variant3`. They have no autoplay, no `startTime` and no action that plays them.
 
 Not covered by any scene:
