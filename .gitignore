@@ -3,3 +3,4 @@
 **/*.blend1
 .report.json
 **/*.zip
+.venv/

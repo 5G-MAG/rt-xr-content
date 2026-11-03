@@ -11,7 +11,7 @@ python3 -m venv .venv
 
 activate it
 ```
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 install dependencies
@@ -31,4 +31,9 @@ to use the script, activate the virtual environment.
 ### Create and push config file to default device rt-xr-player directory:
 ```
 ./rtxrcontent.py config awards ar-video-plane furnitures studio_apartment
+```
+
+Without arguments, the config file lists the scenes of all content directories:
+```
+./rtxrcontent.py config
 ```
