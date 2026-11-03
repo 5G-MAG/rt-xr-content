@@ -102,6 +102,34 @@ Reference asset to demo <b>ANCHORING</b> with a 3D model of a small sofa<br>
 
 Reference assets for testing are listed [here](/test_content.md).
 
+### YCbCr video texture
+
+<table>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+<th>Properties</th>
+</tr>
+
+<tr>
+<td width="400px">
+<a href="TV"><b>scene_ycbcr.gltf</a></b><br>
+<img src="TV/metadata/scene.jpg"  alt="scene_ycbcr"/>
+</td>
+<td>
+Reference asset to test <b>YCbCr VIDEO TEXTURES</b>: the TV set plays a planar YCbCr 4:2:0 video texture, converted to RGB by the renderer as its sampler describes<br>
+</td>
+<td>
+<b>MPEG_media</b><br>
+<b>MPEG_accessor_timed</b><br>
+<b>MPEG_buffer_circular</b><br>
+<b>MPEG_texture_video</b><br>
+<b>MPEG_sampler_YCbCr</b><br>
+<b>MPEG_audio_spatial</b><br>
+<tr>
+
+</table>
+
 # Contributing 
 
 In order to contribute, open a pull request on the `development` branch.
