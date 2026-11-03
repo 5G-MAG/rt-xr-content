@@ -81,7 +81,11 @@ Last checked: 2026-11-03.
 | `video/scene-av-combined` | 0 `bbb_360p_48k.mp4` | MP4 | video + audio muxed (+ OD/BIFS) | 2 (explicit `#track_ID=201/101`) | audio: yes, video: no | video texture, Speaker | on / on | autoplay |
 | `video/scene-av-independant` | 0 `bbb.aac.mp4` | MP4 | audio | 1 (auto) | yes | Speaker | on / on | autoplay |
 | | 1 `bbb.avc.mp4` | MP4 | video | 1 (auto) | no | video texture | on / on | autoplay |
+| `video/scene-av-audio-no-header` | 0 `bbb.aac.mp4` | MP4 | audio | 1 (auto) | no | Speaker | on / on | autoplay |
+| | 1 `bbb.avc.mp4` | MP4 | video | 1 (auto) | no | video texture | on / on | autoplay |
 | `video/scene` | 0 `bbb.avc.mp4` | MP4 | video | 1 (auto) | no | video texture | on / on | autoplay |
+| `video/scene-video-header` | 0 `bbb.avc.mp4` | MP4 | video | 1 (auto) | yes (30 B, picture at byte 30) | video texture | on / on | autoplay |
+| `video/scene-video-header-aligned` | 0 `bbb.avc.mp4` | MP4 | video | 1 (auto) | yes (30 B, picture at byte 32) | video texture | on / on | autoplay |
 | `studio_apartment` | 0 `bbb.avc.mp4` | MP4 | video | 1 (auto) | no | video texture | on / on | autoplay |
 | | 1 `bbb.aac.mp4` | MP4 | audio | 1 (auto) | yes | Speaker | on / on | autoplay |
 | `ar-video-plane/*` (6 scenes) | 0 `ccma_1080p30_avc_2000kbps.mp4` | MP4 | video (1080p30) | 1 (auto) | no | video texture | on / on | autoplay; 5 of the 6 wait for the anchor |
@@ -96,14 +100,14 @@ Last checked: 2026-11-03.
 
 Notes:
 - "auto" means the buffer has no `tracks`: the media pipeline picks the media's track of the matching kind.
-- All timed accessors are immutable. The audio headers are 32 bytes, and the audio data starts right after them.
+- All timed accessors are immutable. The audio headers are 32 bytes, and the audio data starts right after them. The video header of an RGB accessor is 30 bytes.
+- `video/scene-video-header-aligned` shows wrong colours in the player: rt-xr-maf-native 44d697d writes the picture right after the header instead of at the offset of its bufferView.
 - Five media never play: media 0 and 1 of `UseCase_02-variant3`, and all three of `UseCase_03-variant3`. They have no autoplay, no `startTime` and no action that plays them.
 
 Not covered by any scene:
 - MPEG-DASH or HLS sources, and remote URLs.
 - More than one alternative per media.
 - One media used by several buffers or consumers. The player's media pipeline does not support it.
-- A timed accessor header on a video buffer, and an audio buffer without a header.
 - Mutable timed accessors (`immutable: false`). The player does not support them.
 - More than one timed accessor in a buffer, such as multichannel audio.
 - `autoplayGroup`, `startTime` and a non-zero `startTimeOffset`.

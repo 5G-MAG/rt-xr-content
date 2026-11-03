@@ -92,3 +92,69 @@ a living room scene demonstrating video texture
 &#169; 2023, MotionSpell, <a alt="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
 
   - added video texture & audio source
+
+
+## scene-video-header
+
+### Summary
+`scene` with a timed accessor information header on the video buffer. The header of the RGB accessor is 30 bytes, and the picture starts right after it, at byte 30 of the buffer frame.
+
+
+### Extensions used
+
+- MPEG_media
+- MPEG_buffer_circular
+- MPEG_accessor_timed
+- MPEG_texture_video
+
+### Screeshot
+![screenshot](metadata/scene.jpg)
+
+### Legal
+
+Same as `scene`.
+
+
+## scene-video-header-aligned
+
+### Summary
+`scene-video-header` with the picture at byte 32 of the buffer frame, the next 4-byte boundary after the 30-byte header. This is the layout `gltf-mpeg-media add --video-header` writes.
+
+rt-xr-maf-native 44d697d writes the picture right after the header (byte 30), not at the offset of the bufferView, so the player reads it 2 bytes off: the colours are wrong.
+
+
+### Extensions used
+
+- MPEG_media
+- MPEG_buffer_circular
+- MPEG_accessor_timed
+- MPEG_texture_video
+
+### Screeshot
+![screenshot](metadata/scene.jpg)
+
+### Legal
+
+Same as `scene`.
+
+
+## scene-av-audio-no-header
+
+### Summary
+`scene-av-independant` without a timed accessor information header on the audio buffer. A buffer frame holds exactly the 1024 samples of the accessor.
+
+
+### Extensions used
+
+- MPEG_media
+- MPEG_buffer_circular
+- MPEG_accessor_timed
+- MPEG_audio_spatial
+- MPEG_texture_video
+
+### Screeshot
+![screenshot](metadata/scene.jpg)
+
+### Legal
+
+Same as `scene-av-independant`.
