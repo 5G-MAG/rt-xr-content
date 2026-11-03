@@ -24,7 +24,7 @@
 					"alternatives":[
 						{
 							"mimeType":"video/mp4",
-							"uri":"bbb.avc.mp4"
+							"uri":"textures/bbb.avc.mp4"
 						}
 					],
 					"autoplay":true,
@@ -33,8 +33,8 @@
 				{
 					"alternatives":[
 						{
-							"mimeType":"audio/aac",
-							"uri":"bbb.aac.mp4"
+							"mimeType":"audio/mp4",
+							"uri":"textures/bbb.aac.mp4"
 						}
 					],
 					"autoplay":true,
