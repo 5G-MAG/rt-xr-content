@@ -17,6 +17,10 @@ ADB_PUSH_IGNORE = [
     ".blend", ".blend1"
 ]
 
+CONFIG_IGNORE_DIRS = [
+    "tmp", "tools"
+]
+
 def app_directory(app_id):
     return f'/storage/emulated/0/Android/data/{app_id}/files'
 
@@ -60,8 +64,10 @@ def unzip_remote_dir(target_zipped):
 @click.option('-t', '--target', type=str, default='com.fivegmag.rtxrplayer')
 @click.argument('content', nargs=-1)
 def config(ctx, target:str, content:tuple[str, ...]):
-    """generate and push config file for a set directories
+    """generate and push config file for a set directories, all content directories if none is given
     """
+    if not content:
+        content = sorted(str(dp) for dp in Path('.').iterdir() if dp.is_dir() and dp.name not in CONFIG_IGNORE_DIRS and not dp.name.startswith('.'))
     entrypoints = []
     for dirname in content:
         dp = Path(dirname)
