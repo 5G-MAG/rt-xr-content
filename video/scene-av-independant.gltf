@@ -24,7 +24,7 @@
 				{
 					"alternatives":[
 						{
-							"mimeType":"audio/aac",
+							"mimeType":"audio/mp4",
 							"uri":"bbb.aac.mp4"
 						}
 					],

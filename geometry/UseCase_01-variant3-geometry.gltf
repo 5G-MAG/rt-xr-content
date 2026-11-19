@@ -703,12 +703,11 @@
             {
                 "alternatives": [
                     {
-                        "mimeType": "audio/mp3",
+                        "mimeType": "audio/mpeg",
                         "uri": "Sound01.mp3"
                     }
                 ],
                 "startTimeOffset": 0,
-                "endTimeOffset": 0,
                 "autoplay": false,
                 "loop": true,
                 "controls": false,
@@ -721,7 +720,6 @@
         "MPEG_media", 
         "MPEG_accessor_timed", 
         "MPEG_buffer_circular", 
-        "MPEG_texture_video", 
         "KHR_materials_unlit",
         "MPEG_scene_interactivity",
         "MPEG_audio_spatial"

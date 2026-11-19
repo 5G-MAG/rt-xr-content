@@ -33,7 +33,7 @@
 				{
 					"alternatives":[
 						{
-							"mimeType":"audio/aac",
+							"mimeType":"audio/mp4",
 							"uri":"ccma_aac_4800_mono_fltp.mp4"
 						}
 					],
@@ -203,7 +203,7 @@
 			"extensions":{
 				"MPEG_accessor_timed":{
 					"immutable":true,
-					"suggestedUpdateRate":24
+					"suggestedUpdateRate":30
 				}
 			},
 			"name":"MPEG_texture_video.accessor",

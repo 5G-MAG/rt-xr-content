@@ -27,12 +27,12 @@
 							"uri":"bbb_360p_48k.mp4",
 							"tracks": [
 								{
-                                    "track": "#track_ID=1",
-                                    "codecs": "0x31637661;"
+                                    "track": "#track_ID=201",
+                                    "codecs": "avc1.42C01E"
                                 },
                                 {
-                                    "track": "#track_ID=2",
-                                    "codecs": "audio/mp4a"
+                                    "track": "#track_ID=101",
+                                    "codecs": "mp4a.40.2"
                                 }
 							]
 						}

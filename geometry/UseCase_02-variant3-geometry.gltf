@@ -143,7 +143,7 @@
                             90.0,
                             1.0
                         ],
-                    "id": 0,
+                    "id": 1,
                     "accessors":[43],
                     "type": "Object",
                     "targetSampleRate": 48000
@@ -177,7 +177,7 @@
                             90.0,
                             1.0
                         ],
-                    "id": 0,
+                    "id": 2,
                     "accessors":[44],
                     "type": "Object",
                     "targetSampleRate": 48000
@@ -955,7 +955,7 @@
                 "MPEG_accessor_timed": {
                     "bufferView": 43,
                     "immutable": true,
-                    "suggestedUpdateRate": 25
+                    "suggestedUpdateRate": 46.875
                 }
             },
             "type": "SCALAR"
@@ -968,7 +968,7 @@
                 "MPEG_accessor_timed": {
                     "bufferView": 45,
                     "immutable": true,
-                    "suggestedUpdateRate": 25
+                    "suggestedUpdateRate": 46.875
                 }
             },
             "type": "SCALAR"
@@ -981,7 +981,7 @@
                 "MPEG_accessor_timed": {
                     "bufferView": 47,
                     "immutable": true,
-                    "suggestedUpdateRate": 25
+                    "suggestedUpdateRate": 46.875
                 }
             },
             "type": "SCALAR"
@@ -1277,7 +1277,7 @@
             {
                 "alternatives": [
                     {
-                        "mimeType": "audio/mp3",
+                        "mimeType": "audio/mpeg",
                         "uri": "./Sound01.mp3"
                     }
                 ],
@@ -1288,7 +1288,7 @@
             {
                 "alternatives": [
                     {
-                        "mimeType": "audio/mp3",
+                        "mimeType": "audio/mpeg",
                         "uri": "./Sound02.mp3"
                     }
                 ],
@@ -1299,7 +1299,7 @@
             {
                 "alternatives": [
                     {
-                        "mimeType": "audio/mp3",
+                        "mimeType": "audio/mpeg",
                         "uri": "./Sound03.mp3"
                     }
                 ],
@@ -1314,7 +1314,6 @@
         "MPEG_media", 
         "MPEG_accessor_timed", 
         "MPEG_buffer_circular", 
-        "MPEG_texture_video", 
         "KHR_materials_unlit",
         "MPEG_scene_interactivity",
         "MPEG_node_interactivity",
